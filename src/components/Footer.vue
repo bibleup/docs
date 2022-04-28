@@ -1,0 +1,63 @@
+<template>
+  <footer>
+    <ul>
+      <li><a href="">Docs</a></li>
+      <li><a href="">Demo</a></li>
+      <li><a href="">Code Playground</a></li>
+      <li><a href="">Projects</a></li>
+      <li><a href="">Jesus Forever</a> ❤️</li>
+    </ul>
+    <p id="copyright">Copyright ©️ 2022 BibleUp</p>
+  </footer>
+</template>
+
+<script setup></script>
+
+<style lang="less" scoped>
+@import "@/css/theme.less";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+  border-top: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+
+  ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    li {
+      padding: 10px 15px;
+
+      a {
+        text-decoration: none;
+        color: @color;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+
+        &:hover {
+          text-decoration: underline;
+          color: @blue;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  #copyright {
+    font-size: 1.3rem;
+    color: @grey;
+  }
+}
+</style>
