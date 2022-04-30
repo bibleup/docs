@@ -1,7 +1,5 @@
-# Vue 3 + Vite
+# BibleUp Documentations 📃
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f262444a-04a6-4340-aa42-a9e5564164e9/deploy-status)](https://app.netlify.com/sites/bibleup/deploys)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+All BibleUp Docs are hosted from this repo.<br>
+Built with Vite + Vuepress, hosted on Netlify. 
