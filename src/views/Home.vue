@@ -2,7 +2,7 @@
 <template>
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div id="header-content">
-      <p id="note">🎉 BibleUp is currently in <b>final beta</b> </p>
+      <p id="note">🎉 BibleUp is currently in <b>beta</b> </p>
       <h1>Convert Bible References On Web Pages To Accessible Popups</h1>
       <p class="catch">A Web Tool Built For Referencing The Holy Bible</p>
       
