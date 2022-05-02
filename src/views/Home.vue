@@ -74,7 +74,7 @@
     <h1>Contact BibleUp</h1>
     <p class="catch">Have an awesome review to share with us? <br>Need help installing BibleUp on your website or blog or you simply want to cheer us on?</p>
     
-    <form id="contact-form">
+    <form name="feedback" method="POST" id="contact-form" data-netlify="true">
       <input placeholder="Email" type="email"/>
       <input placeholder="Website (optional)" type="url" />
       <textarea placeholder="Details" type="text"></textarea>
