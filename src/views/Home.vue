@@ -111,7 +111,7 @@
   </section>
   
    <section id="subscribe">
-    <h1>BibleUp Newsletter</h1>
+    <h1>Stay In Touch 📧</h1>
     <p class="catch">We are constantly developing awesome products!<br> Subscribe and don't miss out on interesting updates. We definitely won't spam your inbox.</p>
     
     <form name="subscribe" method="POST" id="subscribe-form" data-netlify="true">
@@ -392,6 +392,7 @@
   width: 100%;
   max-width: 500px;
   margin-top: 30px;
+  margin-bottom: 70px; //footer
   
   
   input, textarea {
@@ -427,14 +428,8 @@
 }
 
 
-
-
-
-
-
 #faq {
-  margin-top: 30px;
-  margin-bottom: 100px; //footer
+  margin-top: 50px;
   -webkit-text-size-adjust: 100%;
   font-family: "Rubik", sans-serif;
 
@@ -452,7 +447,7 @@
  .wrapper {
    width: 100%;
    max-width: 700px;
-   margin-top: 30px;
+   margin-top: 20px;
    
    details {
      width: 100%;
