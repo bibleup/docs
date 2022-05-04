@@ -5,7 +5,7 @@ After installation, intialize `BibleUp` by passing an element and the required `
 let bibleup = new BibleUp(element, options)
 ```
 
-**element** - This is the HTML element containing the bible references. This could be the entire `document.body`, browser window or a particular element you want BibleUp to search through.
+**element** - This is the HTML element containing bible references. This could be the entire `document.body`, browser window or a particular element you want BibleUp to search through.
 
 **options**  - This is an object that should contain all BibleUp options and configurations. BibleUp options will be discussed on the next section.
 
@@ -19,7 +19,7 @@ bibleup.create();
 
 BibleUp will transform all valid Bible references to links. Hover or click on the link to get the Bible text 🎉🎉
 
-For a detailed example of usage
+For an example of BibleUp options:
 
 ``` js
 let body = document.body

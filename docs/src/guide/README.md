@@ -10,7 +10,7 @@ npm install @bibleup/bibleup
 ```
 
 ### CDN
-ESM
+Import the ES module through a CDN:
 
 ``` js
 import BibleUp from 'https://cdn.jsdelivr.net/npm/@bibleup/bibleup/+esm'
@@ -27,7 +27,7 @@ BibleUp comes with the CSS included into the build by default, providing a singl
 
 ### NPM:
  
-In your javascript file, after install w:
+In your javascript file, after `npm i`:
 
 ``` js
 import BibleUp from 'bibleup/core'
@@ -51,6 +51,6 @@ or using `<script>` in your HTML:
 Then include the CSS using `<link>` or configure through a CDN
 
 ::: tip NOTE
-- We **recommend** using the single minified build of BibleUp for production rather than including the API and CSS separately.
+- We **recommend** using the single minified build to start up BibleUp with sufficient styling through the config options.
 - You are free to use other CDN registry apart from the one used in the examples
 :::
