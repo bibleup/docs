@@ -55,12 +55,16 @@
 
 <script setup>
 import ArticlePost from "@/components/ArticlePost.vue";
-import { computed, ref } from "vue";
+import { computed, ref, onUnmounted} from "vue";
 
 let articleKey = ref(0);
 const version = ref("kjv");
-const popup = ref("inline");
-const theme = ref('light');
+const popup = ref("classic");
+const theme = ref('dark');
+
+onUnmounted(() => {
+  document.getElementById('bu-popup').remove();
+})
 
 let genKey = computed(() => {
   return 'b' + articleKey.value

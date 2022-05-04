@@ -109,6 +109,17 @@
     </div>
 
   </section>
+  
+   <section id="subscribe">
+    <h1>BibleUp Newsletter</h1>
+    <p class="catch">We are constantly developing awesome products!<br> Subscribe and don't miss out on interesting updates. We definitely won't spam your inbox.</p>
+    
+    <form name="subscribe" method="POST" id="subscribe-form" data-netlify="true">
+      <input placeholder="Email" type="email"/>
+      <input id="subscribe-btn" type="submit" value="Subscribe" />
+     </form>
+  </section>
+  
 </template>
 
 <script setup>
@@ -356,8 +367,70 @@
     color: white;
     border: none;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    
+    &:hover {
+      background-color: darken(@blue, 5%);
+    }
   }
 }
+
+
+#subscribe {
+  padding-top: 50px;
+  font-family: "Rubik", sans-serif;
+  @media @desktop {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+  }
+}
+
+
+#subscribe-form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  
+  
+  input, textarea {
+    display: block;
+    width: 100%;
+    height: 60px;
+    outline: none;
+    border: 3px solid #a6a6a6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    
+    &:hover {
+      border-color: @blue;
+    }
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  #subscribe-btn {
+    margin-top: 20px;
+    background: @blue;
+    color: white;
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    
+    &:hover {
+      background-color: darken(@blue, 5%);
+    }
+  }
+}
+
+
+
+
+
+
 
 #faq {
   margin-top: 30px;
