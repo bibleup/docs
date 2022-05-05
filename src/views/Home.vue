@@ -115,6 +115,7 @@
     <p class="catch">We are constantly developing awesome products!<br> Subscribe and don't miss out on interesting updates. We definitely won't spam your inbox.</p>
     
     <form name="subscribe" method="post" id="subscribe-form" netlify>
+      <input type="hidden" name="form-name" value="subscribe" />
       <input name="email" placeholder="Email" type="email"/>
       <input id="subscribe-btn" type="submit" value="Subscribe" />
      </form>
