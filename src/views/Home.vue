@@ -8,7 +8,7 @@
       
       <div id="dummy-img"></div>
       <div class="btn-grp">
-       <a href="#">Get Started</a>
+       <router-link to="/docs">Get Started</router-link>
        <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
       </div>
   </div>
