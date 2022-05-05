@@ -9,18 +9,6 @@ import GlobalLayout from "C:\\Users\\Hp\\web projects\\docs\\docs\\node_modules\
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-5bfdc528",
-    path: "/customisation/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-5bfdc528").then(next)
-    },
-  },
-  {
-    path: "/customisation/index.html",
-    redirect: "/customisation/"
-  },
-  {
     name: "v-c00ad230",
     path: "/guide/",
     component: GlobalLayout,
@@ -39,6 +27,30 @@ export const routes = [
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-60a15579").then(next)
     },
+  },
+  {
+    name: "v-0b1ce9c0",
+    path: "/plugins/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-0b1ce9c0").then(next)
+    },
+  },
+  {
+    path: "/plugins/index.html",
+    redirect: "/plugins/"
+  },
+  {
+    name: "v-5bfdc528",
+    path: "/customisation/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-5bfdc528").then(next)
+    },
+  },
+  {
+    path: "/customisation/index.html",
+    redirect: "/customisation/"
   },
   {
     name: "v-33aaf7ce",

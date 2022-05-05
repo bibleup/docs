@@ -3,14 +3,40 @@
  */
 export const siteData = {
   "title": "BibleUp Docs",
-  "description": "BibleUp Documentations",
+  "description": "BibleUp Documentation | A tool for converting bible references on a webpage to a link with accessible popup",
   "base": "/",
   "headTags": [
+    [
+      "link",
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "/assets/apple-touch-icon.png"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "/assets/favicon-32x32.png"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "16x16",
+        "href": "/assets/favicon-16x16.png"
+      }
+    ],
     [
       "meta",
       {
         "name": "theme-color",
-        "content": "#3eaf7c"
+        "content": "#fff"
       }
     ],
     [
@@ -29,13 +55,6 @@ export const siteData = {
     ]
   ],
   "pages": [
-    {
-      "frontmatter": {},
-      "regularPath": "/customisation/",
-      "relativePath": "customisation/README.md",
-      "key": "v-5bfdc528",
-      "path": "/customisation/"
-    },
     {
       "title": "Get Started",
       "frontmatter": {},
@@ -85,29 +104,89 @@ export const siteData = {
       "path": "/guide/options.html",
       "headers": [
         {
-          "level": 3,
-          "title": "`version`",
+          "level": 2,
+          "title": "version",
           "slug": "version"
         },
         {
-          "level": 3,
-          "title": "`darkTheme`",
+          "level": 2,
+          "title": "darkTheme",
           "slug": "darktheme"
         },
         {
-          "level": 3,
-          "title": "`popup`",
+          "level": 2,
+          "title": "popup",
           "slug": "popup"
         },
         {
-          "level": 3,
-          "title": "`bu_allow`",
+          "level": 2,
+          "title": "bu_ignore",
+          "slug": "bu-ignore"
+        },
+        {
+          "level": 2,
+          "title": "bu_allow",
           "slug": "bu-allow"
         },
         {
-          "level": 3,
+          "level": 2,
           "title": "styles",
           "slug": "styles"
+        }
+      ]
+    },
+    {
+      "title": "Plugins and Extensions",
+      "frontmatter": {},
+      "regularPath": "/plugins/",
+      "relativePath": "plugins/README.md",
+      "key": "v-0b1ce9c0",
+      "path": "/plugins/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "WordPress",
+          "slug": "wordpress"
+        },
+        {
+          "level": 2,
+          "title": "Extentions",
+          "slug": "extentions"
+        }
+      ]
+    },
+    {
+      "title": "Styling and Customisation",
+      "frontmatter": {},
+      "regularPath": "/customisation/",
+      "relativePath": "customisation/README.md",
+      "key": "v-5bfdc528",
+      "path": "/customisation/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Popup structure",
+          "slug": "popup-structure"
+        },
+        {
+          "level": 2,
+          "title": "CSS Styling",
+          "slug": "css-styling"
+        },
+        {
+          "level": 2,
+          "title": "Using CSS Preprocessors",
+          "slug": "using-css-preprocessors"
+        },
+        {
+          "level": 2,
+          "title": "Styling the links",
+          "slug": "styling-the-links"
+        },
+        {
+          "level": 2,
+          "title": "Credit BibleUp",
+          "slug": "credit-bibleup"
         }
       ]
     },
@@ -120,7 +199,7 @@ export const siteData = {
       "path": "/guide/usage.html"
     },
     {
-      "title": "Introduction 📖",
+      "title": "Introduction",
       "frontmatter": {
         "prev": false,
         "next": "/guide/"
@@ -144,11 +223,14 @@ export const siteData = {
     }
   ],
   "themeConfig": {
-    "repo": "",
-    "editLinks": false,
-    "docsDir": "",
-    "editLinkText": "",
+    "repo": "Bibleup/bibleup",
+    "docsRepo": "Bibleup/docs",
+    "docsBranch": "docs",
+    "docsDir": "docs/src",
+    "editLinks": true,
+    "editLinkText": "Edit this page on Github",
     "lastUpdated": false,
+    "smoothScroll": true,
     "nav": [
       {
         "text": "Introduction",
@@ -159,17 +241,49 @@ export const siteData = {
         "link": "/guide/"
       },
       {
-        "text": "Github",
-        "link": "https://github.com/Bibleup/bibleup"
+        "text": "Home",
+        "link": "https://bibleup.netlify.app"
       }
     ],
-    "sidebar": {
-      "/guide/": [
-        "",
-        "usage",
-        "options"
-      ],
-      "/": "auto"
-    }
+    "sidebar": [
+      {
+        "title": "Introduction 📖",
+        "path": "/",
+        "collapsable": false,
+        "sidebarDepth": 1,
+        "children": [
+          "/"
+        ]
+      },
+      {
+        "title": "Guide 🚀",
+        "path": "/guide/",
+        "collapsable": false,
+        "sidebarDepth": 1,
+        "children": [
+          "/guide/",
+          "/guide/usage",
+          "/guide/options"
+        ]
+      },
+      {
+        "title": "Customisation 🎨",
+        "path": "/customisation",
+        "collapsable": false,
+        "sidebarDepth": 1,
+        "children": [
+          "/customisation/"
+        ]
+      },
+      {
+        "title": "Plugins 🛸",
+        "path": "/plugins",
+        "collapsable": false,
+        "sidebarDepth": 1,
+        "children": [
+          "/plugins/"
+        ]
+      }
+    ]
   }
 }
