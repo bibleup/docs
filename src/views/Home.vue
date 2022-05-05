@@ -74,10 +74,10 @@
     <h1>Contact BibleUp</h1>
     <p class="catch">Have an awesome review to share with us? <br>Need help installing BibleUp on your website or blog or you simply want to cheer us on?</p>
     
-    <form name="feedback" method="POST" id="contact-form" data-netlify="true">
-      <input placeholder="Email" type="email"/>
-      <input placeholder="Website (optional)" type="url" />
-      <textarea placeholder="Details" type="text"></textarea>
+    <form name="feedback" method="post" id="contact-form" netlify>
+      <input name="email" placeholder="Email" type="email"/>
+      <input name="website" placeholder="Website (optional)" type="url" />
+      <textarea name="details" placeholder="Details" type="text"></textarea>
       <input id="submit-btn" type="submit" />
      </form>
   </section>
@@ -114,8 +114,8 @@
     <h1>Stay In Touch 📧</h1>
     <p class="catch">We are constantly developing awesome products!<br> Subscribe and don't miss out on interesting updates. We definitely won't spam your inbox.</p>
     
-    <form name="subscribe" method="POST" id="subscribe-form" data-netlify="true">
-      <input placeholder="Email" type="email"/>
+    <form name="subscribe" method="post" id="subscribe-form" netlify>
+      <input name="email" placeholder="Email" type="email"/>
       <input id="subscribe-btn" type="submit" value="Subscribe" />
      </form>
   </section>
