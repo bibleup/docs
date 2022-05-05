@@ -3,6 +3,7 @@ const { description } = require("../../package");
 module.exports = {
   title: "BibleUp Docs",
   description: 'BibleUp Documentation | A tool for converting bible references on a webpage to a link with accessible popup',
+  base: "/docs/", 
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
