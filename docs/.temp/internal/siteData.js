@@ -56,6 +56,46 @@ export const siteData = {
   ],
   "pages": [
     {
+      "title": "Get Started",
+      "frontmatter": {},
+      "regularPath": "/guide/",
+      "relativePath": "guide/README.md",
+      "key": "v-c00ad230",
+      "path": "/guide/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Installation",
+          "slug": "installation"
+        },
+        {
+          "level": 3,
+          "title": "NPM",
+          "slug": "npm"
+        },
+        {
+          "level": 3,
+          "title": "CDN",
+          "slug": "cdn"
+        },
+        {
+          "level": 2,
+          "title": "BibleUp Core",
+          "slug": "bibleup-core"
+        },
+        {
+          "level": 3,
+          "title": "NPM:",
+          "slug": "npm-2"
+        },
+        {
+          "level": 3,
+          "title": "CDN:",
+          "slug": "cdn-2"
+        }
+      ]
+    },
+    {
       "title": "Options",
       "frontmatter": {},
       "regularPath": "/guide/options.html",
@@ -96,42 +136,22 @@ export const siteData = {
       ]
     },
     {
-      "title": "Get Started",
+      "title": "Plugins and Extensions",
       "frontmatter": {},
-      "regularPath": "/guide/",
-      "relativePath": "guide/README.md",
-      "key": "v-c00ad230",
-      "path": "/guide/",
+      "regularPath": "/plugins/",
+      "relativePath": "plugins/README.md",
+      "key": "v-0b1ce9c0",
+      "path": "/plugins/",
       "headers": [
         {
           "level": 2,
-          "title": "Installation",
-          "slug": "installation"
-        },
-        {
-          "level": 3,
-          "title": "NPM",
-          "slug": "npm"
-        },
-        {
-          "level": 3,
-          "title": "CDN",
-          "slug": "cdn"
+          "title": "WordPress",
+          "slug": "wordpress"
         },
         {
           "level": 2,
-          "title": "BibleUp Core",
-          "slug": "bibleup-core"
-        },
-        {
-          "level": 3,
-          "title": "NPM:",
-          "slug": "npm-2"
-        },
-        {
-          "level": 3,
-          "title": "CDN:",
-          "slug": "cdn-2"
+          "title": "Extentions",
+          "slug": "extentions"
         }
       ]
     },
@@ -200,26 +220,6 @@ export const siteData = {
           "slug": "related-tools"
         }
       ]
-    },
-    {
-      "title": "Plugins and Extensions",
-      "frontmatter": {},
-      "regularPath": "/plugins/",
-      "relativePath": "plugins/README.md",
-      "key": "v-0b1ce9c0",
-      "path": "/plugins/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "WordPress",
-          "slug": "wordpress"
-        },
-        {
-          "level": 2,
-          "title": "Extentions",
-          "slug": "extentions"
-        }
-      ]
     }
   ],
   "themeConfig": {
@@ -241,12 +241,8 @@ export const siteData = {
         "link": "/guide/"
       },
       {
-        "text": "Customisation",
-        "link": "/customisation/"
-      },
-      {
-        "text": "Plugins",
-        "link": "/plugins/"
+        "text": "Home",
+        "link": "https://bibleup.netlify.app"
       }
     ],
     "sidebar": [

@@ -43,12 +43,8 @@ module.exports = {
         link: "/guide/",
       },
       {
-        text: "Customisation",
-        link: "/customisation/",
-      },
-      {
-        text: "Plugins",
-        link: "/plugins/",
+        text: "Home",
+        link: "https://bibleup.netlify.app",
       },
     ],
     sidebar: [

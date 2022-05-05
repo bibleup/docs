@@ -27,7 +27,7 @@ BibleUp comes with the CSS included into the build by default, providing a singl
 
 ### NPM:
  
-In your javascript file, after `npm i`:
+In your javascript file, after `npm install`:
 
 ``` js
 import BibleUp from 'bibleup/core'
