@@ -8,7 +8,7 @@
       
       <div id="dummy-img"></div>
       <div class="btn-grp">
-       <a href="#">Get Started</a>
+       <router-link to="/docs">Get Started</router-link>
        <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
       </div>
   </div>
@@ -74,7 +74,7 @@
     <h1>Contact BibleUp</h1>
     <p class="catch">Have an awesome review to share with us? <br>Need help installing BibleUp on your website or blog or you simply want to cheer us on?</p>
     
-    <form id="contact-form">
+    <form name="feedback" method="POST" id="contact-form" data-netlify="true">
       <input placeholder="Email" type="email"/>
       <input placeholder="Website (optional)" type="url" />
       <textarea placeholder="Details" type="text"></textarea>
@@ -109,6 +109,17 @@
     </div>
 
   </section>
+  
+   <section id="subscribe">
+    <h1>Stay In Touch 📧</h1>
+    <p class="catch">We are constantly developing awesome products!<br> Subscribe and don't miss out on interesting updates. We definitely won't spam your inbox.</p>
+    
+    <form name="subscribe" method="POST" id="subscribe-form" data-netlify="true">
+      <input placeholder="Email" type="email"/>
+      <input id="subscribe-btn" type="submit" value="Subscribe" />
+     </form>
+  </section>
+  
 </template>
 
 <script setup>
@@ -356,12 +367,69 @@
     color: white;
     border: none;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    
+    &:hover {
+      background-color: darken(@blue, 5%);
+    }
   }
 }
 
-#faq {
+
+#subscribe {
+  padding-top: 50px;
+  font-family: "Rubik", sans-serif;
+  @media @desktop {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+  }
+}
+
+
+#subscribe-form {
+  width: 100%;
+  max-width: 500px;
   margin-top: 30px;
-  margin-bottom: 100px; //footer
+  margin-bottom: 70px; //footer
+  
+  
+  input, textarea {
+    display: block;
+    width: 100%;
+    height: 60px;
+    outline: none;
+    border: 3px solid #a6a6a6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    
+    &:hover {
+      border-color: @blue;
+    }
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  #subscribe-btn {
+    margin-top: 20px;
+    background: @blue;
+    color: white;
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    
+    &:hover {
+      background-color: darken(@blue, 5%);
+    }
+  }
+}
+
+
+#faq {
+  margin-top: 50px;
   -webkit-text-size-adjust: 100%;
   font-family: "Rubik", sans-serif;
 
@@ -379,7 +447,7 @@
  .wrapper {
    width: 100%;
    max-width: 700px;
-   margin-top: 30px;
+   margin-top: 20px;
    
    details {
      width: 100%;

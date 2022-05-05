@@ -3,13 +3,11 @@
   <section id="not-found">
     <p id="code">404</p>
     <div>
-      <P class="text"
-        >God sent his Son into the world not to judge the world, but to save the
-        world through him.<br /><router-link
-          to="https://www.compellingtruth.org/give-life-to-God.html"
-          >Choose Jesus</router-link
-        ></P
-      >
+      <P class="text">
+        God sent his Son into the world not to judge the world, but to save the
+        world through him.<br />
+        <a href="https://www.compellingtruth.org/give-life-to-God.html" target="_blank">Choose Jesus</a>
+      </p>
     </div>
 
     <router-link id="home-btn" to="/">Home Page</router-link>

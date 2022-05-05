@@ -1,11 +1,11 @@
 <template>
   <footer>
     <ul>
-      <li><a href="">Docs</a></li>
-      <li><a href="">Demo</a></li>
-      <li><a href="">Code Playground</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">Jesus Forever</a> ❤️</li>
+      <li><router-link to="/docs">Docs</router-link></li>
+      <li><router-link to="/demo">Demo</router-link></li>
+      <li><a href="https://stackblitz.com/edit/bibleup" target="_blank">Code Playground</a></li>
+      <li><a href="https://github.com/Bibleup" target="_blank">Projects</a></li>
+      <li><router-link to="/">Jesus Forever</router-link> ❤️</li>
     </ul>
     <p id="copyright">Copyright ©️ 2022 BibleUp</p>
   </footer>
