@@ -32,6 +32,13 @@
 
 <body>
 
+  <form name="feedback" method="post" id="contact-form" netlify hidden>
+    <input name="email" placeholder="Email" type="email"/>
+    <input name="website" placeholder="Website (optional)" type="url" />
+    <textarea name="details" placeholder="Details" type="text"></textarea>
+    <input id="submit-btn" type="submit" />
+   </form>
+
   <form name="subscribe" method="post" id="subscribe-form" netlify hidden>
     <input type="hidden" name="form-name" value="subscribe" />
     <input name="email" placeholder="Email" type="email"/>
