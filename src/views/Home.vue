@@ -75,6 +75,7 @@
     <p class="catch">Have an awesome review to share with us? <br>Need help installing BibleUp on your website or blog or you simply want to cheer us on?</p>
     
     <form name="feedback" method="post" id="contact-form" netlify>
+      <input type="hidden" name="form-name" value="feedback" />
       <input name="email" placeholder="Email" type="email"/>
       <input name="website" placeholder="Website (optional)" type="url" />
       <textarea name="details" placeholder="Details" type="text"></textarea>
@@ -377,7 +378,7 @@
 
 
 #subscribe {
-  padding-top: 50px;
+  padding-top: 60px;
   font-family: "Rubik", sans-serif;
   @media @desktop {
     display: flex; 
