@@ -3,7 +3,7 @@ prev: false
 next: /guide/
 ---
 
-# Introduction 📖
+# Introduction
 BibleUp is a configurable web tool that allows text of Bible references on a page to be available to readers at a single click (or hover). This makes reading biblical articles pleasurable and more immersive
 
 ::: tip Note

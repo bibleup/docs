@@ -52,15 +52,12 @@ You can find `bibleup.less` file in BibleUp Github repo or through your preferre
 ## Styling the links
 BibleUp adds `bu-link` class to all reference links that trigger the popup. <br>BibleUp link is in this structure and be styled with the selectors
 
-:::: code-group
-::: code-group-item HTML
 ```html
 <cite>
   <a href='#' class='bu-link' bu-data='{}'>John 3:16</a>
 </cite>
 ```
-:::
-::: code-group-item CSS
+
 ```css
 .bu-link {
   color: red;
@@ -68,8 +65,6 @@ BibleUp adds `bu-link` class to all reference links that trigger the popup. <br>
   font-style: normal;
 }
 ```
-:::
-::::
 
 ::: tip
 `cite` element is usually styled in italics by most browser. You can reset this using the class selector.
