@@ -65,7 +65,8 @@ module.exports = {
         children: [
           '/guide/',
           '/guide/usage',
-          '/guide/options'
+          '/guide/options',
+          '/guide/guidelines'
         ]
       },
       {

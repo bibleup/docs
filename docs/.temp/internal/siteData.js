@@ -56,46 +56,6 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "Get Started",
-      "frontmatter": {},
-      "regularPath": "/guide/",
-      "relativePath": "guide/README.md",
-      "key": "v-c00ad230",
-      "path": "/guide/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Installation",
-          "slug": "installation"
-        },
-        {
-          "level": 3,
-          "title": "NPM",
-          "slug": "npm"
-        },
-        {
-          "level": 3,
-          "title": "CDN",
-          "slug": "cdn"
-        },
-        {
-          "level": 2,
-          "title": "BibleUp Core",
-          "slug": "bibleup-core"
-        },
-        {
-          "level": 3,
-          "title": "NPM:",
-          "slug": "npm-2"
-        },
-        {
-          "level": 3,
-          "title": "CDN:",
-          "slug": "cdn-2"
-        }
-      ]
-    },
-    {
       "title": "Options",
       "frontmatter": {},
       "regularPath": "/guide/options.html",
@@ -136,26 +96,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "Plugins and Extensions",
-      "frontmatter": {},
-      "regularPath": "/plugins/",
-      "relativePath": "plugins/README.md",
-      "key": "v-0b1ce9c0",
-      "path": "/plugins/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "WordPress",
-          "slug": "wordpress"
-        },
-        {
-          "level": 2,
-          "title": "Extentions",
-          "slug": "extentions"
-        }
-      ]
-    },
-    {
       "title": "Styling and Customisation",
       "frontmatter": {},
       "regularPath": "/customisation/",
@@ -191,12 +131,97 @@ export const siteData = {
       ]
     },
     {
+      "title": "Get Started",
+      "frontmatter": {},
+      "regularPath": "/guide/",
+      "relativePath": "guide/README.md",
+      "key": "v-c00ad230",
+      "path": "/guide/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Installation",
+          "slug": "installation"
+        },
+        {
+          "level": 3,
+          "title": "NPM",
+          "slug": "npm"
+        },
+        {
+          "level": 3,
+          "title": "CDN",
+          "slug": "cdn"
+        },
+        {
+          "level": 2,
+          "title": "BibleUp Core",
+          "slug": "bibleup-core"
+        },
+        {
+          "level": 3,
+          "title": "NPM:",
+          "slug": "npm-2"
+        },
+        {
+          "level": 3,
+          "title": "CDN:",
+          "slug": "cdn-2"
+        }
+      ]
+    },
+    {
+      "title": "Guidelines",
+      "frontmatter": {},
+      "regularPath": "/guide/guidelines.html",
+      "relativePath": "guide/guidelines.md",
+      "key": "v-3c30c199",
+      "path": "/guide/guidelines.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Bible References",
+          "slug": "bible-references"
+        },
+        {
+          "level": 2,
+          "title": "Format",
+          "slug": "format"
+        },
+        {
+          "level": 2,
+          "title": "Multiple verses",
+          "slug": "multiple-verses"
+        }
+      ]
+    },
+    {
       "title": "Usage",
       "frontmatter": {},
       "regularPath": "/guide/usage.html",
       "relativePath": "guide/usage.md",
       "key": "v-33aaf7ce",
       "path": "/guide/usage.html"
+    },
+    {
+      "title": "Plugins and Extensions",
+      "frontmatter": {},
+      "regularPath": "/plugins/",
+      "relativePath": "plugins/README.md",
+      "key": "v-0b1ce9c0",
+      "path": "/plugins/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "WordPress",
+          "slug": "wordpress"
+        },
+        {
+          "level": 2,
+          "title": "Extentions",
+          "slug": "extentions"
+        }
+      ]
     },
     {
       "title": "Introduction",
@@ -263,7 +288,8 @@ export const siteData = {
         "children": [
           "/guide/",
           "/guide/usage",
-          "/guide/options"
+          "/guide/options",
+          "/guide/guidelines"
         ]
       },
       {

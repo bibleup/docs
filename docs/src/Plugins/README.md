@@ -22,7 +22,7 @@ b.create();
 
 The plugin will now automatically load the code you added on every page of your website. You can also configure the options to your site preference
 
-::: warn
+::: warning
 - This method includes BibleUp on all pages in your blog and not to articles alone.
 - Read this [guide]() to learn how to install to specific pages.
 :::
