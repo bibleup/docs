@@ -8,7 +8,7 @@
       
       <div id="dummy-img"></div>
       <div class="btn-grp">
-       <a href="bibleup.netlify.app/docs">Get Started</a>
+       <a href="/docs">Get Started</a>
        <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
       </div>
   </div>
