@@ -6,3 +6,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  
+[[redirects]]
+  from = "https://docs--bibleup.netlify.app/*"
+  to = "https://bibleup.netlify.app/docs/:splat"
+  status = 301
+  force = true
