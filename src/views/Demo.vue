@@ -8,7 +8,7 @@
         <img src="@/assets/brush.svg" />
         <p>
           You can make use of the
-          <a id="opt-link" href="#editor">options box</a> below to test for
+          <a href="#editor">options box</a> below to test for
           other options. Check the docs on how to toally customise BibleUP 🎨
         </p>
       </div>
@@ -90,13 +90,6 @@ function updateArticle() {
   .catch {
     text-align: center;
   }
-}
-
-#opt-link {
-  padding: 0;
-  height: 0;
-  color: #f2f2f2;
-  text-decoration: underline;
 }
 
 #article-wrapper {

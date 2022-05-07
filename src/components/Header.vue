@@ -1,8 +1,8 @@
 <template>
     <header>
-      <h1><router-link to="/">BibleUp</router-link></h1>
+      <h1><router-link to="/" class="btn">BibleUp</router-link></h1>
       <div class="github">
-        <a target="_blank" href="https://github.com/Bibleup/bibleup.js">
+        <a class="btn" target="_blank" href="https://github.com/Bibleup/bibleup.js">
           <span>Github</span>
         </a>
       </div>
