@@ -50,7 +50,7 @@ import BibleUp from 'https://cdn.jsdelivr.net/npm/@bibleup/bibleup/+esm'
 or using `<script>` in your HTML:
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup/dist/umd/bibleup-core.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup/dist/umd/bibleup-core.min.js "></script>
 ```
 
 ### CSS
@@ -63,5 +63,7 @@ Then include the CSS using `<link>`:
 
 ::: tip NOTE
 - We **recommend** using the single minified build to start up BibleUp when working without a build tool (webpack, vite, next/nuxt) and style through the config options.
-- You are free to use other CDN registry apart from the one used in the examples.
+- You are free to use other CDN registry apart from the one used in the examples. For full distribution files check [Jsdeliver](https://www.jsdelivr.com/package/npm/@bibleup/bibleup) or [unpkg](https://unpkg.com/browse/@bibleup/bibleup/)
+- We **recommend** that you pin BibleUp to a specific version or major versions when used in production and through a cdn.
+- 
 :::
