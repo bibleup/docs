@@ -3,7 +3,7 @@
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div id="header-content">
     <p id="note">🎉 BibleUp is currently in <b>final beta</b></p>
-    <h1>Convert Bible References On Web Pages To Accessible Popups</h1>
+    <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
     <p class="catch">A Web Tool Built For Referencing The Holy Bible</p>
 
     <div id="dummy-img"></div>
@@ -13,6 +13,12 @@
         >See Demo <i class="fi fi-rr-magic-wand"></i
       ></router-link>
     </div>
+  </div>
+
+  <div id="try">
+    <h1>Quick Demo</h1>
+    <p>Hover or click on the references below</p>
+    <p id="try-ref">2 Corinthians 5:17, Romans 10:9-10</p>
   </div>
 
   <section id="feature">
@@ -30,7 +36,7 @@
       <div class="box">
         <h1>Customisation</h1>
         <p>
-          Customise Bible links and popup as much as you want. Style according
+          Customise Bible links and popover as much as you want. Style according
           to your site theme using the API or online 'editor'
         </p>
       </div>
@@ -101,7 +107,7 @@
       <input type="hidden" name="form-name" value="feedback" />
       <input name="email" placeholder="Email" type="email" />
       <input name="website" placeholder="Website (optional)" type="url" />
-      <textarea name="details" placeholder="Details" type="text"></textarea>
+      <textarea required name="details" placeholder="Details" type="text"></textarea>
       <input id="submit-btn" type="submit" />
     </form>
   </section>
@@ -114,9 +120,9 @@
       <details>
         <summary>How does this work?</summary>
         <p class="catch">
-          BibleUp searches for all bible references on a page and transforms
-          each one to a link. Hovering or clicking on these links will make the
-          bible text accessible via a feature-rich and flexible hover popup.<br /><br />At
+          BibleUp searches for all plain Bible references on a page and transforms
+          each one to an link. Hovering or clicking on these links will make the
+          Bible text accessible via a feature-rich and flexible popover.<br /><br />At
           its core, BibleUp is a blend of internal API and a display interface.
         </p>
       </details>
@@ -162,13 +168,20 @@
 
     <form name="subscribe" method="post" id="subscribe-form" netlify>
       <input type="hidden" name="form-name" value="subscribe" />
-      <input name="email" placeholder="Email" type="email" />
+      <input name="email" placeholder="Email" type="email" required />
       <input id="subscribe-btn" type="submit" value="Subscribe" />
     </form>
   </section>
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  let tr = document.getElementById('try')
+  let b = new BibleUp(tr)
+  b.create()
+})
 </script>
 
 <style lang="less" scoped>
@@ -184,6 +197,7 @@
   text-align: center;
   color: @color;
   padding: 0 20px;
+  //padding-top: 20px;
   font-family: "Rubik", sans-serif;
 
   #note {
@@ -256,9 +270,36 @@
   }
 }
 
+#try {
+  width: 100%;
+  background: #f2f2f2;
+  //color: white;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  h1 {
+    font-size: 1.8rem;
+    color: #404040;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: @grey;
+    margin-top: 5px;
+  }
+
+  #try-ref {
+    margin-top: 15px;
+  }
+}
+
 #feature {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: "Rubik", sans-serif;
   //background: red;
 

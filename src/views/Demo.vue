@@ -7,22 +7,13 @@
       <div class="alert-box">
         <img src="@/assets/brush.svg" />
         <p>
-          You can make use of the
-          <a href="#editor">options box</a> below to test for
-          other options. Check the docs on how to toally customise BibleUP 🎨
+          The following article contains plain references until BibleUp is activated.
+          Use the <a href="#editor">options box</a> below to activate BibleUp on the article.
         </p>
       </div>
     </section>
 
     <section id="article-wrapper">
-      <ArticlePost
-        :key="articleKey"
-        :popup="popup"
-        :version="version"
-        :theme="theme"
-        :new = 'genKey'
-      ></ArticlePost>
-
       <div id="editor">
         <div class="card">
           <label for="type">Popup Type</label>
@@ -49,6 +40,14 @@
           <button id="apply-btn" @click="updateArticle">Apply</button>
         </div>
       </div>
+
+      <ArticlePost
+        :key="articleKey"
+        :popup="popup"
+        :version="version"
+        :theme="theme"
+        :genKey = 'genKey'
+      ></ArticlePost>
     </section>
   </div>
 </template>
@@ -63,7 +62,8 @@ const popup = ref("classic");
 const theme = ref('dark');
 
 onUnmounted(() => {
-  document.getElementById('bu-popup').remove();
+  if (document.getElementById('bu-popup'))
+    document.getElementById('bu-popup').remove();
 })
 
 let genKey = computed(() => {
@@ -95,6 +95,7 @@ function updateArticle() {
 #article-wrapper {
   width: 100%;
   margin-bottom: 100px; //footer
+  
 
   @media @desktop {
     display: grid;
@@ -107,8 +108,7 @@ function updateArticle() {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 50px;
-  order: 1;
+  
 
   .card {
     padding: 40px 20px;

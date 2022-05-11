@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BibleUp</title>
-  <meta name="description" content="A tool for converting bible references on a webpage to a link with accessible popup"/>
+  <meta name="description" content="A tool for converting Bible references on a webpage to a link with accessible popovers"/>
   <meta property="og:title" content="BibleUp">
   <meta property="og:description" content="A tool for converting bible references on a webpage to a link with accessible popup"> <!-- ˜300 chars -->
   <meta property="og:site_name" content="BibleUp Homepage">
@@ -29,6 +29,8 @@
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet" />
   <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup@1.0.0-beta"></script>
 </head>
 
 <body>
@@ -36,17 +38,18 @@
   <form name="feedback" method="post" id="contact-form" netlify hidden>
     <input name="email" placeholder="Email" type="email"/>
     <input name="website" placeholder="Website (optional)" type="url" />
-    <textarea name="details" placeholder="Details" type="text"></textarea>
+    <textarea required name="details" placeholder="Details" type="text"></textarea>
     <input id="submit-btn" type="submit" />
    </form>
 
   <form name="subscribe" method="post" id="subscribe-form" netlify hidden>
     <input type="hidden" name="form-name" value="subscribe" />
-    <input name="email" placeholder="Email" type="email"/>
+    <input required name="email" placeholder="Email" type="email"/>
     <input id="subscribe-btn" type="submit" value="Subscribe" />
    </form>
 
   <div id="app"></div>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 

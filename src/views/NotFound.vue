@@ -10,7 +10,7 @@
       </p>
     </div>
 
-    <router-link id="home-btn" to="/">Home Page</router-link>
+    <router-link class="btn" id="home-btn" to="/">Home Page</router-link>
   </section>
 </template>
 
