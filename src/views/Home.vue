@@ -121,9 +121,10 @@
         <summary>How does this work?</summary>
         <p class="catch">
           BibleUp searches for all plain Bible references on a page and transforms
-          each one to an link. Hovering or clicking on these links will make the
+          each one to a link. Hovering or clicking on these links will make the
           Bible text accessible via a feature-rich and flexible popover.<br /><br />At
-          its core, BibleUp is a blend of internal API and a display interface.
+          its core, BibleUp is a blend of internal API and a display interface.<br>
+          Read the introduction <a href="/docs">here</a> for an in-depth explanation.
         </p>
       </details>
 
@@ -131,7 +132,7 @@
         <summary>Is this Free?</summary>
         <p class="catch">
           BibleUp is <b>FREE</b> to use, <b>FOREVER.</b><br /><br />There is,
-          however a clause for distribution and modification. See our licence
+          however a clause on distribution and modification. See our licence
           for these clauses to use without infringement.
         </p>
       </details>
@@ -152,7 +153,7 @@
           <b>You can help to support by sharing!</b><br /><br />
           Contribute to the project on Github and help spread the word to
           bloggers and publishers alike. You can also send a feedback for
-          improvements.<br />Thank you!
+          improvements.
         </p>
       </details>
     </div>
@@ -186,6 +187,11 @@ onMounted(() => {
 
 <style lang="less" scoped>
 @import "@/css/theme.less";
+
+a {
+  color: inherit;
+  color: #4884ee;
+}
 
 #header-content {
   width: 100%;

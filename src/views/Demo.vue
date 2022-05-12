@@ -37,6 +37,13 @@
             <option value="web">World English Bible (WEB)</option>
           </select>
 
+          <label for="preset">Style Presets</label>
+          <select name="preset" v-model="preset">
+            <option value="none" selected>-- Choose Preset --</option>
+            <option value="preset1">Preset 1</option>
+            <option value="preset2">Preset 2</option>
+          </select>
+
           <button id="apply-btn" @click="updateArticle">Apply</button>
         </div>
       </div>
@@ -47,6 +54,7 @@
         :version="version"
         :theme="theme"
         :genKey = 'genKey'
+        :preset = 'preset'
       ></ArticlePost>
     </section>
   </div>
@@ -60,6 +68,7 @@ let articleKey = ref(0);
 const version = ref("kjv");
 const popup = ref("classic");
 const theme = ref('dark');
+const preset = ref('none')
 
 onUnmounted(() => {
   if (document.getElementById('bu-popup'))
