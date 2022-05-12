@@ -20,7 +20,7 @@ Using `<srcipt>` in your HTML:
 
 ``` html
 <!-- jsdelivr -->
-<script src="cdn.jsdelivr.net/npm/@bibleup/bibleup"></script>
+<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup"></script>
 
 <!-- or, unpkg -->
 <script src="https://unpkg.com/@bibleup/bibleup"></script>
