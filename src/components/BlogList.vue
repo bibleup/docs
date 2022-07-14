@@ -5,7 +5,7 @@
         <img
           alt="man hands with loosed shackles - photo by Pixabay"
           src="@/assets/bg1.jpg"
-        />
+        >
       </div>
       <div class="card-content">
         <p class="tag">
@@ -27,7 +27,7 @@
         <img
           alt="Photo by Luis Quintero: https://www.pexels.com/photo/group-of-people-in-stadium-3612706/"
           src="@/assets/bg2.jpg"
-        />
+        >
       </div>
       <div class="card-content">
         <p class="tag">
@@ -45,7 +45,7 @@
         <img
           alt="Photo by Oleg Magni: https://www.pexels.com/photo/gray-metal-cubes-decorative-1005644/"
           src="@/assets/bg3.jpg"
-        />
+        >
       </div>
       <div class="card-content">
         <p class="tag">

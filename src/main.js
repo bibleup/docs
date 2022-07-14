@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router.js'
+import router from './js/router.js'
 import '@/css/core.less';
 
 let app = createApp(App)

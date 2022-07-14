@@ -1,90 +1,72 @@
 <template>
   <div class="wrapper">
-    <section id="intro">
+    <section id="intro" class="flex flex-col justify-center items-center">
       <h1>BibleUp Demo</h1>
       <p class="catch">See BibleUp in action in the article below.</p>
 
       <div class="alert-box">
         <img src="@/assets/brush.svg" />
         <p>
-          The following article contains plain references until BibleUp is activated.
-          Use the <a href="#editor">options box</a> below to activate BibleUp on the article.
+          The following article contains plain references until BibleUp is
+          activated. Use the <a href="#editor">editor</a> to configure BibleUp
+          and see changes in real-time.
         </p>
       </div>
     </section>
 
-    <section id="article-wrapper">
-      <div id="editor">
-        <div class="card">
-          <label for="type">Popup Type</label>
-          <select name="type" v-model="popup">
-            <option value="classic">Classic</option>
-            <option value="inline">Inline</option>
-            <option value="wiki">Wiki</option>
-          </select>
+    <section id="article-wrapper" class="center mt-[50px]">
 
-          <label for="theme">Theme</label>
-          <select name="theme" v-model="theme">
-            <option value='light'>Light</option>
-            <option value='dark'>Dark</option>
-          </select>
-
-          <label for="version">Bible Version</label>
-          <select name="version" v-model="version">
-            <option value="kjv">King James Version (KJV)</option>
-            <option value="asv">American Standard Version (ASV)</option>
-            <option value="lsv">Literal Standard Version (LSV)</option>
-            <option value="web">World English Bible (WEB)</option>
-          </select>
-
-          <label for="preset">Style Presets</label>
-          <select name="preset" v-model="preset">
-            <option value="none" selected>-- Choose Preset --</option>
-            <option value="preset1">Preset 1</option>
-            <option value="preset2">Preset 2</option>
-          </select>
-
-          <button id="apply-btn" @click="updateArticle">Apply</button>
+      <div id="btn-group">
+        <div class="wrapper">
+          <button id="apply-btn" @click="toggleState('editor')">Open Editor</button>
+          <button>Activate BibleUp</button>
         </div>
       </div>
 
-      <ArticlePost
-        :key="articleKey"
-        :popup="popup"
-        :version="version"
-        :theme="theme"
-        :genKey = 'genKey'
-        :preset = 'preset'
-      ></ArticlePost>
+      <ArticlePost :key="articleKey" :popup="popup" :version="version" :theme="theme" :genKey="genKey" :preset="preset">
+      </ArticlePost>
     </section>
+
+    <MainEditor v-show="isEditor"></MainEditor>
   </div>
 </template>
 
 <script setup>
 import ArticlePost from "@/components/ArticlePost.vue";
-import { computed, ref, onUnmounted} from "vue";
+import { computed, ref, onUnmounted, watch } from "vue"
+import MainEditor from "@/components/MainEditor.vue"
+import { isEditor, toggleState } from "@/js/store"
 
 let articleKey = ref(0);
 const version = ref("kjv");
 const popup = ref("classic");
-const theme = ref('dark');
-const preset = ref('none')
+const theme = ref("dark");
+const preset = ref("none");
 
 onUnmounted(() => {
-  if (document.getElementById('bu-popup'))
-    document.getElementById('bu-popup').remove();
+  if (document.getElementById("bu-popup"))
+    document.getElementById("bu-popup").remove();
+});
+
+watch(isEditor, (newVal) => {
+  if (newVal === true) {
+    document.body.style['overflow-y'] = 'hidden';
+  } else {
+    document.body.style['overflow-y'] = 'visible';
+  }
 })
 
 let genKey = computed(() => {
-  return 'b' + articleKey.value
-})
+  return "b" + articleKey.value;
+});
 
 function updateArticle() {
   articleKey.value++;
-  let p = document.getElementById('bu-popup')
-  p.remove()
+  let p = document.getElementById("bu-popup");
+  p.remove();
 }
 </script>
+
 
 <style lang="less" scoped>
 @import "@/css/theme.less";
@@ -94,67 +76,34 @@ function updateArticle() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 300px;
 
   .catch {
+    margin-top: 0;
     text-align: center;
   }
 }
 
-#article-wrapper {
+#btn-group {
+  height: 100%;
   width: 100%;
-  margin-bottom: 100px; //footer
-  
-
-  @media @desktop {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-  }
-}
-
-#editor {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  
 
-  .card {
-    padding: 40px 20px;
+  .wrapper {
+    position: sticky;
+    top: 10%;
     width: 100%;
     max-width: 400px;
+    padding: 20px;
+    padding-top: 0;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
-    label {
-      display: block;
-      color: #404040;
+    button {
       margin-top: 20px;
-    }
-
-    label:nth-of-type(1) {
-      margin-top: 0;
-    }
-
-    select {
-      display: block;
-      width: 100%;
-      height: 50px;
-      outline: none;
-      border: 3px solid #a6a6a6;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 5px;
-      color: #404040;
-      background: #f2f2f2;
-
-      &:hover {
-        border-color: @blue;
-      }
-    }
-
-    #apply-btn {
-      margin-top: 40px;
       background: @blue;
       color: white;
       border: none;
@@ -170,6 +119,16 @@ function updateArticle() {
         background: darken(@blue, 5%);
       }
     }
+  }
+}
+
+#article-wrapper {
+  width: 100%;
+  margin-bottom: 100px; //footer
+
+  @media @lg {
+    display: grid;
+    grid-template-columns: 500px 1fr;
   }
 }
 </style>
