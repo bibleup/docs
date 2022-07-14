@@ -15,7 +15,6 @@
     </section>
 
     <section id="article-wrapper" class="center mt-[50px]">
-
       <div id="btn-group">
         <div class="wrapper">
           <button id="apply-btn" @click="toggleState('editor')">Open Editor</button>
@@ -125,6 +124,7 @@ function updateArticle() {
 #article-wrapper {
   width: 100%;
   margin-bottom: 100px; //footer
+  margin-top: 15px;
 
   @media @lg {
     display: grid;

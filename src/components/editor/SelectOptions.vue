@@ -168,6 +168,7 @@
 
 <style lang="less" scoped>
 @import "@/css/theme.less";
+@import "@/css/editor.less";
 
 #select-options {
   width: 100%;
@@ -175,72 +176,6 @@
   padding: 0;
   padding-bottom: 80px;
   padding-top: 30px;
-}
-
-h3 {
-  padding: 0 15px;
-}
-
-.option-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 20px;
-  margin-top: 30px;
-
-  @media @desktop {
-    justify-content: space-around;
-    flex-direction: column;
-  }
-
-  div {
-    width: 180px;
-
-    p {
-      color: #646970;
-      margin-top: 3px;
-    }
-  }
-
-  .wrap {
-    display: flex;
-  }
-
-  label {
-    font-weight: bold;
-  }
-
-  input,
-  select {
-    width: 150px;
-  }
-
-  textarea {
-    width: 100%;
-    height: 150px;
-  }
-
-  select {
-    padding: 5px;
-  }
-
-  input,
-  select,
-  textarea {
-    outline: none;
-    border-radius: 5px;
-    border: 3px solid #a6a6a6;
-    padding: 3px 7px;
-  }
-
-  input:hover,
-  input:focus,
-  select:hover,
-  select:focus,
-  textarea:hover,
-  textarea:focus {
-    border-color: #4885eeda;
-  }
 }
 
 .option-wrapper {
@@ -275,23 +210,5 @@ h3 {
 
 .option-divider span {
   font-size: 20px;
-}
-
-.note {
-  margin-top: 10px;
-  padding: 20px;
-  width: 100%;
-  background: #ffeb998c;
-  background: #ffeb99;
-}
-
-.note span {
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.note a {
-  color: inherit;
 }
 </style>

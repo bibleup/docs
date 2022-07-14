@@ -4,20 +4,20 @@
 @tailwind utilities;
 
 
-  html {
-    height: 100%;
-    font-size: 62.6%;
-  }
+html {
+  height: 100%;
+  font-size: 62.6%;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    // Default font size on body 16px (1rem = 10px)
-    line-height: 1.5;
-    font-family: "Rubik", sans-serif;
-    font-size: 1.6rem;
-    background: white;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  // Default font size on body 16px (1rem = 10px)
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  background: white;
+}
 
 
 .btn {
@@ -43,7 +43,7 @@
   background: #f6f6f6;
   border-radius: 5px;
   color: @color;
-  
+
   &:hover {
     background: @blue;
     border-radius: 5px;
@@ -51,11 +51,11 @@
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
-  
+
   span {
     padding: 0 7px;
   }
-  
+
   i {
     font-size: 1.7rem;
   }
@@ -81,17 +81,20 @@ article {
     color: @color;
     font-size: 2.8rem;
   }
-
-  h1,
-  h2,
-  h3 {
-    font-weight: bold;
-  }
 }
 
 h1 {
-  color: @color;
   font-size: 2.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @color;
+  font-weight: bold;
 }
 
 .catch {
@@ -139,4 +142,3 @@ h1 {
 .center {
   @apply flex flex-col justify-center items-center;
 }
-

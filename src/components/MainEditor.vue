@@ -3,10 +3,11 @@
     <div id="container">
       <header>
         <h1>BibleUp Editor</h1>
-        <div @click="toggleState('editor')">
+        <button @click="toggleState('editor')">
           <i class="center fi fi-rr-cross"></i>
-        </div>
+        </button>
       </header>
+
       <div class="body">
         <div id="tab">
           <button id="split-btn" :class="{ active: isSplit }" @click="toggleState('split')">
@@ -18,29 +19,22 @@
           <button :class="{ active: ifScreen('preset') }" @click="updateScreen('preset')">Presets</button>
           <button :class="{ active: ifScreen('copy') }" @click="updateScreen('copy')">Copy</button>
         </div>
+
         <div id="split-screen" :class="{ active: isSplit }">
-          <div id="preview" class="screen" v-show="isSplit || ifScreen('preview')">
-            <h3>Preview</h3>
-            <p>John 3:16</p>
-          </div>
+          <Preview class="screen" v-show="isSplit || ifScreen('preview')"></Preview>
           <SelectOptions class="screen" v-show="ifScreen('select')"></SelectOptions>
-          <div id="import" class="screen" v-show="ifScreen('import')">
-            <h3>Import</h3>
-          </div>
-          <div id="presets" class="screen" v-show="ifScreen('preset')">
-            <h3>presets</h3>
-          </div>
-          <div id="copy" class="screen" v-show="ifScreen('copy')">
-          <h3>Copy Generated options</h3>
-          </div>
+          <Import class="screen" v-show="ifScreen('import')"></Import>
+          <Preset class="screen" v-show="ifScreen('preset')"></Preset>
+          <Copy class="screen" v-show="ifScreen('copy')"></Copy>
         </div>
       </div>
+
     </div>
   </section>
 </template>
 
 <script setup>
-import SelectOptions from "@/components/SelectOptions.vue"
+import SelectOptions from "@/components/editor/SelectOptions.vue"
 import {
   updateScreen,
   updateOption,
@@ -49,6 +43,10 @@ import {
   getScreen,
   getOptions
 } from "@/js/store"
+import Preview from "./editor/Preview.vue"
+import Import from "./editor/Import.vue"
+import Preset from "./editor/Preset.vue"
+import Copy from "./editor/Copy.vue"
 
 let ifScreen = (screen) => {
   return getScreen.value === screen
@@ -106,6 +104,9 @@ let closeEditor = () => {
     border-bottom: 2px solid #ccc;
     padding: 15px;
     color: @color;
+    h1 {
+      font-size: 2.5rem;
+    }
 
     i {
       font-size: 1.6rem;
