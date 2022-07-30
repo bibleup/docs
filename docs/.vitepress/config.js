@@ -39,7 +39,7 @@ export default {
     nav: [
       {
         text: "Introduction",
-        link: "/",
+        link: "/intro/",
       },
       {
         text: "Guide",

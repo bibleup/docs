@@ -30,20 +30,20 @@ version: "KJV" | "ASV" | "LSV" | "WEB"
 ## `darkTheme`
 
 **Default:** `false` <br>
-A boolean to toggle dark theme on popup. Dark theme can be toggled on all popup types.
+A boolean to toggle dark theme on popup.
 
 ```js
 darkTheme: true | false
 ```
 
-::: warning NOTE:
-Dark theme on popovers will always get overridden by some explicit `styles` property if active - `primary`, `secondary` and `tertiary`. To use the default dark theme, make sure these properties are set to `false` or not included.
+::: info NOTE:
+Dark theme on popovers can get overridden by some explicit `styles` property - `primary`, `secondary` and `tertiary`. To prevent this, make sure these properties are set to `false` or not included.
 :::
 
 ## `popup`
 
 **Default:** `classic` <br>
-Use this property to specify the popup style. There are currently 3 supported popup/popover styles: classic, inline and wiki.
+Use this property to specify the popup type. There are currently 3 supported popup/popover types: classic, inline and wiki.
 
 ```js
 popup: "classic" | "inline" | "wiki"
@@ -52,7 +52,7 @@ popup: "classic" | "inline" | "wiki"
 ## `bu_ignore`
 
 **Default:** `['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'IMG', 'A'],` <br>
-BibleUp ignores references on certain elements by default. This includes all header and anchor element. Use this option to add other elements you want BibleUp to ignore. This option accepts an array.
+BibleUp ignores references on certain elements by default. This includes all header and anchor element. Use this to add other elements you want BibleUp to ignore. This property accepts an array.
 
 ```js
 // add <blockquote> and <nav> elements to the defaults.
@@ -66,15 +66,15 @@ Add `bu-ignore` class to any specific element you want to ignore in your HTML. B
 <p class="bu-ignore">John 3:16</p>
 ```
 
-::: warning NOTE:
+::: info NOTE:
 - Apart from the defaults, BibleUp internally ignores some other elements like `INPUT`, `TEXTAREA` and `SVG`. These are elements that should be ignored as expected.
-- The descendants of any ignored element will be ignored also. It doesn't matter how deeply nested the element is, all contents inside it will be ignored.
+- The descendants of any ignored element will be ignored also. It doesn't matter how deeply nested the element is, all its content will be ignored.
 :::
 
 ## `bu_allow`
 
 **Default:** `{}` <br>
-Since BibleUp ignores bible references on certain elements by default, this option allows BibleUp to permit listed elements. It overrides `bu-ignore`.
+Since BibleUp ignores Bible references on certain elements by default, this option allows BibleUp to permit listed elements. It overrides `bu-ignore`.
 
 ```js
 // allow references on h4 and h5 tags
@@ -84,7 +84,7 @@ bu_allow: ['H4','H5']
 ## `styles`
 
 **Default:** `undefined` <br>
-BibleUp allows you to customise popover colours, border-radius, box-shadow and font size, making it possible to complete change how the popover looks. This is possible with any of the popup styles and it also overrides the colours set for dark theme.<br>
+BibleUp allows you to customise popover colours, border-radius, box-shadow and font size, making it possible to completely change the popover looks. This is possible with any of the popup types.<br>
 Simply state the colour (HEX, RGBA or value) for the property.
 
 ```js
@@ -102,10 +102,10 @@ styles: {
 
 | Property  | Description |
 |---|---|
-| `primary`  | This targets the main background of the popup |
+| `primary`  | The main background of the popup |
 | `secondary`  | The background of the popup header, containing the reference and version. <br> *(if it exists)* |
 | `tertiary`  | The Bible version background <br> *(if it exists)* |
-| `headerColor`  | This is the color of the header text |
+| `headerColor`  | The font color of the header text |
 | `color`  | This accepts an array with three values:<br>**`color[0]`** - font color of popup text <br><br> **`color[1]`** - font color of the version <br><br> **`color[2]`** - font color of close button *(if it exists)* |
 | `borderRadius`  | The border-radius of the popup, in units (e.g `5px`) |
 | `boxShadow`  | The box-shadow of the popup, in units. |
@@ -113,10 +113,25 @@ styles: {
 
 <br>
 
-::: tip
-- The primary, secondary and tertiary properties apply to CSS `background` and not `background-color`.
-Therefore, you can style using the CSS `linear-gradient()` function.
-- The box-shadow can be styled like a regular CSS `border` (e.g, `0 0 0 2px red`)
+**Some additional note:**
+1. The `primary`, `secondary` and `tertiary` properties apply to CSS `background` and not `background-color`.
+Therefore, you can style using the CSS `linear-gradient()` function or even a background image.
+
+::: details Example
+```js
+styles: {
+  primary: 'linear-gradient(red, yellow)'
+}
+```
 :::
+
+2. The `box-shadow` can be styled like a regular CSS border.
+::: details Example
+```js
+styles: {
+  boxShadow: '0 0 0 2px red'
+}
+```
+::: 
 
 To style popup extensively with custom CSS, check the styling and customisation section.
