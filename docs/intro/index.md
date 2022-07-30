@@ -33,7 +33,7 @@ Use the appropriate issue forum when using the browser extension or WordPress pl
 The form on the homepage should be used for personal feedback/contact.
 
 ## Plugin and Browser Extension
-BibleUp is available as a plugin for WordPress sites and a browser extension that can be used on any website. This makes it much easier to install, configure and use BibleUp on the go.
+BibleUp is available as a plugin for WordPress sites and a browser extension that can be used on any website. This makes it much easier to install, configure and use BibleUp.
 
 - Wordpress plugin
 - Browser Extension

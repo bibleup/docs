@@ -53,16 +53,16 @@ export default {
     sidebar: [
       {
         text: 'Introduction 💡',
-        collapsable: false,
+        collapsible: false,
         items: [
-          {text: 'Introduction', link: '/'}
+          {text: 'Introduction', link: '/intro/'}
         ]
       },
       {
         text: 'Guide 🚀',
-        collapsable: false,
+        collapsible: false,
         items: [
-          {text: 'Installation', link: '/guide'},
+          {text: 'Installation', link: '/guide/'},
           {text: 'Usage', link: '/guide/usage'}, 
           {text: 'Options', link: '/guide/options'}, 
           {text: 'Methods', link: '/guide/methods'}, 
@@ -71,17 +71,17 @@ export default {
       },
       {
         text: 'Customisation 🎨', 
-        collapsable: false,
+        collapsible: false,
         items: [
-          {text: 'Popup Styling', link: '/customisation'}, 
+          {text: 'Popup Styling', link: '/customisation/'}, 
           {text: 'Presets', link: '/customisation/presets'}
         ]
       },
       {
         text: 'Plugins 🛸', 
-        collapsable: false,
+        collapsible: false,
         items: [
-          {text: 'Plugin and Browser Extension', link: '/plugins'}
+          {text: 'Plugin and Browser Extension', link: '/plugins/'}
         ]
       }
     ]
