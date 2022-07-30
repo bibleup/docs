@@ -24,7 +24,6 @@ The plugin will now automatically load the code you added on every page of your 
 
 ::: warning
 - This method includes BibleUp on all pages in your blog and not to articles alone.
-- Read this [guide]() to learn how to install to specific pages.
 :::
 
 You can send us a message through the [contact page](https://bibleup.netlify.app/#contact) to get help. We'll be glad to help out.

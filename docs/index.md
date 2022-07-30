@@ -32,8 +32,8 @@ The form on the homepage should be used for personal feedback/contact.
 ## Plugin and Browser Extension
 BibleUp is available as a plugin for WordPress sites and a browser extension that can be used on any website. This makes it much easier to install, configure and use BibleUp on the go.
 
-- [Wordpress plugin]()
-- [Browser Extension]()
+- Wordpress plugin
+- Browser Extension
 
 For any other information, please refer to the [plugin and extensions](https://bibleup.netlify.app/docs/plugins/) part of this documentation.
 
