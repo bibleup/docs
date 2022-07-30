@@ -1,4 +1,5 @@
-# Styling and Customisation
+# Popup Styling
+
 After calling the `create` method of `BibleUp`, a popup is constructed and appended to the document. This popup is hidden except when a click or mouse event is detected on a BibleUp link.
 
 ## Popup structure

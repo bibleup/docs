@@ -27,6 +27,7 @@ export default {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    siteTitle: 'BibleUp Docs',
     repo: "Bibleup/bibleup",
     docsRepo: 'Bibleup/docs',
     docsBranch: 'docs',
@@ -51,44 +52,36 @@ export default {
     ],
     sidebar: [
       {
-        title: 'Introduction 💡',   // required
-        path: '/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
-        children: [
-          '/',
+        text: 'Introduction 💡',
+        collapsable: false,
+        item: [
+          {text: 'Introduction', link: '/'}
         ]
       },
       {
-        title: 'Guide 🚀',
-        path: '/guide/', 
+        text: 'Guide 🚀',
         collapsable: false,
-        sidebarDepth: 1,
-        children: [
-          '/guide/',
-          '/guide/usage',
-          '/guide/options',
-          '/guide/methods',
-          '/guide/guidelines'
+        item: [
+          {text: 'Installation', link: '/guide/'},
+          {text: 'Usage', link: '/guide/usage'}, 
+          {text: 'Options', link: '/guide/options'}, 
+          {text: 'Methods', link: '/guide/methods'}, 
+          {text: 'Guidelines', link: '/guide/guidelines'}
         ]
       },
       {
-        title: 'Customisation 🎨', 
-        path: '/customisation', 
+        text: 'Customisation 🎨', 
         collapsable: false,
-        sidebarDepth: 1, 
-        children: [
-          '/customisation/',
-          '/customisation/presets'
+        item: [
+          {text: 'Popup Styling', link: '/customisation/'}, 
+          {text: 'Presets', link: '/customisation/presets'}
         ]
       },
       {
-        title: 'Plugins 🛸',  
-        path: '/plugins',
+        text: 'Plugins 🛸', 
         collapsable: false,
-        sidebarDepth: 1, 
-        children: [
-          '/plugins/'
+        item: [
+          {text: 'Plugin and Browser Extension', link: '/plugins/'}
         ]
       }
     ]
