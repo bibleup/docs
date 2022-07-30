@@ -21,20 +21,21 @@ At its core, BibleUp is a blend of an internal API and a display interface.
 You can install BibleUp on virtually all browsers and operating systems. The default build supports an extensive list of browsers. <br>The last 3 major versions of all browsers are fully supported with an extended support for Chromium-based browsers, iOS Safari and Internet Explorer 11. 
 
 ## Try BibleUp Online
-Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup). You can also use the [Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles.
+Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup).<br>
+Use the [Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time.
 
 ## Community
-We love to get feedbacks 😀<br>
-If you have any questions, a feature request, faced with any issue or you simply want to cheer us on, kindly reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions) or use the appropriate issue forum when using the browser extension or WordPress plugin .
+We love feedbacks 😀<br>
+If you have any questions, a feature request, an issue or you simply want to cheer us on, kindly reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions) or use the appropriate issue forum when using the browser extension or WordPress plugin.
 The form on the homepage should be used for personal feedback/contact.
 
 ## Plugin and Browser Extension
-BibleUp is available as a plugin for WordPress sites and a browser extension that can be used on any website. These allows you to easy install, configure and use BibleUp on the go.
+BibleUp is available as a plugin for WordPress sites and a browser extension that can be used on any website. This makes it much easier to install, configure and use BibleUp on the go.
 
 - [Wordpress plugin]()
 - [Browser Extension]()
 
-For any other information, please refer to the ['plugin and extensions'](https://bibleup.netlify.app/docs/plugins/) part of the documentation.
+For any other information, please refer to the [plugin and extensions](https://bibleup.netlify.app/docs/plugins/) part of this documentation.
 
 ## Related Tools
 BibleUp drew inspiration from other awesome related tools and libraries. 

@@ -24,7 +24,7 @@ If you like to use a CDN instead, place the following before the closing `</body
 ```
 
 ## BibleUp Core
-BibleUp comes with the default CSS themes (for the popovers) pre-bundled into the build, providing a single minified code.<br>However, you can decide to include BibleUp Core API and CSS separately.
+BibleUp comes with the default CSS theme (for the popovers) pre-bundled into the build, providing a single minified code.<br>However, you can decide to include BibleUp Core API and CSS separately.
 
 ### NPM:
  
@@ -35,7 +35,7 @@ import BibleUp from '@bibleup/bibleup'
 ```
 
 ### CDN:
-To use the CDN, you can either import the core ESM build or use `<script>`.
+To use the CDN, you can either import the core ESM build:
 
 ``` js
 import BibleUp from 'https://cdn.jsdelivr.net/npm/@bibleup/bibleup@1/+esm'
@@ -59,5 +59,5 @@ Lastly, include the CSS:
 ::: tip NOTE
 - Using the CDN allows you to get code fixes, new features and improvements automatically when BibleUp is updated.
 
-- When using a CDN, We **recommend** that you pin BibleUp to a specific version or the latest major version - as done in the examples above with *@1*. This is to prevent breaking changes when a major version is released.
+- When using a CDN, We **recommend** that you pin BibleUp to a specific version or the latest major version - as done in the examples above *(@bibleup/bibleup@1)*. This is to prevent breaking changes when a major version is released.
 :::

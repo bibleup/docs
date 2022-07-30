@@ -1,13 +1,13 @@
 # Usage
-After installation, create an instance of BibleUp by passing an element and the required `options` object into it. BibleUp exposes a single class object `new BibleUp()`.
+After installation, create an instance of BibleUp by passing an HTML element and the required `options` object. BibleUp exposes a single class object - `new BibleUp()`.
 
 ``` js
 let bibleup = new BibleUp(element, options)
 ```
 
-- **element** - This is the HTML element containing Bible references. This could be the entire `document.body` or a particular element you want BibleUp to search through.
+- **element** - This is an HTML element containing Bible references. This could be the entire `document.body` or a particular element you want BibleUp to search through.
 
-- **options**  - This an object should contain all BibleUp options and configurations. BibleUp options will be discussed in the next section.
+- **options**  - This object should contain all BibleUp options and configurations. BibleUp options will be discussed in the next section.
 
 
 When you are done with configuring `BibleUp`, put it to work by calling the `create()` method
@@ -32,4 +32,4 @@ darkTheme: false
 
 bibleup.create()
 ```
-Check the next section for the full list of all option properties.
+Check the next section for the full list of option properties.

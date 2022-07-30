@@ -11,7 +11,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['base', { href: "https://bibleup.netlify.app"}],
+    //['base', { href: "https://bibleup.netlify.app"}],
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/apple-touch-icon.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicon-32x32.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicon-16x16.png"}],
@@ -100,9 +100,5 @@ module.exports = {
   plugins: [
     "@vuepress/plugin-back-to-top", 
     "@vuepress/plugin-medium-zoom"
-  ],
-  
-  markdown: {
-    lineNumbers: true
-  }
+  ]
 };
