@@ -1,6 +1,5 @@
 [build]
-  base = "docs/"
-  publish = "/.vitepress/dist"
+  publish = "docs/.vitepress/dist"
   
 [[redirects]]
   from = "/*"
