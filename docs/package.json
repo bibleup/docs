@@ -9,11 +9,13 @@
   },
   "repository": "https://github.com/Bibleup/docs/BibleUp Docs",
   "scripts": {
-    "dev": "vuepress dev src --temp .temp",
-    "build": "vuepress build src"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs" 
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3"
+   "vitepress": "^1.0.0-alpha.4",
+   "vue": "^3.2.37"
   }
 }
