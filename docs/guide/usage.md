@@ -1,7 +1,7 @@
 # Usage
 After installation, create an instance of BibleUp by passing an HTML element and the required `options` object. BibleUp exposes a single class object - `new BibleUp()`.
 
-``` js
+```js
 let bibleup = new BibleUp(element, options)
 ```
 
@@ -12,7 +12,7 @@ let bibleup = new BibleUp(element, options)
 
 When you are done with configuring `BibleUp`, put it to work by calling the `create()` method
 
-``` js {2}
+```js {2}
 let bibleup = new BibleUp(element, options);
 bibleup.create();
 ```
@@ -22,7 +22,7 @@ BibleUp will now transform all valid Bible references to links. Hover or click o
 ## Usage Example
 For a minimal example of BibleUp options and usage:
 
-``` js
+```js
 let body = document.body
 let bibleup = new BibleUp(body, {
 version: "KJV", 
