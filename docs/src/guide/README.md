@@ -1,5 +1,5 @@
 # Installation
-BibleUp can be installed through NPM if you use a build tool, if not, it should served through any of your favourite CDN.
+BibleUp can be installed with NPM if you have node installed on your system and you use a build tool. If not, it can be served from a CDN.
 
 ### NPM
 
@@ -16,54 +16,48 @@ import "@bibleup/bibleup/css"
 
 ### CDN
 
-Using `<srcipt>` in your HTML:
+If you like to use a CDN instead, place the following before the closing `</body>` tag in your HTML:
 
 ``` html
 <!-- jsdelivr -->
-<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup"></script>
-
-<!-- or, unpkg -->
-<script src="https://unpkg.com/@bibleup/bibleup"></script>
+<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup@1"></script>
 ```
 
 ## BibleUp Core
-BibleUp comes with the core CSS themes included into the build by default, providing a single minified build.<br>However, you can decide to include BibleUp Core API and CSS separately.
+BibleUp comes with the default CSS themes (for the popovers) pre-bundled into the build, providing a single minified code.<br>However, you can decide to include BibleUp Core API and CSS separately.
 
 ### NPM:
  
-In your javascript file, after `npm install`:
+After `npm install`:
 
 ``` js
-import BibleUp from '@bibleup/bibleup/core'
+import BibleUp from '@bibleup/bibleup'
 ```
 
 ### CDN:
-Using your favourite CDN, You can either import the core ESM build or use the `<script>`.
-<br>
-In your Javascript file: 
+To use the CDN, you can either import the core ESM build or use `<script>`.
 
 ``` js
-import BibleUp from 'https://cdn.jsdelivr.net/npm/@bibleup/bibleup/+esm'
+import BibleUp from 'https://cdn.jsdelivr.net/npm/@bibleup/bibleup@1/+esm'
 ```
 
 
-or using `<script>` in your HTML:
+or use `<script>` in your HTML:
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup/dist/umd/bibleup-core.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/@bibleup/bibleup@1/dist/umd/bibleup-core.min.js "></script>
 ```
 
 ### CSS
 
-Then include the CSS using `<link>`:
+Lastly, include the CSS:
 
 ``` html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bibleup/bibleup/dist/css/bibleup.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bibleup/bibleup@1/dist/css/bibleup.css">
 ```
 
 ::: tip NOTE
-- We **recommend** using the single minified build to start up BibleUp when working without a build tool (webpack, vite, next/nuxt) and style through the config options.
-- You are free to use other CDN registry apart from the one used in the examples. For full distribution files check [Jsdeliver](https://www.jsdelivr.com/package/npm/@bibleup/bibleup) or [unpkg](https://unpkg.com/browse/@bibleup/bibleup/)
-- We **recommend** that you pin BibleUp to a specific version or major versions when used in production and through a cdn.
-- 
+- Using the CDN allows you to get code fixes, new features and improvements automatically when BibleUp is updated.
+
+- When using a CDN, We **recommend** that you pin BibleUp to a specific version or the latest major version - as done in the examples above with *@1*. This is to prevent breaking changes when a major version is released.
 :::

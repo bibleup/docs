@@ -51,7 +51,7 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: 'Introduction 📖',   // required
+        title: 'Introduction 💡',   // required
         path: '/',      // optional, link of the title, which should be an absolute path and must exist
         collapsable: false, // optional, defaults to true
         sidebarDepth: 1,    // optional, defaults to 1
@@ -68,6 +68,7 @@ module.exports = {
           '/guide/',
           '/guide/usage',
           '/guide/options',
+          '/guide/methods',
           '/guide/guidelines'
         ]
       },
@@ -96,5 +97,12 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+  plugins: [
+    "@vuepress/plugin-back-to-top", 
+    "@vuepress/plugin-medium-zoom"
+  ],
+  
+  markdown: {
+    lineNumbers: true
+  }
 };
