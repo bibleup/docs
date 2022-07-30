@@ -36,7 +36,7 @@ A boolean to toggle dark theme on popup. Dark theme can be toggled on all popup 
 darkTheme: true | false
 ```
 
-::: warn NOTE:
+::: warning NOTE:
 Dark theme on popovers will always get overridden by some explicit `styles` property if active - `primary`, `secondary` and `tertiary`. To use the default dark theme, make sure these properties are set to `false` or not included.
 :::
 
@@ -66,7 +66,7 @@ Add `bu-ignore` class to any specific element you want to ignore in your HTML. B
 <p class="bu-ignore">John 3:16</p>
 ```
 
-::: warn NOTE:
+::: warning NOTE:
 - Apart from the defaults, BibleUp internally ignores some other elements like `INPUT`, `TEXTAREA` and `SVG`. These are elements that should be ignored as expected.
 - The descendants of any ignored element will be ignored also. It doesn't matter how deeply nested the element is, all contents inside it will be ignored.
 :::

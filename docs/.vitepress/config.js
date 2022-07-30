@@ -62,7 +62,7 @@ export default {
         text: 'Guide 🚀',
         collapsable: false,
         items: [
-          {text: 'Installation', link: '/guide/'},
+          {text: 'Installation', link: '/guide'},
           {text: 'Usage', link: '/guide/usage'}, 
           {text: 'Options', link: '/guide/options'}, 
           {text: 'Methods', link: '/guide/methods'}, 
@@ -73,7 +73,7 @@ export default {
         text: 'Customisation 🎨', 
         collapsable: false,
         items: [
-          {text: 'Popup Styling', link: '/customisation/'}, 
+          {text: 'Popup Styling', link: '/customisation'}, 
           {text: 'Presets', link: '/customisation/presets'}
         ]
       },
@@ -81,7 +81,7 @@ export default {
         text: 'Plugins 🛸', 
         collapsable: false,
         items: [
-          {text: 'Plugin and Browser Extension', link: '/plugins/'}
+          {text: 'Plugin and Browser Extension', link: '/plugins'}
         ]
       }
     ]

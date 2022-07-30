@@ -18,15 +18,18 @@ BibleUp does this by searching through the entire page (or specific sections) fo
 At its core, BibleUp is a blend of an internal API and a display interface.
 
 ## Browser Support
-You can install BibleUp on virtually all browsers and operating systems. The default build supports an extensive list of browsers. <br>The last 3 major versions of all browsers are fully supported with an extended support for Chromium-based browsers, iOS Safari and Internet Explorer 11. 
+BibleUp supports an extensive list of browsers and operating systems. <br>
+The last 3 major versions of all browsers are fully supported with an extended support for Chromium-based browsers, iOS Safari and Internet Explorer 11. 
 
 ## Try BibleUp Online
-Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup).<br>
-Use the [Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time.
+1. Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup).
+2. Use the [Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time.
 
 ## Community
 We love feedbacks 😀<br>
-If you have any questions, a feature request, an issue or you simply want to cheer us on, kindly reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions) or use the appropriate issue forum when using the browser extension or WordPress plugin.
+If you have any questions, a feature request, an issue or you simply want to cheer us on, kindly reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions)
+<br><br>
+Use the appropriate issue forum when using the browser extension or WordPress plugin.
 The form on the homepage should be used for personal feedback/contact.
 
 ## Plugin and Browser Extension
