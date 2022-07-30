@@ -1,7 +1,4 @@
-[build]
-  base = "docs/"
-  publish = ".vitepress/dist"
-  
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
