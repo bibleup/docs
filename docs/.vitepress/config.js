@@ -54,14 +54,14 @@ export default {
       {
         text: 'Introduction 💡',
         collapsable: false,
-        item: [
+        items: [
           {text: 'Introduction', link: '/'}
         ]
       },
       {
         text: 'Guide 🚀',
         collapsable: false,
-        item: [
+        items: [
           {text: 'Installation', link: '/guide/'},
           {text: 'Usage', link: '/guide/usage'}, 
           {text: 'Options', link: '/guide/options'}, 
@@ -72,7 +72,7 @@ export default {
       {
         text: 'Customisation 🎨', 
         collapsable: false,
-        item: [
+        items: [
           {text: 'Popup Styling', link: '/customisation/'}, 
           {text: 'Presets', link: '/customisation/presets'}
         ]
@@ -80,7 +80,7 @@ export default {
       {
         text: 'Plugins 🛸', 
         collapsable: false,
-        item: [
+        items: [
           {text: 'Plugin and Browser Extension', link: '/plugins/'}
         ]
       }
