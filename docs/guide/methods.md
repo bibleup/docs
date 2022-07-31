@@ -27,8 +27,10 @@ b.refresh(element, options)
 2. `options` *(optional)* - a valid BibleUp config object. This won't override the entire `new BibleUp()` config object but only the part that was modified. If not specified, the instance config will remain the same.
 
 
-::: info NOTE
-1. When a config object is passed to `refresh()`, only the property that was modified will be applied by BibleUp. For example, changing only `version` prop won't affect `styles` and changing `primary` won't also affect other properties inside `styles`.
+::: tip NOTE
+When a config object is passed to `refresh()`, only the property that was modified will be applied by BibleUp. 
+<br>
+For example, changing only `version` prop won't affect `styles` and changing `primary` won't also affect other properties inside `styles`.
 
 ::: details Code Example
 ```js
@@ -46,8 +48,8 @@ article.refresh({
 ```
 :::
 
-2. You can only call the `refresh()` method after previously calling `create()` on a BibleUp instance. Trying to refresh without previously *activating* BibleUp won't work as expected.
-
+::: warning NOTE
+You can only call the `refresh()` method after previously calling `create()` on a BibleUp instance. Trying to refresh without previously *activating* BibleUp won't work as expected.
 :::
 
 ## `destroy()`

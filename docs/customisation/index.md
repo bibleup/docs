@@ -68,7 +68,7 @@ BibleUp adds `bu-link` class to all reference links that trigger the popup. <br>
 ```
 
 ::: tip
-`cite` element is usually styled in italics by most browser. You can reset this using the class selector.
+`cite` element is usually styled in italics by most browser. However, this has been changed to the default for BibleUp links.
 :::
 
 ## Credit BibleUp

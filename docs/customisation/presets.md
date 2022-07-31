@@ -1,5 +1,5 @@
 # Style Presets
-The demo page contains some presets. These presets are documented below. You can also use these code examples to test out how the `styles` property in the config option works.
+Use the following code examples to test out how the `styles` property in the config option works. These presets are taken from the BibleUp Editor.
 
 ## preset 1
 ```js
@@ -36,3 +36,7 @@ let bibleup = new BibleUp(body, {
 
 The `styles` config can be used to sufficiently style BibleUp popovers without toching even touching CSS.<br><br>
 If you have a beautiful preset that you would like to share with the community, consider submitting an issue on Github and we would gladly feature it on our awesome list 😎
+
+## Editor Presets
+[BibleUp Editor](https://bibleup.netlify.app/demo) contains some wonderful presets you can use. You can also import and export styles.
+

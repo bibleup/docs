@@ -24,7 +24,7 @@ The last 3 major versions of all browsers are fully supported with an extended s
 
 ## Try BibleUp Online
 1. Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup).
-2. Use the [Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time.
+2. Use the [BibleUp Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time. You can also export styles to the WordPress plugin and browser extension.
 
 ## Community
 We love feedbacks 😀<br>

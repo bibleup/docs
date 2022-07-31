@@ -39,7 +39,7 @@ export default {
     nav: [
       {
         text: "Introduction",
-        link: "/intro/",
+        link: "/",
       },
       {
         text: "Home",
@@ -55,7 +55,7 @@ export default {
       }, 
       {
         text: "Community",
-        link: "https://github.com/bibleup/bibleup/community"
+        link: "https://github.com/bibleup/bibleup/discussions"
       }
     ],
     sidebar: [
@@ -63,7 +63,7 @@ export default {
         text: 'Introduction 💡',
         collapsible: false,
         items: [
-          {text: 'Introduction', link: '/intro/'}
+          {text: 'Introduction', link: '/'}
         ]
       },
       {
