@@ -47,13 +47,16 @@ article.refresh({
 :::
 
 2. You can only call the `refresh()` method after previously calling `create()` on a BibleUp instance. Trying to refresh without previously *activating* BibleUp won't work as expected.
+
 :::
 
 ## `destroy()`
-This method will destroy the popover and also remove all Bible reference tagging. This method accepts no parameters and does not return any value.
+This method will remove all Bible reference tagging and destroy the popover. It accepts no parameter and does not return any value.
 
 ::: warning 
-warning
+This method can't be undone. That is, calling `create()` after destruction **won't work as expected** and tagging won't also work properly.
+<br><br>
+This is a known issue and might be fixed on future releases. Use `refresh()` if you simply want to change configuration.
 :::
 
 

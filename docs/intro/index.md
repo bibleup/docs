@@ -4,6 +4,7 @@ next: /guide/
 ---
 
 # Introduction
+[[toc]]
 
 ## What is BibleUp? 
 BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks. Hovering on these links will make the corresponding Bible text accessible via a feature-rich and flexible popover.<br>

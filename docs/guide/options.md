@@ -37,7 +37,9 @@ darkTheme: true | false
 ```
 
 ::: info NOTE:
-Dark theme on popovers can get overridden by some explicit `styles` property - `primary`, `secondary` and `tertiary`. To prevent this, make sure these properties are set to `false` or not included.
+Dark theme on popovers can get overridden by some explicit `styles` property - `primary`, `secondary` and `tertiary`. 
+<br><br>
+To prevent this, make sure these properties are set to `false` or not included.
 :::
 
 ## `popup`
@@ -113,9 +115,9 @@ styles: {
 
 <br>
 
-**Some additional note:**
+**Some additional notes:**
 1. The `primary`, `secondary` and `tertiary` properties apply to CSS `background` and not `background-color`.
-Therefore, you can style using the CSS `linear-gradient()` function or even a background image.
+Therefore, you can style using the CSS linear-gradient function or even a background image.
 
 ::: details Example
 ```js
@@ -125,7 +127,7 @@ styles: {
 ```
 :::
 
-2. The `box-shadow` can be styled like a regular CSS border.
+2. `boxShadow` can be styled like a regular CSS border.
 ::: details Example
 ```js
 styles: {

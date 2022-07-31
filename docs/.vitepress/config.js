@@ -42,13 +42,21 @@ export default {
         link: "/intro/",
       },
       {
-        text: "Guide",
-        link: "/guide/",
-      },
-      {
         text: "Home",
         link: "https://bibleup.netlify.app",
       },
+      {
+        text: "Code Playground",
+        link: "https://stackblitz.com/edit/bibleup"
+      }, 
+      {
+        text: "Github", 
+        link: "https://github.com/bibleup/bibleup"
+      }, 
+      {
+        text: "Community",
+        link: "https://github.com/bibleup/bibleup/community"
+      }
     ],
     sidebar: [
       {
@@ -93,5 +101,9 @@ export default {
   plugins: [
     "@vuepress/plugin-back-to-top", 
     "@vuepress/plugin-medium-zoom"
-  ]
+  ], 
+  
+  markdown: {
+    toc: { level: [1, 2] }
+  }
 };
