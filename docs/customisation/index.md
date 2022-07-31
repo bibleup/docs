@@ -72,4 +72,4 @@ BibleUp adds `bu-link` class to all reference links that trigger the popup. <br>
 :::
 
 ## Credit BibleUp
-If you enjoyed using BibleUp, we plead that you leave the popup footer (containing `BibleUp 📖💡`) untampared with or without obstruction. The text doesn't link to our website or any affiliate website, it only serves as a little promotion for this tool.
+If you enjoyed using BibleUp, we plead that you leave the popup footer (containing `BibleUp 📖💡`) untampared with or without obstruction. The text does not link to our website or any affiliate website, it only serves as a little promotion for this tool.

@@ -86,10 +86,16 @@ export default {
         ]
       },
       {
-        text: 'Plugins 🛸', 
+        text: 'Plugin and Extensions 🛸',
         collapsible: false,
         items: [
-          {text: 'Plugin and Browser Extension', link: '/plugins/'}
+          {text: 'WordPress Plugin',
+          link: '/plugins/wordpress-plugin'
+          },
+          {
+            text: 'Browser Extension',
+            link: '/plugins/browser-extension'
+          }
         ]
       }
     ]
