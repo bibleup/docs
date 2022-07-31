@@ -1,12 +1,12 @@
 # BibleUp WordPress Plugin
-BibleUp is available as a plugin for WordPress-powered sites. It is hosted on the WordPress plugin directory and available for installation.<br>
+BibleUp is available as a plugin for WordPress-powered sites. It is hosted on the WordPress plugin directory and available for installation.<br><br>
 The plugin is dependent on BibleUp source files and releases are tailored accordingly.
 
 ## Installation
-You can install the plugin directly on the directory from your WordPress dashboard. Check the guide on the plugin page for ways to install
+You can install the plugin directly from your WordPress dashboard. Check the guide on the plugin page for ways to install.
 
 ## Leave a review
-We appreciate your feedbacks 😀
+We love feedbacks 😀<br>
 Don't hesitate to leave a review for us. It will allow more users find BibleUp and will also help us improve the project.
 
 ## Issues
