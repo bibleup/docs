@@ -48,7 +48,7 @@ article.refresh({
 ```
 :::
 
-::: warning NOTE
+::: warning
 You can only call the `refresh()` method after previously calling `create()` on a BibleUp instance. Trying to refresh without previously *activating* BibleUp won't work as expected.
 :::
 

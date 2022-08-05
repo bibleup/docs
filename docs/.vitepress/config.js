@@ -36,11 +36,15 @@ export default {
     editLinkText: "Edit this page on Github",
     lastUpdated: false,
     smoothScroll: true,
+    editLink: {
+      pattern: 'https://github.com/bibleup/docs/tree/docs/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present BibleUp'
+    },
     nav: [
-      {
-        text: "Introduction",
-        link: "/",
-      },
       {
         text: "Home",
         link: "https://bibleup.netlify.app",
@@ -48,6 +52,10 @@ export default {
       {
         text: "Code Playground",
         link: "https://stackblitz.com/edit/bibleup"
+      },
+      {
+        text: "BibleUp Editor",
+        link: "https://bibleup.netlify.app/demo#editor"
       }, 
       {
         text: "Github", 
@@ -63,7 +71,7 @@ export default {
         text: 'Introduction 💡',
         collapsible: false,
         items: [
-          {text: 'Introduction', link: '/'}
+          {text: 'What is BibleUp?', link: '/'}
         ]
       },
       {

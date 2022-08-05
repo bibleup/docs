@@ -1,5 +1,5 @@
 # What's Next?
-The following points might not be in sync with opened issues/feature request but have been considered to made available in future releases.
+The following points might not be in sync with opened issues/feature request but have been considered to be made available in future releases.
 
 - More Bible versions
 - Change of versions on popup

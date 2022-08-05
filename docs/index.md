@@ -3,37 +3,36 @@ prev: false
 next: /guide/
 ---
 
-# Introduction
 [[toc]]
 
-## What is BibleUp? 
+# What is BibleUp? 
 BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks. Hovering on these links will make the corresponding Bible text accessible via a feature-rich and flexible popover.<br>
 BibleUp removes the need of switching to a different tab or app to look up plain Bible references on a webpage. It makes the text accessible to readers on the go.
 
 BibleUp supports customisation of links, popovers and versions - all done through the API options.
 
-## How it works
+# How it works
 BibleUp searches for all valid Bible references on a page and transforms each one to a link. Hovering or clicking on these links will make the corresponding Bible text accessible via a feature-rich and flexible popover.
 <br><br>
 BibleUp does this by searching through the entire page (or specific sections) for valid Bible references. It then transforms these references to an `<a>` element, intercepting clicks and hover events and then fetching the Bible text via the internal API. The text is displayed on a flexible and highly customisable popover.
 At its core, BibleUp is a blend of an internal API and a display interface.
 
-## Browser Support
+# Browser Support
 BibleUp supports an extensive list of browsers and operating systems. <br>
 The last 3 major versions of all browsers are fully supported with an extended support for Chromium-based browsers, iOS Safari and Internet Explorer 11. 
 
-## Try BibleUp Online
+# Try BibleUp Online
 1. Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup).
 2. Use the [BibleUp Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time. You can also export styles to the WordPress plugin and browser extension.
 
-## Community
+# Community
 We love feedbacks 😀<br>
 If you have any questions, a feature request, an issue or you simply want to cheer us on, kindly reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions)
 <br><br>
 Use the appropriate issue forum when using the browser extension or WordPress plugin.
 The form on the homepage should be used for personal feedback/contact.
 
-## Plugin and Browser Extension
+# Plugin and Browser Extension
 BibleUp is available as a plugin for WordPress sites and a browser extension that can be used on any website. This makes it much easier to install, configure and use BibleUp.
 
 - Wordpress plugin
@@ -41,7 +40,7 @@ BibleUp is available as a plugin for WordPress sites and a browser extension tha
 
 For further details, please refer to the [plugin and extensions](https://bibleup.netlify.app/docs/plugins/) part of this documentation.
 
-## Related Tools
+# Related Tools
 BibleUp drew inspiration from other awesome tools and libraries. 
 - [FaithLife Reftagger](https://faithlife.com/products/reftagger)
 - [ESV Crossreference Tool](https://www.esv.org/resources/esv-crossreference-tool/)
