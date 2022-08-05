@@ -39,13 +39,14 @@ BibleUp is available as a plugin for WordPress sites and a browser extension tha
 - Wordpress plugin
 - Browser Extension
 
-For any other information, please refer to the [plugin and extensions](https://bibleup.netlify.app/docs/plugins/) part of this documentation.
+For further details, please refer to the [plugin and extensions](https://bibleup.netlify.app/docs/plugins/) part of this documentation.
 
 ## Related Tools
-BibleUp drew inspiration from other awesome related tools and libraries. 
+BibleUp drew inspiration from other awesome tools and libraries. 
 - [FaithLife Reftagger](https://faithlife.com/products/reftagger)
 - [ESV Crossreference Tool](https://www.esv.org/resources/esv-crossreference-tool/)
 - [Blue Letter Bible (BLB) ScriptTagger](https://www.blueletterbible.org/webtools/blb_scripttagger.cfm)
 
 These tools are related in core features and they work great! <br>
-BibleUp however leverages on community development and has its pros on extensibility and flexibility.
+BibleUp is similar to FaithLife Reftagger and other Bible Reference tagging tools.
+BibleUp, however, leverages on community development and has its pros on extensibility and flexibility.

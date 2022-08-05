@@ -73,7 +73,8 @@ export default {
           {text: 'Installation', link: '/guide/'},
           {text: 'Usage', link: '/guide/usage'}, 
           {text: 'Options', link: '/guide/options'}, 
-          {text: 'Methods', link: '/guide/methods'}, 
+          {text: 'Methods', link: '/guide/methods'},
+          {text: 'Local Development', link: '/guide/development'}, 
           {text: 'Guidelines', link: '/guide/guidelines'}
         ]
       },
@@ -95,6 +96,19 @@ export default {
           {
             text: 'Browser Extension',
             link: '/plugins/browser-extension'
+          }
+        ]
+      },
+      {
+        text: 'Extra Topics 🧤', 
+        items: [
+          {
+            text: 'Contribute',
+            link: '/extra/contribute'
+          },
+          {
+            text: 'Roadmap',
+            link: '/extra/roadmap'
           }
         ]
       }

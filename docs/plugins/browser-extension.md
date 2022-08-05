@@ -1,8 +1,8 @@
 # BibleUp Browser Extension
-There is an official BibleUp browser extension for Chromium-based browsers that can be used on any website. The extension is available for installation on the Chrome store. <br><br> We only support Chromium-based browsers (Chrome, Edge, Opera, Brave, Valvadi, e.t.c) for the meantime. The extension will be made compatible with Mozilla Firefox in future releases.
+There is an official BibleUp browser extension for Chromium-based browsers that can be used on any website. The extension is available for installation on the Chrome store. <br><br> We only support Chromium-based browsers (Chrome, Edge, Opera, Brave, Valvadi, e.t.c). The extension will be made compatible with Mozilla Firefox in future releases.
 
 ## Installation
-Follow these steps to install the BibleUp extension.
+Follow these steps to install BibleUp extension.
 1. Visit the extension Web page.
 2. Click the **Add to Chrome** button.
 3. In the confirmation box, approve the requested permissions and click **Add Extension**
@@ -21,13 +21,13 @@ To configure the options, simply click on the extension icon to open the options
 <br><br>
 
 ### Activate BibleUp
-Click on the **Activate BibleUp** button to activate BibleUp then reload the current webpage to see BibleUp in action.<br><br> BibleUp automatically keeps working even when you navigate to a different webpage so you only have to reload the webpage once after activation.
+Click on **Activate BibleUp** button to activate BibleUp then reload the current webpage to see BibleUp in action.<br><br> BibleUp automatically keeps working even when you navigate to a different webpage so you only have to reload the webpage once after activation.
 
 ### De-activate BibleUp
-Click on the **Deactivate BibleUp** button to stop BibleUp from running. When you reload the webpage, the reference tagging should be gone. BibleUp will also stop running automatically when you load to a different webpage.
+Click on **Deactivate BibleUp** button to stop BibleUp from running. The reference tagging should be gone when you reload the page. BibleUp will also stop running automatically when you load a different webpage.
 
 ### Refresh BibleUp
-BibleUp works correctly on most websites and even single-page applications (SPA) that constantly refreshes content without a browser reload (like Gmail, Facebook, Reddit e.t.c). <br><br>However if you need to reload BibleUp on your current webpage without doing a full browser refresh, simply click the **reload** icon near the activate button. This is also useful if you change BibleUp config options and want it to immediately apply to tagged references.
+BibleUp works correctly on most websites and even on single-page applications (SPA) that constantly refreshes content without a browser reload (like Gmail, Facebook, Reddit e.t.c). <br><br> However, to reload BibleUp on your current webpage without having to do a full browser refresh, simply click the **reload** icon near the activate button. This is useful if you change BibleUp options and want it to immediately apply to tagged references.
 
 ## Leave a review
 We love feedbacks 😀<br>

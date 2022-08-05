@@ -1,5 +1,11 @@
+
 # Installation
-BibleUp can be installed with NPM if you have node installed on your system and you use a build tool. If not, it can be served from a CDN.
+
+::: note
+The following guide is for development purposes. The installation guide for the WordPress plugin and browser extension guide can be found at other sections of this documentation.
+::: 
+
+BibleUp can be installed with NPM if you have node installed on your system and if you use a build tool. If not, it should be served from a CDN.
 
 ### NPM
 
