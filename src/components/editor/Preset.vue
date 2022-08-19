@@ -2,19 +2,41 @@
   <section id="preset">
     <h3>Presets</h3>
     <div class="wrapper">
-      <div class="box active"><p>Preset #1</p></div>
-      <div class="box"><p>Preset #2</p></div>
-      <div class="box"><p>Github style</p></div>
-      <div class="box"><p>Stackoverflow style</p></div>
-      <div class="box"><p>Elegant</p></div>
-      <div class="box"><p>Minimal and outer border</p></div>
+      <div class="box" :class="{ active: isPreset === 'preset 1' }" @click="setActive('preset 1')">
+        <p>Preset #1</p>
+      </div>
+      <div class="box" :class="{ active: isPreset === 'preset 2' }" @click="setActive('preset 2')">
+        <p>Preset #2</p>
+      </div>
+      <div class="box" :class="{ active: isPreset === 'github' }" @click="setActive('github')">
+        <p>Github style</p>
+      </div>
+      <div class="box" :class="{ active: isPreset === 'stackoverflow' }" @click="setActive('stackoverflow')">
+        <p>Stackoverflow style</p>
+      </div>
+      <div class="box"><p>Elegant (coming soon)</p></div>
+      <div class="box"><p>Minimalist (coming soon)</p></div>
     </div>
   </section>
 </template>
 
+<script setup>
+import { isPreset, updateState } from '@/js/store';
+import { preset } from '@/js/utility'
+
+let setActive = (val) => {
+  if (isPreset.value === val) {
+    updateState('preset', false);
+  } else {
+    updateState('preset', val);
+    updateState('buOption', preset[val])
+  }
+};
+</script>
+
 <style lang="less" scoped>
 @import '@/css/theme.less';
-@import "@/css/editor.less";
+@import '@/css/editor.less';
 
 #preset {
   width: 100%;
@@ -51,8 +73,8 @@
     }
 
     &.active {
-        background: @blue;
-        color: white;
+      background: @blue;
+      color: white;
     }
   }
 }

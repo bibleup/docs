@@ -18,12 +18,11 @@
       <div id="btn-group">
         <div class="wrapper">
           <button id="apply-btn" @click="toggleState('editor')">Open Editor</button>
-          <button>Activate BibleUp</button>
+          <button @click="activate()">Activate BibleUp</button>
         </div>
       </div>
 
-      <ArticlePost :key="articleKey" :popup="popup" :version="version" :theme="theme" :genKey="genKey" :preset="preset">
-      </ArticlePost>
+      <ArticlePost :active="isActive" ref='article'></ArticlePost>
     </section>
 
     <MainEditor v-show="isEditor"></MainEditor>
@@ -31,16 +30,16 @@
 </template>
 
 <script setup>
-import ArticlePost from "@/components/ArticlePost.vue";
-import { computed, ref, onUnmounted, watch } from "vue"
+import ArticlePost from "@/components/ArticlePost.vue"
+import { computed, ref, onUnmounted, watch, onMounted } from "vue"
 import MainEditor from "@/components/MainEditor.vue"
-import { isEditor, toggleState } from "@/js/store"
+import { isEditor, toggleState, getBuOption } from "@/js/store"
+let isActive = ref(false)
 
-let articleKey = ref(0);
-const version = ref("kjv");
-const popup = ref("classic");
-const theme = ref("dark");
-const preset = ref("none");
+onMounted(() => {
+  /* let bu = new BibleUp(document.body, getBuOption)
+  bu.create() */
+})
 
 onUnmounted(() => {
   if (document.getElementById("bu-popup"))
@@ -55,14 +54,8 @@ watch(isEditor, (newVal) => {
   }
 })
 
-let genKey = computed(() => {
-  return "b" + articleKey.value;
-});
-
-function updateArticle() {
-  articleKey.value++;
-  let p = document.getElementById("bu-popup");
-  p.remove();
+let activate = () => {
+  isActive.value = !isActive.value
 }
 </script>
 

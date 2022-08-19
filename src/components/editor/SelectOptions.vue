@@ -14,8 +14,8 @@
       <div class="option-box">
         <label for="type">Popup Type: </label>
         <div>
-          <select name="type" id="type">
-            <option value="classic" selected>classic</option>
+          <select name="type" id="type" v-model="option.popup">
+            <option value="classic">classic</option>
             <option value="inline">inline</option>
             <option value="wiki">wiki</option>
           </select>
@@ -25,8 +25,8 @@
       <div class="option-box">
         <label for="version">Version: </label>
         <div>
-          <select name="version" id="version">
-            <option value="KJV" selected>King James Version (KJV)</option>
+          <select name="version" id="version" v-model="option.version">
+            <option value="KJV">King James Version (KJV)</option>
             <option value="ASV">American Standard Version (ASV)</option>
             <option value="LSV">Literal Standard Version (LSV)</option>
             <option value="WEB">World English Bible (WEB)</option>
@@ -39,9 +39,9 @@
         <div>
           <div class="wrap">
             <label for="dark-true">True</label>
-            <input id="dark-true" name="darkTheme" type="radio" value="true" checked>
+            <input id="dark-true" name="darkTheme" type="radio" value="true" v-model="option.darkTheme">
             <label for="dark-false">False</label>
-            <input id="dark-false" name="darkTheme" type="radio" value="false">
+            <input id="dark-false" name="darkTheme" type="radio" value="false" v-model="option.darkTheme">
           </div>
           <p>
             Enable dark theme on popup (this can be overridden by other background
@@ -60,70 +60,70 @@
         <div class="option-box">
           <label>Primary: </label>
           <div>
-            <input id="primary" type="text" maxlength="30" value="false">
+            <input id="primary" type="text" maxlength="30" v-model="option.primary">
             <p>Set color for overall popup background</p>
           </div>
         </div>
         <div class="option-box">
           <label>Secondary: </label>
           <div>
-            <input id="secondary" type="text" maxlength="30" value="false">
+            <input id="secondary" type="text" maxlength="30" v-model="option.secondary">
             <p>Set background color for popup header (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Tertiary: </label>
           <div>
-            <input id="tertiary" type="text" maxlength="30" value="false">
+            <input id="tertiary" type="text" maxlength="30" v-model="option.tertiary">
             <p>Set background color for popup version (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Header Color: </label>
           <div>
-            <input id="headerColor" type="text" maxlength="30" value="false">
+            <input id="headerColor" type="text" maxlength="30" v-model="option.headerColor">
             <p>Font color for popup header (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Color: </label>
           <div>
-            <input id="fontColor" type="text" maxlength="30" value="false">
+            <input id="fontColor" type="text" maxlength="30" v-model="option.fontColor">
             <p>The default font color for the popup</p>
           </div>
         </div>
         <div class="option-box">
           <label>Version Color: </label>
           <div>
-            <input id="versionColor" type="text" maxlength="30" value="false">
+            <input id="versionColor" type="text" maxlength="30" v-model="option.versionColor">
             <p>Font color for popup version (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Close Color: </label>
           <div>
-            <input id="closeColor" type="text" maxlength="30" value="false">
+            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor">
             <p>Set color for close button (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Border Radius: </label>
           <div>
-            <input id="borderRadius" type="text" maxlength="30" value="false">
+            <input id="borderRadius" type="text" maxlength="30" v-model="option.borderRadius">
             <p>Set border radius for popup (in units).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Box Shadow: </label>
           <div>
-            <input id="boxShadow" type="text" maxlength="30" value="false">
+            <input id="boxShadow" type="text" maxlength="30" v-model="option.boxShadow">
             <p>Set a drop shadow for the popup (using CSS syntax).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Size: </label>
           <div>
-            <input id="fontSize" type="text" maxlength="200" value="false">
+            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize">
             <p>Set font size for all popup (in units)</p>
           </div>
         </div>
@@ -139,7 +139,7 @@
         <div class="option-box">
           <label>Ignore Specific HTML Elements: </label>
           <div>
-            <input id="ignore" type="text" maxlength="200" value="false">
+            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore">
             <p>
               BibleUp won't tag element listed here.<br>
               Seperate these elements using a comma and put inside a square
@@ -150,7 +150,7 @@
         <div class="option-box">
           <label>Allow Specific HTML Elements: </label>
           <div>
-            <input id="allow" type="text" maxlength="200" value="false">
+            <input id="allow" type="text" maxlength="200" v-model="option.bu_allow">
             <p>
               Override the default elements ignored by BibleUp by placing them
               here.<br>
@@ -163,6 +163,13 @@
     </details>
   </div>
 </template>
+
+<script setup>
+import {getOptions} from "@/js/store"
+import {ref} from "vue"
+
+let option = ref(getOptions)
+</script>
 
 
 
@@ -181,7 +188,7 @@
 .option-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
 
   @media @xl {
     grid-template-columns: 1fr 1fr;

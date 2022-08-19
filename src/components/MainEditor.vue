@@ -13,19 +13,19 @@
           <button id="split-btn" :class="{ active: isSplit }" @click="toggleState('split')">
             <i class="fi fi-rr-eye center"></i>
           </button>
-          <button :class="{ active: ifScreen('preview') }" @click="updateScreen('preview')">Preview</button>
-          <button :class="{ active: ifScreen('select') }" @click="updateScreen('select')">Select Options</button>
-          <button :class="{ active: ifScreen('import') }" @click="updateScreen('import')">Import</button>
-          <button :class="{ active: ifScreen('preset') }" @click="updateScreen('preset')">Presets</button>
-          <button :class="{ active: ifScreen('copy') }" @click="updateScreen('copy')">Copy</button>
+          <button :class="{ active: getScreen === 'preview' }" @click="updateScreen('preview')">Preview</button>
+          <button :class="{ active: getScreen === 'select' }" @click="updateScreen('select')">Select Options</button>
+          <button :class="{ active: getScreen === 'import' }" @click="updateScreen('import')">Import</button>
+          <button :class="{ active: getScreen === 'preset' }" @click="updateScreen('preset')">Presets</button>
+          <button :class="{ active: getScreen === 'copy' }" @click="updateScreen('copy')">Copy</button>
         </div>
 
         <div id="split-screen" :class="{ active: isSplit }">
-          <Preview class="screen" v-show="isSplit || ifScreen('preview')"></Preview>
-          <SelectOptions class="screen" v-show="ifScreen('select')"></SelectOptions>
-          <Import class="screen" v-show="ifScreen('import')"></Import>
-          <Preset class="screen" v-show="ifScreen('preset')"></Preset>
-          <Copy class="screen" v-show="ifScreen('copy')"></Copy>
+          <Preview class="screen" v-show="isSplit || getScreen === 'preview'"></Preview>
+          <SelectOptions class="screen" v-show="getScreen === 'select'"></SelectOptions>
+          <Import class="screen" v-show="getScreen === 'import'"></Import>
+          <Preset class="screen" v-show="getScreen === 'preset'"></Preset>
+          <Copy class="screen" v-show="getScreen === 'copy'"></Copy>
         </div>
       </div>
 
@@ -35,26 +35,11 @@
 
 <script setup>
 import SelectOptions from "@/components/editor/SelectOptions.vue"
-import {
-  updateScreen,
-  updateOption,
-  toggleState,
-  isSplit,
-  getScreen,
-  getOptions
-} from "@/js/store"
+import { updateScreen, toggleState, isSplit, getScreen} from "@/js/store"
 import Preview from "./editor/Preview.vue"
 import Import from "./editor/Import.vue"
 import Preset from "./editor/Preset.vue"
 import Copy from "./editor/Copy.vue"
-
-let ifScreen = (screen) => {
-  return getScreen.value === screen
-}
-
-let closeEditor = () => {
-
-}
 
 </script>
 

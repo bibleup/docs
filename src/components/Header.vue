@@ -1,6 +1,9 @@
 <template>
     <header>
-      <h1><router-link to="/" class="btn">BibleUp</router-link></h1>
+      <div id="text">
+        <img width="50" height="50" id="logo" alt="BibleUp Logo" src="../assets/logo.png">
+        <h1><router-link to="/" class="btn">BibleUp</router-link></h1>
+      </div>
       <div class="github">
         <a class="btn2" target="_blank" href="https://github.com/Bibleup/bibleup.js">
           <span>Github</span>
@@ -20,11 +23,23 @@ header {
    display: flex;
    justify-content: space-between;
    align-content: center;
-   padding: 20px;
+   padding: 25px 20px;
+   background: white;
 
    @media @desktop {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  #text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #logo {
+      width: 35px;
+      height: 35px;
+    }
   }
    
    h1 {
@@ -32,6 +47,7 @@ header {
      font-weight: 600;
      font-family: 'Rubik', sans-serif;
      font-weight: 500;
+     margin-left: 10px;
      color: @color;
 
      a {

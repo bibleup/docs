@@ -24,6 +24,7 @@ footer {
   background: #f2f2f2;
   padding-bottom: 20px;
   font-size: 1.5rem;
+  margin-top: 50px;
   border-top: 3px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);

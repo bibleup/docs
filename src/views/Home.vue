@@ -1,17 +1,18 @@
-
 <template>
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div id="header-content">
-    <p id="note">🎉 BibleUp is currently in <b>final beta</b></p>
-    <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
-    <p class="catch">A Web Tool Built For Referencing The Holy Bible</p>
+    <!-- <p id="note">🎉 BibleUp is currently in <b>final beta</b></p> -->
+    <div id="main">
+      <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
+      <p class="catch">A Web Tool Built For Referencing The Holy Bible</p>
+      <div class="btn-grp">
+        <a href="/docs">Get Started</a>
+        <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
+      </div>
+    </div>
 
-    <div id="dummy-img"></div>
-    <div class="btn-grp">
-      <a href="/docs">Get Started</a>
-      <router-link to="/demo" class="grad"
-        >See Demo <i class="fi fi-rr-magic-wand"></i
-      ></router-link>
+    <div id="header-image">
+      <div id="dummy-img"><img src="@/assets/popover.jpg" alt="BibleUp reference tagger popup"></div>
     </div>
   </div>
 
@@ -22,39 +23,36 @@
   </div>
 
   <section id="feature">
-    <h1>Features💡</h1>
+    <!-- <h1>Features</h1> -->
 
     <div class="wrapper">
       <div class="box">
+        <i class="fi fi-rr-link-alt icon"></i>
         <h1>Easy Integration</h1>
         <p>
-          Easily integrate BibleUp into your custom website or blog with no
-          coding experience or technical overhead.
+          Easily integrate BibleUp into your custom website or blog with no coding experience or technical overhead.
         </p>
       </div>
 
       <div class="box">
+        <i class="fi fi-rr-paint-roller icon"></i>
         <h1>Customisation</h1>
         <p>
-          Customise Bible links and popover as much as you want. Style according
-          to your site theme using the API or online 'editor'
+          Customise Bible links and popover as much as you want. Style according to your site theme using the API or
+          online 'editor'
         </p>
       </div>
 
       <div class="box">
+        <i class="fi fi-rr-dashboard icon"></i>
         <h1>Performant</h1>
-        <p>
-          Package size is approximately 10kb (gzipped). Perfectly light weight
-          and fast.
-        </p>
+        <p>BibleUp reference tagging is performant and fast. The package size is approximately 10kb (gzipped).</p>
       </div>
 
       <div class="box">
+        <i class="fi fi-rr-book-open-reader icon"></i>
         <h1>Accessibility</h1>
-        <p>
-          BibleUp follows the WAI-ARAI accessibility guidelines for screen
-          readers and keyboard navigation.
-        </p>
+        <p>BibleUp follows the WAI-ARAI accessibility guidelines for screen readers and keyboard navigation.</p>
       </div>
     </div>
   </section>
@@ -62,8 +60,7 @@
   <section id="community">
     <h1>Community Driven</h1>
     <p class="catch">
-      Enjoy the merit of open source and rapid development. Contributions are
-      allowed from everyone and anyone.
+      Enjoy the merit of open source and rapid development. Contributions are allowed from everyone and anyone.
     </p>
 
     <div id="soon">
@@ -74,42 +71,41 @@
       </div>
 
       <div class="box down">
-        <img src="@/assets/github-logo.svg" />
+        <img src="@/assets/github.svg" />
         <p>Github</p>
-        <p class="tag">Follow</p>
+        <p class="tag">Open source</p>
       </div>
 
       <div class="box">
         <img src="@/assets/wordpress.svg" />
         <p>WordPress</p>
-        <p class="tag">Coming soon 📦</p>
+        <p class="tag">Plugin 🔌</p>
+      </div>
+
+      <div class="box">
+        <img src="../assets/chrome-store.svg" />
+        <p>Extension</p>
+        <p class="tag">Add-ons 📦</p>
       </div>
     </div>
 
     <div class="alert-box">
-      <img src="@/assets/alert-circle.svg" />
       <p>
-        BibleUp is currently under <b>active development</b>. For
-        installation on WordPress sites, read the guide
-        <a href="https://bibleup.netlify.app/docs/plugins">here</a> 
+        BibleUp is available as a
+        <b><a href="https://bibleup.netlify.app/docs/plugins/wordpress-plugin">WordPress Plugin</a></b> and
+        <b><a href="https://bibleup.netlify.app/docs/plugins/browser-extension">Browser Extension</a></b> that can be
+        used on any website.
       </p>
     </div>
   </section>
 
-  <section id="contact">
-    <h1>Contact BibleUp</h1>
+  <section id="partners">
+    <h1>Used by</h1>
     <p class="catch">
-      Have an awesome review to share with us? <br />Need help installing
-      BibleUp on your website or blog or you simply want to cheer us on?
+      If you use BibleUp on yor website or blog, kindly send us a message with your web address so we can
+      feature it right here.
     </p>
-
-    <form name="feedback" method="post" id="contact-form" netlify>
-      <input type="hidden" name="form-name" value="feedback" />
-      <input name="email" placeholder="Email" type="email" />
-      <input name="website" placeholder="Website (optional)" type="url" />
-      <textarea required name="details" placeholder="Details" type="text"></textarea>
-      <input id="submit-btn" type="submit" />
-    </form>
+    <div id="add" ref="partner"><i class="fi fi-rr-plus icon"></i></div>
   </section>
 
   <section id="faq">
@@ -120,30 +116,27 @@
       <details>
         <summary>How does this work?</summary>
         <p class="catch">
-          BibleUp searches for all plain Bible references on a page and transforms
-          each one to a link. Hovering or clicking on these links will make the
-          Bible text accessible via a feature-rich and flexible popover.<br /><br />At
-          its core, BibleUp is a blend of internal API and a display interface.<br>
+          BibleUp searches for all plain Bible references on a page and transforms each one to a link. Hovering or
+          clicking on these links will make the Bible text accessible via a feature-rich and flexible popover.<br /><br />At
+          its core, BibleUp is a blend of internal API and a display interface.<br />
           Read the introduction <a href="/docs">here</a> for an in-depth explanation.
-        </p>
-      </details>
-
-      <details>
-        <summary>Is this Free?</summary>
-        <p class="catch">
-          BibleUp is <b>FREE</b> to use, <b>FOREVER.</b><br /><br />There is,
-          however a clause on distribution and modification. See our licence
-          for these clauses to use without infringement.
         </p>
       </details>
 
       <details>
         <summary>What makes BibleUp different from other tools</summary>
         <p class="catch">
-          There are quite a few tools like BibleUp. We particularly know of
-          FaithLife Reftagger (awesome!). <br><br>However, BibleUp brings lots of
-          improvements and flexibility and also leverages on community
+          There are quite a few tools like BibleUp. We particularly know of FaithLife Reftagger (awesome!).
+          <br /><br />However, BibleUp reference tagging brings lots of improvements and flexibility and also leverages on community
           development.
+        </p>
+      </details>
+
+      <details>
+        <summary>Is this Free?</summary>
+        <p class="catch">
+          BibleUp is <b>FREE</b> to use, <b>FOREVER.</b><br /><br />There is, however a clause on distribution and
+          modification. See our licence for these clauses to use without infringement.
         </p>
       </details>
 
@@ -151,42 +144,45 @@
         <summary>How can I support</summary>
         <p class="catch">
           <b>You can help to support by sharing!</b><br /><br />
-          Contribute to the project on Github and help spread the word to
-          bloggers and publishers alike. You can also send a feedback for
-          improvements.
+          Contribute to the project on Github and help spread the word to bloggers and publishers alike. You can also
+          send a feedback for improvements.
         </p>
       </details>
     </div>
   </section>
 
-  <section id="subscribe">
-    <h1>Stay In Touch 📧</h1>
+  <section id="contact">
+    <h1>Contact BibleUp</h1>
     <p class="catch">
-      We are constantly developing awesome products!<br />
-      Subscribe and don't miss out on interesting updates. We definitely won't
-      spam your inbox.
+      Have an awesome review to share with us? <br />Need help installing BibleUp on your website or blog or you simply
+      want to cheer us on?
     </p>
 
-    <form name="subscribe" method="post" id="subscribe-form" netlify>
-      <input type="hidden" name="form-name" value="subscribe" />
-      <input name="email" placeholder="Email" type="email" required />
-      <input id="subscribe-btn" type="submit" value="Subscribe" />
+    <form name="feedback" method="post" id="contact-form" netlify>
+      <input type="hidden" name="form-name" value="feedback" />
+      <input name="email" placeholder="Email" type="email" />
+      <input name="website" placeholder="Website (optional)" type="url" />
+      <textarea required name="details" placeholder="Details" type="text"></textarea>
+      <input id="submit-btn" type="submit" />
     </form>
   </section>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
+let partner = ref(null)
+
+partner.on
 
 onMounted(() => {
-  let tr = document.getElementById('try')
-  let b = new BibleUp(tr)
-  b.create()
-})
+  let tr = document.getElementById('try');
+  let b = new BibleUp(tr);
+  b.create();
+});
 </script>
 
 <style lang="less" scoped>
-@import "@/css/theme.less";
+@import '@/css/theme.less';
 
 a {
   color: inherit;
@@ -195,16 +191,30 @@ a {
 
 #header-content {
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: @color;
-  padding: 0 20px;
-  //padding-top: 20px;
-  font-family: "Rubik", sans-serif;
+  padding: 50px 20px;
+  font-family: 'Rubik', sans-serif;
+  background: white;
+
+  @media @lg {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  #main {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+
+    @media @lg {
+      padding: 0 2rem;
+      text-align: left;
+    }
+  }
 
   #note {
     padding: 5px 20px;
@@ -215,46 +225,72 @@ a {
   }
 
   h1 {
-    font-size: 2.8rem;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
+    font-size: 3rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     margin-top: 20px;
+    line-height: 43px;
+
+    @media @lg {
+      font-size: 3.5rem;
+    }
   }
 
   p {
-    margin-top: 20px;
+    margin-top: 30px;
     color: @grey;
   }
 
-  #dummy-img {
+  #header-image {
     width: 100%;
-    max-width: 400px;
-    margin-top: 40px;
-    height: 200px;
-    border-radius: 15px;
-    background: #f2f2f2 url(@/assets/popup2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    box-shadow: 0 0 10px 2px #ccc;
-    display: none;
+    //background: #4884ee;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media @lg {
+      padding: 0 50px;
+      margin: 0;
+    }
+
+    #dummy-img {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width:100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
   }
 
   .btn-grp {
-    margin-top: 40px;
+    margin-top: 30px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media @lg {
+      align-items: flex-start;
+    }
 
     a {
       display: inline-block;
       text-decoration: none;
       color: white;
       border-radius: 5px;
-      width: 150px;
+      width: 100%;
+      max-width: 300px;
       padding: 10px;
-      margin: 0 15px;
       background: @blue;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       transition: background 200ms;
@@ -266,11 +302,12 @@ a {
 
     .grad {
       background-color: #f39f86;
-      background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+      background-image: linear-gradient(315deg, #f9d976 0%, #f39f86 74%);
+      margin-top: 15px;
       color: @dark-blue2;
 
       &:hover {
-        background-image: linear-gradient(315deg, #f9d976 0%, #f39f86 74%);
+        background-image: linear-gradient(315deg, #fcd14f 0%, #f3724a 74%);
       }
     }
   }
@@ -278,9 +315,8 @@ a {
 
 #try {
   width: 100%;
-  background: #f2f2f2;
+  background: #F2f2f2;
   //color: white;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,35 +341,55 @@ a {
 
 #feature {
   width: 100%;
-  margin-top: 40px;
-  font-family: "Rubik", sans-serif;
+  margin-top: 10px;
+  font-family: 'Rubik', sans-serif;
   //background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .wrapper {
     @media @desktop {
       display: grid;
       grid-template-columns: auto auto;
       justify-content: center;
-      grid-column-gap: 30px;
+      grid-column-gap: 20px;
+    }
+
+    @media @lg {
+      grid-template-columns: auto auto auto;
     }
   }
 
   .box {
-    margin-top: 30px;
+    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px, 0 0 0 2px #d9d9d9;
-    transition: box-shadow 400ms;
     padding: 15px;
-    height: 160px;
+    //box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0em 2px;
 
     &:hover {
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 20px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      background: #f2f2f263;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 5px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: #4884ee;
+      color: white;
+      border-radius: 5px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
     }
 
     h1 {
       font-size: 2rem;
       color: #666666;
+      margin-top: 10px;
     }
 
     p {
@@ -344,9 +400,9 @@ a {
 }
 
 #community {
-  padding: 50px 20px;
-  margin-top: 20px;
-  font-family: "Rubik", sans-serif;
+  padding: 20px;
+  margin-top: 30px;
+  font-family: 'Rubik', sans-serif;
 
   @media @desktop {
     display: flex;
@@ -375,8 +431,7 @@ a {
       padding: 10px;
       margin-top: 20px;
       border-radius: 15px;
-      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -387,11 +442,17 @@ a {
       h3 {
         font-size: 3.8rem;
         font-weight: 700;
+        padding: 0;
+        transform: scale(1.3, 1.3);
+        background-color: #ff3cac;
+        background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       img {
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
       }
 
       p {
@@ -407,18 +468,125 @@ a {
         background-color: #f39f86;
         background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
       }
+    }
 
-      .green {
-        background: green;
-        color: white;
+    .alert-box {
+      margin-top: 15px;
+    }
+  }
+}
+
+#partners {
+  padding: 20px;
+  margin-top: 40px;
+  font-family: 'Rubik', sans-serif;
+
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #add {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 0;
+    border: 3px solid grey;
+    border-radius: 6px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+
+    &:hover {
+      border-color: #4885ee;
+      color: #4885ee;
+    }
+
+    .icon {
+      font-size: 2rem;
+      line-height: 15px;
+    }
+  }
+}
+
+#faq {
+  margin-top: 40px;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Rubik', sans-serif;
+
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    color: @grey;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+
+    details {
+      width: 100%;
+      margin-top: 20px;
+
+      .catch {
+        text-align: left;
+      }
+
+      summary {
+        list-style: none;
+        margin-top: 10px;
+        background: #f2f2f2;
+        padding: 10px 35px;
+        border-radius: 10px;
+        position: relative;
+        user-select: none;
+        cursor: default;
+
+        &:before {
+          content: '';
+          //display: block;
+          border-width: 0.7rem;
+          border-style: solid;
+          border-color: transparent transparent transparent @grey;
+          position: absolute;
+          top: 1.3rem;
+          left: 1.5rem;
+          transform: rotate(0);
+          transform-origin: 0.2rem 50%;
+          transition: 0.25s transform ease;
+        }
+      }
+
+      &[open] > summary:before {
+        transform: rotate(90deg);
+      }
+
+      &[open] > summary {
+        background: #f2f2f2;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+
+      p {
+        padding: 0 15px;
       }
     }
   }
 }
 
 #contact {
-  padding-top: 50px;
-  font-family: "Rubik", sans-serif;
+  margin-top: 40px;
+  font-family: 'Rubik', sans-serif;
 
   @media @desktop {
     display: flex;
@@ -463,128 +631,6 @@ a {
 
     &:hover {
       background-color: darken(@blue, 5%);
-    }
-  }
-}
-
-#subscribe {
-  padding-top: 60px;
-  font-family: "Rubik", sans-serif;
-  @media @desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-#subscribe-form {
-  width: 100%;
-  max-width: 500px;
-  margin-top: 30px;
-  margin-bottom: 70px; //footer
-
-  input,
-  textarea {
-    display: block;
-    width: 100%;
-    height: 60px;
-    outline: none;
-    border: 3px solid #a6a6a6;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 15px;
-
-    &:hover {
-      border-color: @blue;
-    }
-  }
-
-  textarea {
-    height: 150px;
-  }
-
-  #subscribe-btn {
-    margin-top: 20px;
-    background: @blue;
-    color: white;
-    border: none;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-
-    &:hover {
-      background-color: darken(@blue, 5%);
-    }
-  }
-}
-
-#faq {
-  margin-top: 50px;
-  -webkit-text-size-adjust: 100%;
-  font-family: "Rubik", sans-serif;
-
-  @media @desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  p {
-    color: @grey;
-  }
-
-  .wrapper {
-    width: 100%;
-    max-width: 700px;
-    margin-top: 20px;
-
-    details {
-      width: 100%;
-      margin-top: 20px;
-
-      .catch {
-        text-align: left;
-      }
-
-      summary {
-        list-style: none;
-        margin-top: 10px;
-        background: #f2f2f2;
-        padding: 10px 35px;
-        border-radius: 10px;
-        position: relative;
-        user-select: none;
-        cursor: default;
-
-        &:before {
-          content: "";
-          //display: block;
-          border-width: 0.7rem;
-          border-style: solid;
-          border-color: transparent transparent transparent @grey;
-          position: absolute;
-          top: 1.3rem;
-          left: 1.5rem;
-          transform: rotate(0);
-          transform-origin: 0.2rem 50%;
-          transition: 0.25s transform ease;
-        }
-      }
-
-      &[open] > summary:before {
-        transform: rotate(90deg);
-      }
-
-      &[open] > summary {
-        background: #f2f2f2;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px 0px,
-          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-      }
-
-      p {
-        padding: 0 15px;
-      }
     }
   }
 }

@@ -1,16 +1,30 @@
 <template>
   <section id="copy">
-    <h3>Copy Generated Config</h3>
+    <h3>Generated Config</h3>
 
     <div class="option-box">
       <div>
-        <textarea id="rawOptions" readonly value=""></textarea>
+        <textarea id="rawOptions" readonly v-model="generated" ref="textarea"></textarea>
         <p>Your generated BibleUp will be here. This input is readonly</p>
       </div>
-      <button class="btn-copy">Copy To Clipboard</button>
+      <button class="btn-editor" @click="toClipboard">Copy To Clipboard</button>
     </div>
   </section>
 </template>
+
+<script setup>
+import {ref} from "vue"
+import { generated } from "@/js/store"
+
+let textarea = ref(null)
+console.log(textarea.value)
+
+let toClipboard = () => {
+  textarea.value.select();
+  document.execCommand('copy');
+}
+
+</script>
 
 <style lang="less" scoped>
 @import '@/css/theme.less';
@@ -26,23 +40,5 @@
 
 .option-box {
     margin-top: 10px;
-}
-
-.btn-copy {
-  width: 100%;
-  background: @blue;
-  text-decoration: none;
-  color: white;
-  border-radius: 5px;
-  -webkit-tap-highlight-color: transparent;
-  padding: 10px;
-  text-align: center;
-  user-select: none;
-  margin-top: 20px;
-  max-width: 500px;
-
-  &:hover {
-    background: darken(@blue, 10%);
-  }
 }
 </style>
