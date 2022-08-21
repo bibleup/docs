@@ -17,7 +17,6 @@ import {ref} from "vue"
 import { generated } from "@/js/store"
 
 let textarea = ref(null)
-console.log(textarea.value)
 
 let toClipboard = () => {
   textarea.value.select();

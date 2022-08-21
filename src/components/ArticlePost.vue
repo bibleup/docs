@@ -7,7 +7,7 @@
     </p>
     <p>
       Salvation is the permanent solution Jesus gave for our reconciliation back to the Father. Salvation reconciles us
-      back to the initial communion and fellowship the first man lost has a result sin through disobedience 2Cor 5:18,
+      back to the initial communion and fellowship the first man lost has a result sin through disobedience 2 Cor 5:18,
       Romans 5:10 Salvation breach the gap/separation sin caused, and it brings us to our rightful place in Christ with
       GOD.
     </p>

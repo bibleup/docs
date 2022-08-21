@@ -1,5 +1,6 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from "vue-router";
+import { isEditor, toggleState } from '@/js/store';
 import Home from "@/views/Home.vue";
 const routes = [
   {
@@ -41,5 +42,7 @@ router.afterEach((to, from) => {
   // Complete the animation of the route progress bar.
   NProgress.done();
 });
+
+
 
 export default router;

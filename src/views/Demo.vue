@@ -7,9 +7,8 @@
       <div class="alert-box">
         <img src="@/assets/brush.svg" />
         <p>
-          The following article contains plain references until BibleUp is
-          activated. Use the <a href="#editor">editor</a> to configure BibleUp
-          and see changes in real-time.
+          The following article contains plain references until BibleUp is activated. Use the
+          <a href="#editor">editor</a> to configure BibleUp and see changes in real-time.
         </p>
       </div>
     </section>
@@ -22,7 +21,7 @@
         </div>
       </div>
 
-      <ArticlePost :active="isActive" ref='article'></ArticlePost>
+      <ArticlePost :active="isActive"></ArticlePost>
     </section>
 
     <MainEditor v-show="isEditor"></MainEditor>
@@ -30,20 +29,31 @@
 </template>
 
 <script setup>
-import ArticlePost from "@/components/ArticlePost.vue"
-import { computed, ref, onUnmounted, watch, onMounted } from "vue"
-import MainEditor from "@/components/MainEditor.vue"
-import { isEditor, toggleState, getBuOption } from "@/js/store"
-let isActive = ref(false)
+import ArticlePost from '@/components/ArticlePost.vue';
+import { ref, onUnmounted, onMounted, watch } from 'vue';
+import MainEditor from '@/components/MainEditor.vue';
+import { isEditor, toggleState } from '@/js/store';
+let isActive = ref(false);
 
 onMounted(() => {
-  /* let bu = new BibleUp(document.body, getBuOption)
-  bu.create() */
-})
+  checkHash()
+  window.onhashchange = checkHash
+});
+
+let checkHash = () => {
+  let hash = window.location.hash?.substring(1) || false;
+    console.log(isEditor.value)
+  if (hash === 'editor' && !isEditor.value) {
+    toggleState('editor')
+    window.location.hash = 'editor';
+  } else if (isEditor.value) {
+    toggleState('editor')
+    window.location.hash = '';
+  }
+}
 
 onUnmounted(() => {
-  if (document.getElementById("bu-popup"))
-    document.getElementById("bu-popup").remove();
+  if (document.getElementById('bu-popup')) document.getElementById('bu-popup').remove();
 });
 
 watch(isEditor, (newVal) => {
@@ -52,16 +62,15 @@ watch(isEditor, (newVal) => {
   } else {
     document.body.style['overflow-y'] = 'visible';
   }
-})
+});
 
 let activate = () => {
-  isActive.value = !isActive.value
-}
+  isActive.value = !isActive.value;
+};
 </script>
 
-
 <style lang="less" scoped>
-@import "@/css/theme.less";
+@import '@/css/theme.less';
 
 #intro {
   display: flex;
