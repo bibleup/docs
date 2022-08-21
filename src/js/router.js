@@ -1,6 +1,5 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from "vue-router";
-import { isEditor, toggleState } from '@/js/store';
 import Home from "@/views/Home.vue";
 const routes = [
   {
@@ -12,11 +11,6 @@ const routes = [
     path: "/demo",
     name: "Demo",
     component: () => import("@/views/Demo.vue"),
-  },
-  {
-    path: "/article",
-    name: "Article",
-    component: () => import("@/views/Article.vue"),
   },
   {
     path: "/:catchAll(.*)",
