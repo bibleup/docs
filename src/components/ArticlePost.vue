@@ -47,20 +47,24 @@ import { getBuOption } from '@/js/store';
 import { debounce } from '@/js/utility';
 const article = ref(null);
 const props = defineProps(['active']);
+let buOption;
 
 onMounted(() => {
   let b = new BibleUp(article.value, getBuOption);
   watch(props, (newVal) => {
     if (newVal.active) {
       b.create();
+      b.refresh(buOption);
     }
   });
   watch(
     getBuOption,
     debounce((newOpt) => {
-      b.refresh(newOpt);
-    }, 500),
-    { flush: 'post' }
+      buOption = newOpt;
+      if (props.active) {
+        b.refresh(buOption);
+      }
+    }, 500)
   );
 });
 </script>

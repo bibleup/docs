@@ -17,11 +17,11 @@
       <div id="btn-group">
         <div class="wrapper">
           <button id="apply-btn" @click="toggleState('editor')">Open Editor</button>
-          <button @click="activate()">Activate BibleUp</button>
+          <button @click="activate()">{{ isActive ? 'De-activate BibleUp': 'Activate BibleUp'}}</button>
         </div>
       </div>
 
-      <ArticlePost :active="isActive"></ArticlePost>
+      <ArticlePost :key="articleKey" :active="isActive"></ArticlePost>
     </section>
 
     <MainEditor v-show="isEditor"></MainEditor>
@@ -34,6 +34,7 @@ import { ref, onUnmounted, onMounted, watch } from 'vue';
 import MainEditor from '@/components/MainEditor.vue';
 import { isEditor, toggleState } from '@/js/store';
 let isActive = ref(false);
+let articleKey = ref(0)
 
 onMounted(() => {
   checkHash()
@@ -42,7 +43,6 @@ onMounted(() => {
 
 let checkHash = () => {
   let hash = window.location.hash?.substring(1) || false;
-    console.log(isEditor.value)
   if (hash === 'editor' && !isEditor.value) {
     toggleState('editor')
     window.location.hash = 'editor';
@@ -66,6 +66,9 @@ watch(isEditor, (newVal) => {
 
 let activate = () => {
   isActive.value = !isActive.value;
+  if (isActive.value === false) {
+    document.location.reload()
+  }
 };
 </script>
 
