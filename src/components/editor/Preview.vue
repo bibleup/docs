@@ -6,24 +6,28 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch } from 'vue';
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
 import { getBuOption } from '@/js/store';
 import { debounce } from '@/js/utility';
-
 const local = ref(null);
+let bibleup
 
 onMounted(() => {
-  let bu = new BibleUp(local.value, getBuOption)
-  bu.create()
+  bibleup = new BibleUp(local.value, getBuOption)
+  bibleup.create()
 
   watch(
     getBuOption,
     debounce((newOpt) => {
-      bu.refresh(newOpt);
+      bibleup.refresh(newOpt);
     }, 500),
     { flush: 'post' }
   );
 });
+
+onBeforeUnmount(() => {
+  bibleup.destroy()
+})
 </script>
 
 <style lang="less" scoped>

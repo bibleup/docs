@@ -30,7 +30,7 @@
 
 <script setup>
 import ArticlePost from '@/components/ArticlePost.vue';
-import { ref, onUnmounted, onMounted, watch } from 'vue';
+import { ref, onBeforeUnmount, onMounted, watch } from 'vue';
 import MainEditor from '@/components/MainEditor.vue';
 import { isEditor, toggleState } from '@/js/store';
 let isActive = ref(false);
@@ -52,10 +52,6 @@ let checkHash = () => {
   }
 }
 
-onUnmounted(() => {
-  if (document.getElementById('bu-popup')) document.getElementById('bu-popup').remove();
-});
-
 watch(isEditor, (newVal) => {
   if (newVal === true) {
     document.body.style['overflow-y'] = 'hidden';
@@ -66,9 +62,9 @@ watch(isEditor, (newVal) => {
 
 let activate = () => {
   isActive.value = !isActive.value;
-  if (isActive.value === false) {
+  /* if (isActive.value === false) {
     document.location.reload()
-  }
+  } */
 };
 </script>
 

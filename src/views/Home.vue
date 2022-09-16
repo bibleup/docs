@@ -4,7 +4,7 @@
     <!-- <p id="note">🎉 BibleUp is currently in <b>final beta</b></p> -->
     <div id="main">
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
-      <p class="catch">A Web Tool Built For Referencing The Holy Bible</p>
+      <p class="catch">BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with accessible Popovers.</p>
       <div class="btn-grp">
         <a href="/docs">Get Started</a>
         <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
@@ -12,14 +12,14 @@
     </div>
 
     <div id="header-image">
-      <div id="dummy-img"><img src="@/assets/popover.jpg" alt="BibleUp reference tagger popup"></div>
+      <div id="dummy-img"><img src="@/assets/popover.jpg" alt="BibleUp reference tagger popup" /></div>
     </div>
   </div>
 
   <div id="try">
     <h1>Quick Demo</h1>
     <p>Hover or click on the references below</p>
-    <p id="try-ref">2 Corinthians 5:17, Romans 10:9-10</p>
+    <p id="try-ref"><span ref="try1">2 Corinthians 5:17</span>, <span ref="try2">Romans 10:9-10</span></p>
   </div>
 
   <section id="feature">
@@ -102,8 +102,8 @@
   <section id="partners">
     <h1>Used by</h1>
     <p class="catch">
-      If you use BibleUp on yor website or blog, kindly send us a message with your web address so we can
-      feature it right here.
+      If you use BibleUp on yor website or blog, kindly send us a message with your web address so we can feature it
+      right here.
     </p>
     <div id="add" ref="partner"><i class="fi fi-rr-plus icon"></i></div>
   </section>
@@ -127,8 +127,8 @@
         <summary>What makes BibleUp different from other tools</summary>
         <p class="catch">
           There are quite a few tools like BibleUp. We particularly know of FaithLife Reftagger (awesome!).
-          <br /><br />However, BibleUp reference tagging brings lots of improvements and flexibility and also leverages on community
-          development.
+          <br /><br />However, BibleUp reference tagging brings lots of improvements and flexibility and also leverages
+          on community development.
         </p>
       </details>
 
@@ -169,15 +169,31 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
-let partner = ref(null)
-
-partner.on
+import { onMounted, onBeforeUnmount, ref } from 'vue';
+let partner = ref(null);
+let try1 = ref(null);
+let try2 = ref(null);
+let bibleup_try1;
+let bibleup_try2;
 
 onMounted(() => {
-  let tr = document.getElementById('try');
-  let b = new BibleUp(tr);
-  b.create();
+  bibleup_try1 = new BibleUp(try1.value);
+  bibleup_try2 = new BibleUp(try2.value, {
+    popup: 'inline',
+    version: 'ASV',
+    darkTheme: true,
+    styles: {
+      boxShadow: '10px -10x',
+      borderRadius: '10px',
+    }
+  });
+  bibleup_try1.create();
+  bibleup_try2.create();
+});
+
+onBeforeUnmount(() => {
+  bibleup_try1.destroy();
+  bibleup_try2.destroy();
 });
 </script>
 
@@ -263,7 +279,7 @@ a {
       align-items: center;
 
       img {
-        width:100%;
+        width: 100%;
         height: 100%;
         object-fit: contain;
       }
@@ -315,7 +331,7 @@ a {
 
 #try {
   width: 100%;
-  background: #F2f2f2;
+  background: #f2f2f2;
   //color: white;
   display: flex;
   flex-direction: column;

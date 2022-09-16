@@ -42,19 +42,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, onUpdated } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import { getBuOption } from '@/js/store';
 import { debounce } from '@/js/utility';
 const article = ref(null);
 const props = defineProps(['active']);
 let buOption;
+let b;
+let samePage = false;
 
 onMounted(() => {
-  let b = new BibleUp(article.value, getBuOption);
+  b = new BibleUp(article.value, getBuOption);
   watch(props, (newVal) => {
     if (newVal.active) {
-      b.create();
-      b.refresh(buOption);
+      if (samePage) {
+        b.refresh(buOption);
+      } else {
+        b.create();
+        b.refresh(buOption);
+      }
+      samePage = true;
+    } else if (newVal.active === false && samePage) {
+      b.destroy(false);
     }
   });
   watch(
@@ -66,6 +75,11 @@ onMounted(() => {
       }
     }, 500)
   );
+});
+
+onBeforeUnmount(() => {
+  b.destroy();
+  console.log('destroy');
 });
 </script>
 
