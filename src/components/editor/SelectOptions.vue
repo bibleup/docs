@@ -188,7 +188,7 @@ let option = ref(getOptions)
 .option-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
   @media @xl {
     grid-template-columns: 1fr 1fr;

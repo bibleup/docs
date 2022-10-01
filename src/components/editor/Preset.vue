@@ -1,6 +1,13 @@
 <template>
   <section id="preset">
     <h3>Presets</h3>
+    <div class="note">
+      <h4>Note:</h4>
+      <p>
+        Click to activate/deactivate preset.<br>
+        Presets do not change select options but you can copy the code.
+      </p>
+    </div>
     <div class="wrapper">
       <div class="box" :class="{ active: isPreset === 'preset 1' }" @click="setActive('preset 1')">
         <p>Preset #1</p>
@@ -44,6 +51,10 @@ let setActive = (val) => {
   padding: 0;
   padding-bottom: 80px;
   padding-top: 30px;
+}
+
+.info {
+  color: #4d4d4d;
 }
 
 .wrapper {

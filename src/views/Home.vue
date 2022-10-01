@@ -1,13 +1,21 @@
 <template>
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div id="header-content">
-    <!-- <p id="note">🎉 BibleUp is currently in <b>final beta</b></p> -->
     <div id="main">
+      <span id="note">🎉 BibleUp is now in <b>version 1.0.0</b></span>
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
-      <p class="catch">BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with accessible Popovers.</p>
+      <p class="catch">
+        BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with
+        accessible Popovers.
+      </p>
       <div class="btn-grp">
         <a href="/docs">Get Started</a>
         <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
+
+        <div class="check-feat">
+          <p><i class="icon fi fi-rr-check"></i> Wordpress Plugin</p>
+          <p><i class="icon fi fi-rr-check"></i> Browser Extention</p>
+        </div>
       </div>
     </div>
 
@@ -103,9 +111,11 @@
     <h1>Used by</h1>
     <p class="catch">
       If you use BibleUp on yor website or blog, kindly send us a message with your web address so we can feature it
-      right here.
+      right here!
     </p>
-    <div id="add" ref="partner"><i class="fi fi-rr-plus icon"></i></div>
+    <div id="add" ref="partner">
+      <a href="#contact"><i class="fi fi-rr-plus icon"></i></a>
+    </div>
   </section>
 
   <section id="faq">
@@ -154,7 +164,7 @@
   <section id="contact">
     <h1>Contact BibleUp</h1>
     <p class="catch">
-      Have an awesome review to share with us? <br />Need help installing BibleUp on your website or blog or you simply
+      Have an awesome review to share with us? <br />Need help installing BibleUp on your website/blog or you simply
       want to cheer us on?
     </p>
 
@@ -185,7 +195,7 @@ onMounted(() => {
     styles: {
       boxShadow: '10px -10x',
       borderRadius: '10px',
-    }
+    },
   });
   bibleup_try1.create();
   bibleup_try2.create();
@@ -233,7 +243,9 @@ a {
   }
 
   #note {
-    padding: 5px 20px;
+    display: inline-block;
+    width: auto;
+    padding: 6px 15px;
     background-color: @blue;
     background-image: linear-gradient(315deg, @blue2 0%, #4884ee 74%);
     color: white;
@@ -250,11 +262,6 @@ a {
     @media @lg {
       font-size: 3.5rem;
     }
-  }
-
-  p {
-    margin-top: 30px;
-    color: @grey;
   }
 
   #header-image {
@@ -325,6 +332,33 @@ a {
       &:hover {
         background-image: linear-gradient(315deg, #fcd14f 0%, #f3724a 74%);
       }
+    }
+  }
+
+  .check-feat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 15px;
+    font-size: 1.3rem;
+    margin-top: 12px;
+    color: #808080;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon {
+      height: 100%;
+      margin-right: 5px;
+      justify-self: center;
+      line-height: 0.3px;
+      font-size: 1.25rem;
+    }
+
+    @media @lg {
+      align-items: flex-start;
     }
   }
 }
@@ -437,12 +471,17 @@ a {
     gap: 20px;
 
     @media @desktop {
-      grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
+      /* grid-template-columns: repeat(3, 1fr);
+      justify-items: center; */
+      display: flex;
+      justify-content: center;
+      gap: 0 50px;
     }
 
     .box {
-      width: 150px;
+      flex: 50%;
+      width: 100%;
+      max-width: 150px;
       height: 150px;
       padding: 10px;
       margin-top: 20px;
@@ -463,6 +502,7 @@ a {
         background-color: #ff3cac;
         background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
@@ -485,11 +525,12 @@ a {
         background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
       }
     }
-
-    .alert-box {
-      margin-top: 15px;
-    }
   }
+
+  .alert-box {
+      margin: 0 auto;
+      margin-top: 40px;
+    }
 }
 
 #partners {
@@ -513,14 +554,23 @@ a {
     border: 3px solid grey;
     border-radius: 6px;
     background: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: gray;
 
     &:hover {
       border-color: #4885ee;
       color: #4885ee;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
     }
 
     .icon {
@@ -549,7 +599,7 @@ a {
   .wrapper {
     width: 100%;
     max-width: 700px;
-    margin-top: 20px;
+    margin-top: 10px;
 
     details {
       width: 100%;
@@ -567,7 +617,7 @@ a {
         border-radius: 10px;
         position: relative;
         user-select: none;
-        cursor: default;
+        cursor: pointer;
 
         &:before {
           content: '';

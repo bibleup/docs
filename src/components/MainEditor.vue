@@ -70,7 +70,7 @@ import Copy from "./editor/Copy.vue"
     position: relative;
     width: 100%;
     height: 100%;
-    background: wheat;
+    background: white;
 
     @media @desktop {
       width: 80%;

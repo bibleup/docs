@@ -10,8 +10,8 @@
       <div>
         <textarea id="rawOptions" v-model="getOptions.rawOptions"></textarea>
         <p>Paste the raw config options here.<br />Options will fallback to Select Options if input is invalid.</p>
-        <button class="btn-editor" @click="importOptions">{{ isImport ? 'Remove Import' : 'Import'}}</button>
       </div>
+      <button class="btn-editor" @click="importOptions">{{ isImport ? 'Remove Import' : 'Import' }}</button>
     </div>
   </section>
 </template>
@@ -20,7 +20,7 @@
 import { isImport, getOptions, toggleState } from '@/js/store';
 
 let importOptions = () => {
-  toggleState('isImport')
+  toggleState('isImport');
 };
 </script>
 

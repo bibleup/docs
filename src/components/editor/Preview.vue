@@ -2,19 +2,23 @@
   <section id="preview">
     <h3>Preview</h3>
     <p ref="local">John 3:16</p>
+    <div id="preview-info" :hidden="!isPreset">
+      <span><i class="fi fi-rr-info"></i></span>
+      <p>A preset is enabled</p>
+    </div>
   </section>
 </template>
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
-import { getBuOption } from '@/js/store';
+import { getBuOption, isPreset } from '@/js/store';
 import { debounce } from '@/js/utility';
 const local = ref(null);
-let bibleup
+let bibleup;
 
 onMounted(() => {
-  bibleup = new BibleUp(local.value, getBuOption)
-  bibleup.create()
+  bibleup = new BibleUp(local.value, getBuOption);
+  bibleup.create();
 
   watch(
     getBuOption,
@@ -26,10 +30,27 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
-  bibleup.destroy()
-})
+  bibleup.destroy();
+});
 </script>
 
 <style lang="less" scoped>
 @import '@/css/theme.less';
+
+#preview-info {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  margin-top: 5px;
+  color: #a6a6a6;
+  font-size: 13px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  span {
+    color: #a6a6a6;
+  }
+}
 </style>

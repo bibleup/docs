@@ -53,7 +53,7 @@ export let preset = {
     },
     stackoverflow: {
       version: 'kjv',
-      popup: 'inline',
+      popup: 'classic',
       darkTheme: false,
       styles: {
         primary: ' #fff',
