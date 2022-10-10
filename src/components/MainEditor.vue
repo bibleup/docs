@@ -13,19 +13,19 @@
           <button id="split-btn" :class="{ active: isSplit }" @click="toggleState('split')">
             <i class="fi fi-rr-eye center"></i>
           </button>
-          <button :class="{ active: getScreen === 'preview' }" @click="updateScreen('preview')">Preview</button>
-          <button :class="{ active: getScreen === 'select' }" @click="updateScreen('select')">Select Options</button>
-          <button :class="{ active: getScreen === 'import' }" @click="updateScreen('import')">Import</button>
-          <button :class="{ active: getScreen === 'preset' }" @click="updateScreen('preset')">Presets</button>
-          <button :class="{ active: getScreen === 'copy' }" @click="updateScreen('copy')">Copy</button>
+          <button :class="{ active: getScreen === 'Preview' }" @click="updateScreen('Preview')">Preview</button>
+          <button :class="{ active: getScreen === 'Select Options' }" @click="updateScreen('Select Options')">Select Options</button>
+          <button :class="{ active: getScreen === 'Import' }" @click="updateScreen('Import')">Import</button>
+          <button :class="{ active: getScreen === 'Preset' }" @click="updateScreen('Preset')">Presets</button>
+          <button :class="{ active: getScreen === 'Copy' }" @click="updateScreen('Copy')">Copy</button>
         </div>
 
         <div id="split-screen" :class="{ active: isSplit }">
-          <Preview class="screen" v-show="isSplit || getScreen === 'preview'"></Preview>
-          <SelectOptions class="screen" v-show="getScreen === 'select'"></SelectOptions>
-          <Import class="screen" v-show="getScreen === 'import'"></Import>
-          <Preset class="screen" v-show="getScreen === 'preset'"></Preset>
-          <Copy class="screen" v-show="getScreen === 'copy'"></Copy>
+          <Preview class="screen" v-show="isSplit || getScreen === 'Preview'"></Preview>
+          <SelectOptions class="screen" v-show="getScreen === 'Select Options'"></SelectOptions>
+          <Import class="screen" v-show="getScreen === 'Import'"></Import>
+          <Preset class="screen" v-show="getScreen === 'Preset'"></Preset>
+          <Copy class="screen" v-show="getScreen === 'Copy'"></Copy>
         </div>
       </div>
 
@@ -40,9 +40,6 @@ import Preview from "./editor/Preview.vue"
 import Import from "./editor/Import.vue"
 import Preset from "./editor/Preset.vue"
 import Copy from "./editor/Copy.vue"
-
-
-
 </script>
 
 <style lang="less" scoped>
@@ -157,7 +154,7 @@ import Copy from "./editor/Copy.vue"
     }
 
     #preview {
-      border-bottom: 2px solid #ccc;
+      //border-bottom: 2px solid #ccc;
 
       @media @lg {
         border-right: 2px solid #ccc;

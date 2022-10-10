@@ -1,11 +1,11 @@
 <template>
   <div id="select-options">
-    <h3>Select Options</h3>
+    <SplitHeader class="split-header"></SplitHeader>
     <div class="note">
       <h4>Note:</h4>
       <p>
-        Set any option to <span>false or leave empty</span> to get the default
-        value. For full documentation of these options, check the
+        Set any option to false or leave empty to get the default value. For full documentation of these options, check
+        the
         <span><a href="https://bibleup.netlify.app/docs" target="_blank">docs</a></span>
       </p>
     </div>
@@ -39,91 +39,86 @@
         <div>
           <div class="wrap">
             <label for="dark-true">True</label>
-            <input id="dark-true" name="darkTheme" type="radio" value="true" v-model="option.darkTheme">
+            <input id="dark-true" name="darkTheme" type="radio" value="true" v-model="option.darkTheme" />
             <label for="dark-false">False</label>
-            <input id="dark-false" name="darkTheme" type="radio" value="false" v-model="option.darkTheme">
+            <input id="dark-false" name="darkTheme" type="radio" value="false" v-model="option.darkTheme" />
           </div>
-          <p>
-            Enable dark theme on popup (this can be overridden by other background
-            color).
-          </p>
+          <p>Enable dark theme on popup (this can be overridden by other background color).</p>
         </div>
       </div>
     </div>
 
     <details>
-      <summary class="option-divider">
-        Popup background and colors <span>&#8250;</span>
-      </summary>
+      <summary class="option-divider">Popup background and colors <span>&#8250;</span></summary>
 
       <div class="option-wrapper">
         <div class="option-box">
           <label>Primary: </label>
           <div>
-            <input id="primary" type="text" maxlength="30" v-model="option.primary">
+            <input id="primary" type="text" maxlength="30" v-model="option.primary" />
             <p>Set color for overall popup background</p>
           </div>
         </div>
         <div class="option-box">
           <label>Secondary: </label>
           <div>
-            <input id="secondary" type="text" maxlength="30" v-model="option.secondary">
+            <input id="secondary" type="text" maxlength="30" v-model="option.secondary" />
             <p>Set background color for popup header (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Tertiary: </label>
           <div>
-            <input id="tertiary" type="text" maxlength="30" v-model="option.tertiary">
+            <input id="tertiary" type="text" maxlength="30" v-model="option.tertiary" />
             <p>Set background color for popup version (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Header Color: </label>
           <div>
-            <input id="headerColor" type="text" maxlength="30" v-model="option.headerColor">
+            <input id="headerColor" type="text" maxlength="30" v-model="option.headerColor" />
             <p>Font color for popup header (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Color: </label>
           <div>
-            <input id="fontColor" type="text" maxlength="30" v-model="option.fontColor">
+            <input id="fontColor" type="text" maxlength="30" v-model="option.fontColor" />
             <p>The default font color for the popup</p>
           </div>
         </div>
         <div class="option-box">
           <label>Version Color: </label>
           <div>
-            <input id="versionColor" type="text" maxlength="30" v-model="option.versionColor">
+            <input id="versionColor" type="text" maxlength="30" v-model="option.versionColor" />
             <p>Font color for popup version (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Close Color: </label>
           <div>
-            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor">
+            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor" />
             <p>Set color for close button (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Border Radius: </label>
           <div>
-            <input id="borderRadius" type="text" maxlength="30" v-model="option.borderRadius">
+            <input id="borderRadius" type="text" maxlength="30" v-model="option.borderRadius" />
             <p>Set border radius for popup (in units).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Box Shadow: </label>
           <div>
-            <input id="boxShadow" type="text" maxlength="30" v-model="option.boxShadow">
+            <input id="boxShadow" type="text" maxlength="30" v-model="option.boxShadow" />
             <p>Set a drop shadow for the popup (using CSS syntax).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Size: </label>
           <div>
-            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize">
+            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize" />
             <p>Set font size for all popup (in units)</p>
           </div>
         </div>
@@ -131,31 +126,26 @@
     </details>
 
     <details>
-      <summary class="option-divider">
-        Additional Options <span>&#8250;</span>
-      </summary>
+      <summary class="option-divider">Additional Options <span>&#8250;</span></summary>
 
       <div class="option-wrapper">
         <div class="option-box">
           <label>Ignore Specific HTML Elements: </label>
           <div>
-            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore">
+            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore" />
             <p>
-              BibleUp won't tag element listed here.<br>
-              Seperate these elements using a comma and put inside a square
-              bracket.
+              BibleUp won't tag element listed here.<br />
+              Seperate these elements using a comma and put inside a square bracket.
             </p>
           </div>
         </div>
         <div class="option-box">
           <label>Allow Specific HTML Elements: </label>
           <div>
-            <input id="allow" type="text" maxlength="200" v-model="option.bu_allow">
+            <input id="allow" type="text" maxlength="200" v-model="option.bu_allow" />
             <p>
-              Override the default elements ignored by BibleUp by placing them
-              here.<br>
-              Seperate these elements using a comma and put inside a square
-              bracket.
+              Override the default elements ignored by BibleUp by placing them here.<br />
+              Seperate these elements using a comma and put inside a square bracket.
             </p>
           </div>
         </div>
@@ -165,30 +155,28 @@
 </template>
 
 <script setup>
-import {getOptions} from "@/js/store"
-import {ref} from "vue"
+import SplitHeader from '@/components/editor/SplitHeader.vue';
+import { getOptions } from '@/js/store';
+import { ref } from 'vue';
 
-let option = ref(getOptions)
+let option = ref(getOptions);
 </script>
 
-
-
 <style lang="less" scoped>
-@import "@/css/theme.less";
-@import "@/css/editor.less";
+@import '@/css/theme.less';
+@import '@/css/editor.less';
 
 #select-options {
   width: 100%;
   height: 100%;
   padding: 0;
   padding-bottom: 80px;
-  padding-top: 30px;
 }
 
 .option-wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media @xl {
     grid-template-columns: 1fr 1fr;

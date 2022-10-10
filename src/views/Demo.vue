@@ -30,15 +30,15 @@
 
 <script setup>
 import ArticlePost from '@/components/ArticlePost.vue';
-import { ref, onBeforeUnmount, onMounted, watch } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import MainEditor from '@/components/MainEditor.vue';
 import { isEditor, toggleState } from '@/js/store';
 let isActive = ref(false);
 let articleKey = ref(0)
 
 onMounted(() => {
-  checkHash()
-  window.onhashchange = checkHash
+  //checkHash()
+  //window.onhashchange = checkHash
 });
 
 let checkHash = () => {

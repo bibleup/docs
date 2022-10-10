@@ -1,26 +1,30 @@
 <template>
   <section id="import">
-    <h3>Import</h3>
-    <div class="note">
-      <h4>Note:</h4>
-      <p>Paste a valid BibleUp option inside the input below. This won't work if the option is invalid.</p>
-    </div>
-
+    <SplitHeader class="split-header"></SplitHeader>
     <div class="option-box">
       <div>
-        <textarea id="rawOptions" v-model="getOptions.rawOptions"></textarea>
+        <textarea id="rawOptions" placeholder="false" ref="input"></textarea>
         <p>Paste the raw config options here.<br />Options will fallback to Select Options if input is invalid.</p>
       </div>
-      <button class="btn-editor" @click="importOptions">{{ isImport ? 'Remove Import' : 'Import' }}</button>
+      <button class="btn-editor" @click="import_add">Import</button>
+      <button class="btn-editor" :disabled="isImport === false" @click="import_remove">Remove Import</button>
     </div>
   </section>
 </template>
 
 <script setup>
-import { isImport, getOptions, toggleState } from '@/js/store';
+import SplitHeader from '@/components/editor/SplitHeader.vue';
+import { ref } from 'vue';
+import { isImport, addImport } from '@/js/store';
 
-let importOptions = () => {
-  toggleState('isImport');
+const input = ref(null);
+
+const import_add = () => {
+  addImport(input.value.value);
+};
+
+const import_remove = () => {
+  addImport();
 };
 </script>
 
@@ -33,10 +37,20 @@ let importOptions = () => {
   height: 100%;
   padding: 0;
   padding-bottom: 80px;
-  padding-top: 30px;
+}
+
+.option-box {
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  margin-top: 10px;
 }
 
 .btn-editor[disabled] {
-  background: gray;
+  background: #f2f2f2;
+  color: #ccc;
+}
+
+.btn-editor:last-of-type {
+  margin-top: 10px;
 }
 </style>

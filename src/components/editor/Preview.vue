@@ -2,35 +2,43 @@
   <section id="preview">
     <h3>Preview</h3>
     <p ref="local">John 3:16</p>
-    <div id="preview-info" :hidden="!isPreset">
+    <div id="preview-info" :hidden="!isPreset && !isImport">
       <span><i class="fi fi-rr-info"></i></span>
-      <p>A preset is enabled</p>
+      <p>{{infoMessage}}</p>
     </div>
   </section>
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
-import { getBuOption, isPreset } from '@/js/store';
+import { onMounted, onBeforeUnmount, ref, watch, computed } from 'vue';
+import { getBuOption, isPreset, isImport } from '@/js/store';
 import { debounce } from '@/js/utility';
 const local = ref(null);
-let bibleup;
+let lbibleup;
+
+const infoMessage = computed(() => {
+  if (isPreset.value) {
+    return 'A preset is enabled'
+  } else if (isImport.value) {
+    return 'An imported config is being used'
+  }
+})
 
 onMounted(() => {
-  bibleup = new BibleUp(local.value, getBuOption);
-  bibleup.create();
+  lbibleup = new BibleUp(local.value, getBuOption);
+  lbibleup.create();
 
   watch(
     getBuOption,
     debounce((newOpt) => {
-      bibleup.refresh(newOpt);
+      lbibleup.refresh(newOpt, true);
     }, 500),
     { flush: 'post' }
   );
 });
 
 onBeforeUnmount(() => {
-  bibleup.destroy();
+  lbibleup.destroy();
 });
 </script>
 

@@ -1,12 +1,12 @@
 import { reactive, computed, watch } from 'vue';
 
 let state = reactive({
-  isEditor: false,
+  isEditor: true,
   isImport: false,
   preset: false,
   screen: {
     split: true,
-    active: 'select', // preview|select|paste|import|preset
+    active: 'Select Options', //  Preview|Select Options|Paste|Import|Preset
   },
   option: {
     popup: 'classic',
@@ -47,6 +47,18 @@ let state = reactive({
     bu_allow: false,
 } */
 
+// GETTERS
+export let isEditor = computed(() => state.isEditor);
+export let isImport = computed(() => state.isImport);
+export let isPreset = computed(() => state.preset);
+export let getScreen = computed(() => state.screen.active);
+export let isSplit = computed(() => state.screen.split);
+export let getOptions = computed(() => state.option);
+export let getBuOption = computed(() => state.buOption);
+export let stringify_buOption = computed(() => {
+  return JSON.stringify(state.buOption, null, '\t');
+});
+
 export let updateScreen = (screen) => {
   state.screen.active = screen;
   if (screen === 'preview') {
@@ -66,33 +78,33 @@ export let toggleState = (s) => {
     state.isEditor = !state.isEditor;
   }
   if (s === 'isImport') {
-    if (state.isImport === false && (state.option.rawOptions === 'false' || !state.option.rawOptions)) {
-      return false;
-    }
-
-    if (state.isImport === false && formatRaw()) {
-      state.isImport = true;
-    } else if (state.isImport === true) {
-      state.isImport = false;
-    }
+    state.isImport = !state.isImport;
   }
 };
 
+// For import
+/**
+ * Checks if `state.option.rawOptions` is a valid object
+ * It will set `buOption` to the parsed rawOption value or `format_buOption` value
+ */
 let formatRaw = () => {
-  let raw = !state.option.rawOptions || state.option.rawOptions === 'false' ? 'null' : state.option.rawOptions;
+  let raw;
+  if (!state.option.rawOptions || state.option.rawOptions === 'false') {
+    raw = 'null';
+  } else {
+    raw = state.option.rawOptions;
+  }
+
   let regex1 = /([a-zA-Z]+(?:\s?)):/g; // match object keys
   let regex2 = /(?:\'\s?(.*?)\s?\')/g; // match object values
   let result = raw.replace(regex1, '"$1":').replace(regex2, '"$1"');
-  console.log(result);
 
   try {
-    let valid = JSON.parse(result);
+    const valid = JSON.parse(result);
     if (valid && typeof valid === 'object') {
-      state.buOption = valid;
-      return true;
+      return valid;
     }
   } catch (e) {
-    state.buOption = generated;
     return false;
   }
 };
@@ -114,20 +126,18 @@ let validate = (value, d) => {
   return value.replace(reg, (match) => map[match]);
 };
 
-// GETTERS
-export let isEditor = computed(() => state.isEditor);
-export let isImport = computed(() => state.isImport);
-export let isPreset = computed(() => state.preset);
-export let getScreen = computed(() => state.screen.active);
-export let isSplit = computed(() => state.screen.split);
-export let getOptions = computed(() => state.option);
-export let getBuOption = computed(() => state.buOption);
+watch(state.option, () => {
+  state.buOption = format_buOption();
+});
 
-// for Copy.vue
-export let generated = computed(() => {
-    /* Check if preset is active and buOption is set */
-  if (state.preset && Object.keys(state.buOption).length !== 0) {
-    return JSON.stringify(state.buOption, null, '\t');
+/**
+ * This method compiles `buOption` by watching for changes in `state.option`
+ * It formats buOption to the standard BibleUp Object
+ */
+const format_buOption = () => {
+  if (state.option.rawOptions) {
+    const real = formatRaw();
+    if (real) return real;
   }
 
   let opt = {};
@@ -135,7 +145,7 @@ export let generated = computed(() => {
     opt[prop] = validate(state.option[prop], false);
   }
 
-  let copy = { popup: opt.popup, version: opt.version, darkTheme: opt.darkTheme };
+  let realOpt = { popup: opt.popup, version: opt.version, darkTheme: opt.darkTheme };
   let styleProps = {
     primary: opt.primary,
     secondary: opt.secondary,
@@ -151,29 +161,56 @@ export let generated = computed(() => {
   for (const prop in styleProps) {
     if (styleProps[prop] && styleProps[prop] !== 'false') {
       //console.log(prop, styleProps[prop])
-      if (!copy.styles) copy.styles = {};
-      copy.styles[prop] = styleProps[prop];
+      if (!realOpt.styles) realOpt.styles = {};
+      realOpt.styles[prop] = styleProps[prop];
     }
   }
 
   // check color
   for (const prop in colorProps) {
     if (colorProps[prop] && colorProps[prop] !== 'false') {
-      if (!copy.styles.color) copy.styles.color = [false, false, false];
-      if (prop === 'fontColor') copy.styles.color[0] = colorProps[prop];
-      if (prop === 'versionColor') copy.styles.color[1] = colorProps[prop];
-      if (prop === 'closeColor') copy.styles.color[2] = colorProps[prop];
+      if (!realOpt.styles.color) realOpt.styles.color = [false, false, false];
+      if (prop === 'fontColor') realOpt.styles.color[0] = colorProps[prop];
+      if (prop === 'versionColor') realOpt.styles.color[1] = colorProps[prop];
+      if (prop === 'closeColor') realOpt.styles.color[2] = colorProps[prop];
     }
   }
 
   // check others
   if (opt.bu_allow && opt.bu_allow !== 'false') {
-    copy.bu_allow = opt.bu_allow;
+    realOpt.bu_allow = opt.bu_allow;
   }
   if (opt.bu_ignore && opt.bu_ignore !== 'false') {
-    copy.bu_ignore = opt.bu_ignore;
+    realOpt.bu_ignore = opt.bu_ignore;
   }
 
-  state.buOption = copy;
-  return JSON.stringify(copy, null, '\t');
-});
+  //state.buOption = realOpt;
+  console.log('format Done');
+  return realOpt;
+};
+
+export const addPreset = (val) => {
+  if (val) {
+    state.preset = true
+    if (state.isImport) {
+      state.isImport = false
+    }
+    state.option.rawOptions = JSON.stringify(val);
+  } else {
+    state.preset = false;
+    state.option.rawOptions = false;
+  }
+};
+
+export const addImport = (val) => {
+  if (val) {
+    state.isImport = true;
+    if (state.preset) {
+      state.preset = false;
+    }
+    state.option.rawOptions = val;
+  } else {
+    state.isImport = false;
+    state.option.rawOptions = false;
+  }
+};

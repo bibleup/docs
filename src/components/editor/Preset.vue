@@ -1,24 +1,24 @@
 <template>
   <section id="preset">
-    <h3>Presets</h3>
+    <SplitHeader class="split-header"></SplitHeader>
     <div class="note">
       <h4>Note:</h4>
       <p>
-        Click to activate/deactivate preset.<br>
+        Click to activate/deactivate preset.<br />
         Presets do not change select options but you can copy the code.
       </p>
     </div>
     <div class="wrapper">
-      <div class="box" :class="{ active: isPreset === 'preset 1' }" @click="setActive('preset 1')">
+      <div class="box" :class="{ active: current === 'preset 1' }" @click="setActive('preset 1')">
         <p>Preset #1</p>
       </div>
-      <div class="box" :class="{ active: isPreset === 'preset 2' }" @click="setActive('preset 2')">
+      <div class="box" :class="{ active: current === 'preset 2' }" @click="setActive('preset 2')">
         <p>Preset #2</p>
       </div>
-      <div class="box" :class="{ active: isPreset === 'github' }" @click="setActive('github')">
+      <div class="box" :class="{ active: current === 'github' }" @click="setActive('github')">
         <p>Github style</p>
       </div>
-      <div class="box" :class="{ active: isPreset === 'stackoverflow' }" @click="setActive('stackoverflow')">
+      <div class="box" :class="{ active: current === 'stackoverflow' }" @click="setActive('stackoverflow')">
         <p>Stackoverflow style</p>
       </div>
       <div class="box"><p>Elegant (coming soon)</p></div>
@@ -28,15 +28,26 @@
 </template>
 
 <script setup>
-import { isPreset, updateState } from '@/js/store';
-import { preset } from '@/js/utility'
+  import SplitHeader from '@/components/editor/SplitHeader.vue';
+import { isPreset, addPreset } from '@/js/store';
+import { preset } from '@/js/utility';
+import { ref, watch } from 'vue';
+
+let current = ref(false);
+
+watch(isPreset, (newVal) => {
+  if (newVal === false) {
+    current.value = false
+  }
+})
 
 let setActive = (val) => {
-  if (isPreset.value === val) {
-    updateState('preset', false);
+  if (current.value === val) {
+    addPreset() //remove preset
+    current.value = false
   } else {
-    updateState('preset', val);
-    updateState('buOption', preset[val])
+    addPreset(preset[val]);
+    current.value = val;
   }
 };
 </script>
@@ -50,7 +61,6 @@ let setActive = (val) => {
   height: 100%;
   padding: 0;
   padding-bottom: 80px;
-  padding-top: 30px;
 }
 
 .info {

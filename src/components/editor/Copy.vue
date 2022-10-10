@@ -1,10 +1,9 @@
 <template>
   <section id="copy">
-    <h3>Generated Config</h3>
-
+    <SplitHeader class="split-header"></SplitHeader>
     <div class="option-box">
       <div>
-        <textarea id="rawOptions" readonly v-model="generated" ref="textarea"></textarea>
+        <textarea id="rawOptions" readonly v-model="stringify_buOption" ref="textarea"></textarea>
         <p>Your generated BibleUp will be here. This input is readonly</p>
       </div>
       <button class="btn-editor" @click="toClipboard">Copy To Clipboard</button>
@@ -13,31 +12,30 @@
 </template>
 
 <script setup>
-import {ref} from "vue"
-import { generated } from "@/js/store"
+import SplitHeader from '@/components/editor/SplitHeader.vue';
+import { ref } from 'vue';
+import { stringify_buOption } from '@/js/store';
 
-let textarea = ref(null)
+let textarea = ref(null);
 
 let toClipboard = () => {
   textarea.value.select();
   document.execCommand('copy');
-}
-
+};
 </script>
 
 <style lang="less" scoped>
 @import '@/css/theme.less';
-@import "@/css/editor.less";
+@import '@/css/editor.less';
 
 #copy {
   width: 100%;
   height: 100%;
   padding: 0;
   padding-bottom: 80px;
-  padding-top: 30px;
 }
 
 .option-box {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 </style>
