@@ -1,7 +1,7 @@
 import { reactive, computed, watch } from 'vue';
 
 let state = reactive({
-  isEditor: true,
+  isEditor: false,
   isImport: false,
   preset: false,
   screen: {

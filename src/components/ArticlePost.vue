@@ -95,7 +95,7 @@ article {
   line-height: 1.7;
   margin-top: 40px;
 
-  @media @desktop {
+  @media @lg {
     padding: 0 40px;
     margin-top: 0;
   }

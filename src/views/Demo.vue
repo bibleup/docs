@@ -62,14 +62,26 @@ watch(isEditor, (newVal) => {
 
 let activate = () => {
   isActive.value = !isActive.value;
-  /* if (isActive.value === false) {
-    document.location.reload()
-  } */
 };
 </script>
 
 <style lang="less" scoped>
 @import '@/css/theme.less';
+
+section,
+article {
+  width: 100%;
+  padding: 20px;
+
+  @media @desktop {
+    padding: 0 40px;
+  }
+
+  &>h1:first-of-type {
+    color: @color;
+    font-size: 2.8rem;
+  }
+}
 
 #intro {
   display: flex;
@@ -77,6 +89,7 @@ let activate = () => {
   justify-content: center;
   align-items: center;
   height: 300px;
+  margin-top: 50px;
 
   .catch {
     margin-top: 0;

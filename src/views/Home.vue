@@ -1,8 +1,7 @@
 <template>
-  <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div id="header-content">
     <div id="main">
-      <span id="note">🎉 BibleUp is now in <b>version 1.0.0</b></span>
+      <span id="note">BibleUp is now in <b>version 1.0.0</b> 🎈</span>
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
       <p class="catch">
         BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with
@@ -96,26 +95,24 @@
         <p class="tag">Add-ons 📦</p>
       </div>
     </div>
-
-    <div class="alert-box">
-      <p>
-        BibleUp is available as a
-        <b><a href="https://bibleup.netlify.app/docs/plugins/wordpress-plugin">WordPress Plugin</a></b> and
-        <b><a href="https://bibleup.netlify.app/docs/plugins/browser-extension">Browser Extension</a></b> that can be
-        used on any website.
-      </p>
-    </div>
   </section>
 
   <section id="partners">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="rgba(0,0,0,0.2)"
+        d="M41.2,-63.6C54.7,-55.4,67.8,-46.2,75,-33.4C82.1,-20.6,83.2,-4.3,81.3,11.9C79.3,28.2,74.4,44.2,64.8,57.4C55.3,70.5,41,80.8,24.9,86.2C8.8,91.6,-9.2,92.2,-23.6,85.6C-38,79,-48.8,65.3,-59.6,52.1C-70.3,38.8,-81.1,26,-85.7,10.8C-90.3,-4.5,-88.8,-22.2,-82.3,-38C-75.7,-53.8,-64.1,-67.7,-49.5,-75.4C-34.9,-83.2,-17.5,-84.7,-1.8,-81.9C13.8,-79.1,27.7,-71.8,41.2,-63.6Z"
+        transform="translate(100 100)"
+      />
+    </svg>
     <h1>Used by</h1>
-    <p class="catch">
+    <p>
       If you use BibleUp on yor website or blog, kindly send us a message with your web address so we can feature it
       right here!
     </p>
-    <div id="add" ref="partner">
+    <button>
       <a href="#contact"><i class="fi fi-rr-plus icon"></i></a>
-    </div>
+    </button>
   </section>
 
   <section id="faq">
@@ -176,6 +173,15 @@
       <input id="submit-btn" type="submit" />
     </form>
   </section>
+
+  <section id="credits">
+    <h1>Credits & Sponsors</h1>
+    <p class="catch">BibleUp is free, supported and backed by these amazing organisations</p>
+    <div class="wrapper">
+      <img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70" />
+    </div>
+  </section>
+
 </template>
 
 <script setup>
@@ -215,6 +221,16 @@ a {
   color: #4884ee;
 }
 
+section {
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5rem;
+
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
 #header-content {
   width: 100%;
   display: flex;
@@ -223,18 +239,19 @@ a {
   align-items: center;
   color: @color;
   padding: 50px 20px;
-  font-family: 'Rubik', sans-serif;
   background: white;
 
   @media @lg {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   #main {
     width: 100%;
     text-align: center;
     flex-grow: 1;
+    max-width: 700px;
+    justify-self: center;
 
     @media @lg {
       padding: 0 2rem;
@@ -253,14 +270,12 @@ a {
   }
 
   h1 {
-    font-size: 3rem;
-    font-family: 'Rubik', sans-serif;
+    font-size: 2.4rem;
     font-weight: 700;
     margin-top: 20px;
-    line-height: 43px;
 
     @media @lg {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
   }
 
@@ -271,6 +286,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: center;
 
     @media @lg {
       padding: 0 50px;
@@ -379,7 +395,6 @@ a {
   }
 
   p {
-    font-size: 1.6rem;
     color: @grey;
     margin-top: 5px;
   }
@@ -392,7 +407,6 @@ a {
 #feature {
   width: 100%;
   margin-top: 10px;
-  font-family: 'Rubik', sans-serif;
   //background: red;
   display: flex;
   flex-direction: column;
@@ -416,12 +430,6 @@ a {
     margin-top: 20px;
     border-radius: 10px;
     padding: 15px;
-    //box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0em 2px;
-
-    &:hover {
-      background: #f2f2f263;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 5px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    }
 
     .icon {
       width: 40px;
@@ -452,7 +460,6 @@ a {
 #community {
   padding: 20px;
   margin-top: 30px;
-  font-family: 'Rubik', sans-serif;
 
   @media @desktop {
     display: flex;
@@ -471,11 +478,9 @@ a {
     gap: 20px;
 
     @media @desktop {
-      /* grid-template-columns: repeat(3, 1fr);
-      justify-items: center; */
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
       justify-content: center;
-      gap: 0 50px;
     }
 
     .box {
@@ -492,7 +497,6 @@ a {
       justify-content: space-around;
       align-items: center;
       text-align: center;
-      position: relative;
 
       h3 {
         font-size: 3.8rem;
@@ -526,56 +530,59 @@ a {
       }
     }
   }
-
-  .alert-box {
-      margin: 0 auto;
-      margin-top: 40px;
-    }
 }
 
 #partners {
-  padding: 20px;
+  padding: 15px;
+  background-color: #4884ee;
+  background-image: linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
   margin-top: 40px;
-  font-family: 'Rubik', sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
 
   @media @desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    p {
+      padding: 0 100px;
+    }
   }
 
-  #add {
-    width: 50px;
-    height: 50px;
-    margin-top: 20px;
-    padding: 0;
-    border: 3px solid grey;
-    border-radius: 6px;
-    background: #f2f2f2;
-    color: gray;
+  svg {
+    position: absolute;
+    bottom: -90px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+  }
 
-    &:hover {
-      border-color: #4885ee;
-      color: #4885ee;
-    }
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    margin-top: 1px;
+  }
+
+  button {
+    margin-top: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 1);
 
     a {
-      display: inline-block;
       width: 100%;
       height: 100%;
-      color: inherit;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0;
-      margin: 0;
-    }
-
-    .icon {
+      line-height: 2px;
       font-size: 2rem;
-      line-height: 15px;
     }
   }
 }
@@ -583,7 +590,6 @@ a {
 #faq {
   margin-top: 40px;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Rubik', sans-serif;
 
   @media @desktop {
     display: flex;
@@ -651,8 +657,7 @@ a {
 }
 
 #contact {
-  margin-top: 40px;
-  font-family: 'Rubik', sans-serif;
+  margin-top: 30px;
 
   @media @desktop {
     display: flex;
@@ -660,6 +665,22 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+}
+
+#credits {
+  margin-top: 30px;
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wrapper {
+    margin-top: 0px;
+    opacity: 0.8;
   }
 }
 
