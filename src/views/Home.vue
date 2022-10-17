@@ -66,7 +66,7 @@
 
   <section id="community">
     <h1>Community Driven</h1>
-    <p class="catch">
+    <p class="info">
       Enjoy the merit of open source and rapid development. Contributions are allowed from everyone and anyone.
     </p>
 
@@ -117,7 +117,7 @@
 
   <section id="faq">
     <h1>FAQ</h1>
-    <p>Frequently Asked Questions</p>
+    <p class="info">Frequently Asked Questions</p>
 
     <div class="wrapper">
       <details>
@@ -160,7 +160,7 @@
 
   <section id="contact">
     <h1>Contact BibleUp</h1>
-    <p class="catch">
+    <p class="info">
       Have an awesome review to share with us? <br />Need help installing BibleUp on your website/blog or you simply
       want to cheer us on?
     </p>
@@ -176,7 +176,7 @@
 
   <section id="credits">
     <h1>Credits & Sponsors</h1>
-    <p class="catch">BibleUp is free, supported and backed by these amazing organisations</p>
+    <p class="info">BibleUp is free, supported and backed by these amazing organisations</p>
     <div class="wrapper">
       <img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70" />
     </div>
@@ -224,10 +224,15 @@ a {
 section {
   padding: 20px;
   font-family: 'Rubik', sans-serif;
-  font-size: 1.5rem;
 
   h1 {
     font-size: 2.8rem;
+    color: @color;
+  }
+
+  .info {
+    color: @grey;
+    margin-top: 5px;
   }
 }
 
@@ -277,6 +282,10 @@ section {
     @media @lg {
       font-size: 3rem;
     }
+  }
+
+  .catch {
+    margin-top: 10px;
   }
 
   #header-image {
@@ -562,10 +571,11 @@ section {
 
   h1 {
     font-size: 2.8rem;
+    color: white;
   }
 
   p {
-    margin-top: 1px;
+    margin-top: 5px;
   }
 
   button {
@@ -613,6 +623,7 @@ section {
 
       .catch {
         text-align: left;
+        margin-top: 15px;
       }
 
       summary {
