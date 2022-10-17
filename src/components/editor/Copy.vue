@@ -31,8 +31,6 @@ let toClipboard = () => {
 #copy {
   width: 100%;
   height: 100%;
-  padding: 0;
-  padding-bottom: 80px;
 }
 
 .option-box {

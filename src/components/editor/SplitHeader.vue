@@ -28,8 +28,8 @@ const close = () => {
   color: @color;
   position: sticky;
   top: 0;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
   z-index: 1;
 
   p {
@@ -39,6 +39,7 @@ const close = () => {
 
   button {
     font-size: 1.3rem;
+    line-height: 1px;
   }
 }
 </style>

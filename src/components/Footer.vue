@@ -37,9 +37,11 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0;
+    margin: 0;
+    margin: 10px;
 
     li {
-      padding: 10px 15px;
+      padding: 5px 15px;
 
       a {
         text-decoration: none;

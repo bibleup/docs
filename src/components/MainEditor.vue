@@ -79,31 +79,34 @@ import Copy from "./editor/Copy.vue"
   }
 
   header {
-    position: absolute;
-    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #ccc;
     padding: 15px;
     color: @color;
     h1 {
       font-size: 2.5rem;
     }
 
-    i {
-      font-size: 1.6rem;
+    button {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
       background: #f2f2f2;
-      padding: 10px;
-      border-radius: 20px;
+    }
+
+    i {
+      font-size: 1.35rem;
+      line-height: 1px;
     }
   }
 }
 
 .body {
-  //margin-top: 90px;
-  padding-top: 80px;
   width: 100%;
   height: 100%;
 }
@@ -113,7 +116,6 @@ import Copy from "./editor/Copy.vue"
   justify-content: flex-start;
   align-items: center;
   overflow-x: auto;
-  margin-top: 10px;
   padding-right: 15px;
 
   button {
@@ -137,6 +139,7 @@ import Copy from "./editor/Copy.vue"
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    line-height: 1px;
   }
 }
 
@@ -155,7 +158,6 @@ import Copy from "./editor/Copy.vue"
 
     #preview {
       //border-bottom: 2px solid #ccc;
-
       @media @lg {
         border-right: 2px solid #ccc;
       }
@@ -164,9 +166,8 @@ import Copy from "./editor/Copy.vue"
 }
 
 .screen {
-  padding: 15px;
   color: @color;
   overflow: auto;
-  padding-bottom: 60px;
+  padding-bottom: 150px;
 }
 </style>

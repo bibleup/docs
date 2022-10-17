@@ -45,6 +45,10 @@ onBeforeUnmount(() => {
 <style lang="less" scoped>
 @import '@/css/theme.less';
 
+#preview {
+  padding: 10px;
+}
+
 #preview-info {
   display: flex;
   align-items: center;
