@@ -2,7 +2,6 @@
   <div id="select-options">
     <SplitHeader class="split-header"></SplitHeader>
     <div class="note">
-      <h4>Note:</h4>
       <p>
         Set any option to false or leave empty to get the default value. For full documentation of these options, check
         the
@@ -193,7 +192,7 @@ let option = ref(getOptions);
 .option-divider {
   width: 100%;
   height: 50px;
-  background: #e6e6e6;
+  background: #f2f2f2;
   padding: 10px 20px;
   margin-top: 20px;
   display: flex;

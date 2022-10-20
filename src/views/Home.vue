@@ -181,7 +181,6 @@
       <img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70" />
     </div>
   </section>
-
 </template>
 
 <script setup>
@@ -624,6 +623,10 @@ section {
       .catch {
         text-align: left;
         margin-top: 15px;
+      }
+
+      & > summary::-webkit-details-marker {
+        display: none;
       }
 
       summary {

@@ -149,7 +149,7 @@ import Copy from "./editor/Copy.vue"
 
   &.active {
     display: grid;
-    grid-template-rows: 30% 1fr;
+    grid-template-rows: 20% 1fr;
 
     @media @lg {
       grid-template-rows: none;
@@ -157,7 +157,6 @@ import Copy from "./editor/Copy.vue"
     }
 
     #preview {
-      //border-bottom: 2px solid #ccc;
       @media @lg {
         border-right: 2px solid #ccc;
       }

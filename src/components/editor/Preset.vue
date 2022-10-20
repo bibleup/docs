@@ -2,7 +2,6 @@
   <section id="preset">
     <SplitHeader class="split-header"></SplitHeader>
     <div class="note">
-      <h4>Note:</h4>
       <p>
         Click to activate/deactivate preset.<br />
         Presets do not change select options but you can copy the code.

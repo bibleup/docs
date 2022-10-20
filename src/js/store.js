@@ -38,7 +38,9 @@ let state = reactive({
         secondary: false,
         tertiary: false,
         headerColor: false,
-        color: [fontColor, versionColor, closeColor],
+        fontColor: false,
+        versionColor: false,
+        closeColor: false,
         borderRadius: false,
         boxShadow: false,
         fontSize: false,
@@ -82,10 +84,9 @@ export let toggleState = (s) => {
   }
 };
 
-// For import
+
 /**
- * Checks if `state.option.rawOptions` is a valid object
- * It will set `buOption` to the parsed rawOption value or `format_buOption` value
+ * Checks if `state.option.rawOptions` is a valid object then `buOption` to the parsed rawOption value or `format_buOption` value
  */
 let formatRaw = () => {
   let raw;
@@ -146,33 +147,24 @@ const format_buOption = () => {
   }
 
   let realOpt = { popup: opt.popup, version: opt.version, darkTheme: opt.darkTheme };
-  let styleProps = {
+  let styles = {
     primary: opt.primary,
     secondary: opt.secondary,
     tertiary: opt.tertiary,
     headerColor: opt.headerColor,
+    fontColor: opt.fontColor,
+    versionColor: opt.versionColor,
+    closeColor: opt.closeColor,
     borderRadius: opt.borderRadius,
     boxShadow: opt.boxShadow,
     fontSize: opt.fontSize,
   };
-  let colorProps = { fontColor: opt.fontColor, versionColor: opt.versionColor, closeColor: opt.closeColor };
 
   // check styles
-  for (const prop in styleProps) {
-    if (styleProps[prop] && styleProps[prop] !== 'false') {
-      //console.log(prop, styleProps[prop])
+  for (const prop in styles) {
+    if (styles[prop] && styles[prop] !== 'false') {
       if (!realOpt.styles) realOpt.styles = {};
-      realOpt.styles[prop] = styleProps[prop];
-    }
-  }
-
-  // check color
-  for (const prop in colorProps) {
-    if (colorProps[prop] && colorProps[prop] !== 'false') {
-      if (!realOpt.styles.color) realOpt.styles.color = [false, false, false];
-      if (prop === 'fontColor') realOpt.styles.color[0] = colorProps[prop];
-      if (prop === 'versionColor') realOpt.styles.color[1] = colorProps[prop];
-      if (prop === 'closeColor') realOpt.styles.color[2] = colorProps[prop];
+      realOpt.styles[prop] = styles[prop];
     }
   }
 

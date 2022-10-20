@@ -6,10 +6,11 @@
 </template>
 
 <script setup>
-import {getScreen, updateScreen} from '@/js/store'
+import {getScreen, toggleState, updateScreen} from '@/js/store'
 
 const close = () => {
   updateScreen('Preview')
+  toggleState('split', false)
 }
 
 </script>
