@@ -1,3 +1,5 @@
+[build]
+  publish = "docs/.vitepress/dist"
 
 [[redirects]]
   from = "/*"
