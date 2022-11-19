@@ -1,7 +1,7 @@
 <template>
   <div id="header-content">
     <div id="main">
-      <span id="note">BibleUp is now in <b>version 1.0.0</b> 🎈</span>
+      <span id="note">BibleUp is now in <b>version 1.0.0</b> 🎉</span>
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
       <p class="catch">
         BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with
@@ -10,11 +10,10 @@
       <div class="btn-grp">
         <a href="/docs">Get Started</a>
         <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
-
-        <div class="check-feat">
-          <p><i class="icon fi fi-rr-check"></i> Wordpress Plugin</p>
-          <p><i class="icon fi fi-rr-check"></i> Browser Extention</p>
-        </div>
+      </div>
+      <div class="check-feat">
+        <p><i class="icon fi fi-rr-plus"></i> Wordpress Plugin</p>
+        <p><i class="icon fi fi-rr-plus"></i> Browser Extention</p>
       </div>
     </div>
 
@@ -26,7 +25,10 @@
   <div id="try">
     <h1>Quick Demo</h1>
     <p>Hover or click on the references below</p>
-    <p id="try-ref"><span ref="try1">2 Corinthians 5:17</span>, <span ref="try2">Romans 10:9-10</span></p>
+    <p id="try-ref">
+      <span ref="try1">2 Corinthians 5:17</span>, <span ref="try2">Romans 10:9-10</span>,
+      <span class="icon-ref" ref="try3">John 3:16,30</span>
+    </p>
   </div>
 
   <section id="feature">
@@ -188,8 +190,10 @@ import { onMounted, onBeforeUnmount, ref } from 'vue';
 let partner = ref(null);
 let try1 = ref(null);
 let try2 = ref(null);
+let try3 = ref(null);
 let bibleup_try1;
 let bibleup_try2;
+let bibleup_try3;
 
 onMounted(() => {
   bibleup_try1 = new BibleUp(try1.value);
@@ -202,15 +206,39 @@ onMounted(() => {
       borderRadius: '10px',
     },
   });
+  bibleup_try3 = new BibleUp(try3.value, {
+    bu_id: 'icon',
+  });
+  // create all
   bibleup_try1.create();
   bibleup_try2.create();
+  bibleup_try3.create();
 });
 
 onBeforeUnmount(() => {
   bibleup_try1.destroy();
   bibleup_try2.destroy();
+  bibleup_try3.destroy();
 });
 </script>
+
+<style lang="less">
+// global styles
+.bu-link-icon::after {
+  display: inline-block;
+  /* content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg'  fill='currentColor' id='Outline' viewBox='0 0 24 24' width='12px' height='12px'%3E%3Cpath d='M20,0H4A4,4,0,0,0,0,4V16a4,4,0,0,0,4,4H6.9l4.451,3.763a1,1,0,0,0,1.292,0L17.1,20H20a4,4,0,0,0,4-4V4A4,4,0,0,0,20,0Zm2,16a2,2,0,0,1-2,2H17.1a2,2,0,0,0-1.291.473L12,21.69,8.193,18.473h0A2,2,0,0,0,6.9,18H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H20a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M7,7h5a1,1,0,0,0,0-2H7A1,1,0,0,0,7,7Z'/%3E%3Cpath d='M17,9H7a1,1,0,0,0,0,2H17a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M17,13H7a1,1,0,0,0,0,2H17a1,1,0,0,0,0-2Z'/%3E%3C/svg>"); */
+  content: '';
+  -webkit-mask: url(../assets/comment-5.svg) no-repeat 50% 50%;
+  mask: url(../assets/comment-4.svg) no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #5c5c5c;
+  height: 10px;
+  width: 10px;
+  margin: 0 3px;
+  margin-bottom: 5px;
+}
+</style>
 
 <style lang="less" scoped>
 @import '@/css/theme.less';
@@ -248,17 +276,17 @@ section {
   @media @lg {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 50px 40px;
   }
 
   #main {
     width: 100%;
     text-align: center;
     flex-grow: 1;
-    max-width: 700px;
+    max-width: 650px;
     justify-self: center;
 
     @media @lg {
-      padding: 0 2rem;
       text-align: left;
     }
   }
@@ -267,9 +295,15 @@ section {
     display: inline-block;
     width: auto;
     padding: 6px 15px;
-    background-color: @blue;
-    background-image: linear-gradient(315deg, @blue2 0%, #4884ee 74%);
-    color: white;
+    //background-color: @blue;
+    //background-image: linear-gradient(315deg, @blue2 0%, #4884ee 74%);
+    background: #f5f5f5;
+    border: 2px solid #dedede;
+    border: 3px solid transparent;
+    background-image: linear-gradient(#f5f5f5, #f5f5f5), linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #404040;
     border-radius: 5px;
   }
 
@@ -284,7 +318,7 @@ section {
   }
 
   .catch {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   #header-image {
@@ -321,13 +355,16 @@ section {
     margin-top: 30px;
     width: 100%;
     display: flex;
+    gap: 12px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 
     @media @lg {
+      flex-direction: row;
       align-items: flex-start;
+      justify-content: flex-start;
     }
 
     a {
@@ -342,30 +379,52 @@ section {
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       transition: background 200ms;
 
+      @media @lg {
+        max-width: 200px;
+      }
+
       &:hover {
         background-color: darken(@blue, 5%);
       }
     }
 
     .grad {
+      position: relative;
+      z-index: 1; /* matters! */
       background-color: #f39f86;
-      background-image: linear-gradient(315deg, #f9d976 0%, #f39f86 74%);
-      margin-top: 15px;
+      background-image: linear-gradient(to right bottom, #f9d976 0%, #f39f86 74%);
       color: @dark-blue2;
+      transition: background-image 1s linear;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left bottom, #f9d976 0%, #f39f86 74%);
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity 0.4s;
+        z-index: -1;
+      }
 
       &:hover {
-        background-image: linear-gradient(315deg, #fcd14f 0%, #f3724a 74%);
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }
 
   .check-feat {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 0 15px;
     font-size: 1.3rem;
-    margin-top: 12px;
+    margin-top: 15px;
     color: #808080;
 
     p {
@@ -375,22 +434,25 @@ section {
     }
     .icon {
       height: 100%;
-      margin-right: 5px;
+      margin-right: 10px;
       justify-self: center;
       line-height: 0.3px;
       font-size: 1.25rem;
     }
 
     @media @lg {
+      justify-content: flex-start;
       align-items: flex-start;
+      padding-left: 2px;
     }
   }
 }
 
 #try {
   width: 100%;
-  background: #f2f2f2;
-  //color: white;
+  background: #f5f5f5;
+  border-top: 2px solid #dedede;
+  border-bottom: 2px solid #dedede;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -454,7 +516,7 @@ section {
 
     h1 {
       font-size: 2rem;
-      color: #666666;
+      color: #5c5c5c;
       margin-top: 10px;
     }
 

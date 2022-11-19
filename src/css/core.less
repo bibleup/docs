@@ -6,20 +6,6 @@ html {
   font-size: 62.6%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  outline: none;
-  color: inherit;
-  border: inherit;
-  background: inherit;
-  border: none;
-  cursor: pointer;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -31,11 +17,23 @@ body {
 }
 
 @media screen and (min-width:700px) {
-  html {
-    font-size: 66%;
-  }
+  //desktop
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  color: inherit;
+  border: inherit;
+  background: inherit;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
 
 .btn {
   text-decoration: none;
@@ -57,7 +55,7 @@ body {
   justify-content: center;
   align-content: center;
   padding: 5px 10px;
-  background: #f6f6f6;
+  background: #f2f2f2;
   border-radius: 5px;
   color: @color;
 
@@ -132,5 +130,7 @@ h6 {
 
 .bu-link {
   text-decoration: none;
-  color: @blue2;
+  a {
+    color: @blue2;
+  }
 }
