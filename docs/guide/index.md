@@ -1,11 +1,11 @@
 
 # Installation
 
-::: note
-The following guide is for development purposes. The installation guide for the WordPress plugin and browser extension guide can be found at other sections of this documentation.
+::: tip NOTE
+The following guide is for development purposes. The installation guide for the WordPress plugin and browser extension guide can be found in the **Plugin and Extensions** section.
 ::: 
 
-BibleUp can be installed with NPM if you have node installed on your system and if you use a build tool. If not, it should be served from a CDN.
+BibleUp can be installed with NPM if you have node installed on your system and if you use a build tool. It can also be served from a CDN.
 
 ### NPM
 
@@ -22,7 +22,7 @@ import "@bibleup/bibleup/css"
 
 ### CDN
 
-If you like to use a CDN instead, place the following before the closing `</body>` tag in your HTML:
+To serve BibleUp through a CDN, place the following code before the closing `</body>` in the HTML file:
 
 ```html
 <!-- jsdelivr -->
