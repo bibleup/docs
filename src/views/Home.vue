@@ -8,7 +8,7 @@
         accessible Popovers.
       </p>
       <div class="btn-grp">
-        <a href="/docs">Get Started</a>
+        <a href="https://docs-v1--bibleup.netlify.app/">Get Started</a>
         <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
       </div>
       <div class="check-feat">
@@ -26,7 +26,7 @@
     <h1>Quick Demo</h1>
     <p>Hover or click on the references below</p>
     <p id="try-ref">
-      <span ref="try1">2 Corinthians 5:17</span>, <span ref="try2">Romans 10:9-10</span>,
+      <span ref="try1">2 Corinthians 5:17</span> | <span ref="try2">Romans 10:9-10</span> |
       <span class="icon-ref" ref="try3">John 3:16,30</span>
     </p>
   </div>
@@ -207,7 +207,8 @@ onMounted(() => {
     },
   });
   bibleup_try3 = new BibleUp(try3.value, {
-    bu_id: 'icon',
+    popup: 'inline',
+    bu_id: 'icon'
   });
   // create all
   bibleup_try1.create();
@@ -232,11 +233,19 @@ onBeforeUnmount(() => {
   mask: url(../assets/comment-4.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: #5c5c5c;
+  background-color: yellowgreen;
   height: 10px;
   width: 10px;
   margin: 0 3px;
   margin-bottom: 5px;
+}
+
+#bu-popup-icon {
+  background: linear-gradient(rgba(72, 0, 72, 0.5), rgba(192, 72, 72, 0.5)), url(../assets/popup_bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 </style>
 
@@ -470,7 +479,9 @@ section {
   }
 
   #try-ref {
-    margin-top: 15px;
+    width: 90%;
+    text-align: center;
+    margin-top: 10px;
   }
 }
 

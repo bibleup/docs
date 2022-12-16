@@ -9,18 +9,18 @@
         <button id="menu-btn" class="btn2" target="_blank" @click="menuAction">Menu</button>
         <div class="btn-group">
           <a href="">Plugin and Extention</a>
-          <a href="">Join The Community</a>
+          <a href="https://github.com/bibleup">Join The Community</a>
           <a href="">BibleUp Editor</a>
-          <a href="">Github</a>
+          <a href="https://github.com/Bibleup/bibleup">Github</a>
         </div>
       </div>
     </div>
     <div id="mobile-menu" v-show="openMenu">
       <ul>
         <li><a href="">Plugin and Extention</a></li>
-        <li><a href="">Documentation</a></li>
-        <li><a href="">Join The Community</a></li>
-        <li><a href="">BibleUp Editor</a></li>
+        <li><a href="https://docs-v1--bibleup.netlify.app/">Documentation</a></li>
+        <li><a href="https://github.com/bibleup">Join The Community</a></li>
+        <li><a href="/demo">BibleUp Editor</a></li>
         <li>
           <a class="github" target="_blank" href="https://github.com/Bibleup/bibleup.js">Github</a>
         </li>
