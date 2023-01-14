@@ -31,9 +31,9 @@ onMounted(() => {
   watch(
     getBuOption,
     debounce((newOpt) => {
+      console.log(newOpt)
       lbibleup.refresh(newOpt, true);
-    }, 500),
-    { flush: 'post' }
+    }, 500)
   );
 });
 

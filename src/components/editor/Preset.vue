@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-  import SplitHeader from '@/components/editor/SplitHeader.vue';
+import SplitHeader from '@/components/editor/SplitHeader.vue';
 import { isPreset, addPreset } from '@/js/store';
 import { preset } from '@/js/utility';
 import { ref, watch } from 'vue';
@@ -36,14 +36,14 @@ let current = ref(false);
 
 watch(isPreset, (newVal) => {
   if (newVal === false) {
-    current.value = false
+    current.value = false;
   }
-})
+});
 
 let setActive = (val) => {
   if (current.value === val) {
-    addPreset() //remove preset
-    current.value = false
+    addPreset(); //remove preset
+    current.value = false;
   } else {
     addPreset(preset[val]);
     current.value = val;

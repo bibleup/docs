@@ -64,9 +64,11 @@ onMounted(() => {
   bibleupInsatnces[1] = new BibleUp(p2, {
     popup: 'classic',
     styles: {
-      primary: 'linear-gradient(to right, #659999, #f4791f)',
-      secondary: 'linear-gradient(to right, #659999, #f4791f)',
+      primary: 'linear-gradient(to bottom right, #E5E5BE, #003973)',
+      secondary: '#003973',
+      headerColor: 'white'
     },
+
   });
   bibleupInsatnces[1].create();
 

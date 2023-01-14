@@ -1,16 +1,17 @@
 <template>
   <div id="header-content">
     <div id="main">
-      <span id="note">BibleUp is now in <b>version 1.0.0</b> 🎉</span>
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
       <p class="catch">
         BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with
         accessible Popovers.
       </p>
+
       <div class="btn-grp">
         <a href="https://docs-v1--bibleup.netlify.app/">Get Started</a>
         <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
       </div>
+
       <div class="check-feat">
         <p><i class="icon fi fi-rr-plus"></i> Wordpress Plugin</p>
         <p><i class="icon fi fi-rr-plus"></i> Browser Extention</p>
@@ -26,7 +27,7 @@
     <h1>Quick Demo</h1>
     <p>Hover or click on the references below</p>
     <p id="try-ref">
-      <span ref="try1">2 Corinthians 5:17</span> | <span ref="try2">Romans 10:9-10</span> |
+      <span ref="try1">2 Corinthians 5:17</span>, <span ref="try2">Romans 10:9-10</span>,
       <span class="icon-ref" ref="try3">John 3:16,30</span>
     </p>
   </div>
@@ -63,6 +64,20 @@
         <h1>Accessibility</h1>
         <p>BibleUp follows the WAI-ARAI accessibility guidelines for screen readers and keyboard navigation.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="snippet">
+    <div class="info">
+      <h1>Tweak To Your Taste</h1>
+      <p class="info">
+        Bibleup makes it easy to tweak available features to fit your website, re-build from source or add custom
+        features.
+      </p>
+    </div>
+
+    <div class="img-wrapper">
+      <img src="../assets/snippet1.svg" alt="BibleUp tagger code snippet" width="100%" />
     </div>
   </section>
 
@@ -117,6 +132,14 @@
     </button>
   </section>
 
+  <section id="sponsors">
+    <h1>Credits & Sponsors</h1>
+    <p class="info">BibleUp is free, supported and backed by these amazing organisations</p>
+    <div class="wrapper">
+      <a href=""><img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70" /></a>
+    </div>
+  </section>
+
   <section id="faq">
     <h1>FAQ</h1>
     <p class="info">Frequently Asked Questions</p>
@@ -163,8 +186,11 @@
   <section id="contact">
     <h1>Contact BibleUp</h1>
     <p class="info">
-      Have an awesome review to share with us? <br />Need help installing BibleUp on your website/blog or you simply
+      Have an awesome review to share with us? <br />
       want to cheer us on?
+    </p>
+    <p class="note info">
+      For issues, bugs or feature requests, <a href="">check here</a> instead
     </p>
 
     <form name="feedback" method="post" id="contact-form" netlify>
@@ -174,14 +200,6 @@
       <textarea required name="details" placeholder="Details" type="text"></textarea>
       <input id="submit-btn" type="submit" />
     </form>
-  </section>
-
-  <section id="credits">
-    <h1>Credits & Sponsors</h1>
-    <p class="info">BibleUp is free, supported and backed by these amazing organisations</p>
-    <div class="wrapper">
-      <img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70" />
-    </div>
   </section>
 </template>
 
@@ -208,7 +226,7 @@ onMounted(() => {
   });
   bibleup_try3 = new BibleUp(try3.value, {
     popup: 'inline',
-    bu_id: 'icon'
+    bu_id: 'icon',
   });
   // create all
   bibleup_try1.create();
@@ -223,21 +241,24 @@ onBeforeUnmount(() => {
 });
 </script>
 
+<!-- global styles -->
 <style lang="less">
-// global styles
 .bu-link-icon::after {
-  display: inline-block;
-  /* content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg'  fill='currentColor' id='Outline' viewBox='0 0 24 24' width='12px' height='12px'%3E%3Cpath d='M20,0H4A4,4,0,0,0,0,4V16a4,4,0,0,0,4,4H6.9l4.451,3.763a1,1,0,0,0,1.292,0L17.1,20H20a4,4,0,0,0,4-4V4A4,4,0,0,0,20,0Zm2,16a2,2,0,0,1-2,2H17.1a2,2,0,0,0-1.291.473L12,21.69,8.193,18.473h0A2,2,0,0,0,6.9,18H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H20a2,2,0,0,1,2,2Z'/%3E%3Cpath d='M7,7h5a1,1,0,0,0,0-2H7A1,1,0,0,0,7,7Z'/%3E%3Cpath d='M17,9H7a1,1,0,0,0,0,2H17a1,1,0,0,0,0-2Z'/%3E%3Cpath d='M17,13H7a1,1,0,0,0,0,2H17a1,1,0,0,0,0-2Z'/%3E%3C/svg>"); */
   content: '';
-  -webkit-mask: url(../assets/comment-5.svg) no-repeat 50% 50%;
-  mask: url(../assets/comment-4.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../assets/comment.svg) no-repeat 50% 50%;
+  mask: url(../assets/comment.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: yellowgreen;
-  height: 10px;
-  width: 10px;
-  margin: 0 3px;
-  margin-bottom: 5px;
+  display: inline-block;
+  background-color: purple;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  margin-bottom: 0px;
+}
+
+.bu-link-icon {
+  color: gold;
 }
 
 #bu-popup-icon {
@@ -307,7 +328,6 @@ section {
     //background-color: @blue;
     //background-image: linear-gradient(315deg, @blue2 0%, #4884ee 74%);
     background: #f5f5f5;
-    border: 2px solid #dedede;
     border: 3px solid transparent;
     background-image: linear-gradient(#f5f5f5, #f5f5f5), linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
     background-origin: border-box;
@@ -387,6 +407,10 @@ section {
       background: @blue;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       transition: background 200ms;
+      outline: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
 
       @media @lg {
         max-width: 200px;
@@ -499,7 +523,7 @@ section {
       display: grid;
       grid-template-columns: auto auto;
       justify-content: center;
-      grid-column-gap: 20px;
+      grid-column-gap: 30px;
     }
 
     @media @lg {
@@ -510,12 +534,16 @@ section {
   .box {
     margin-top: 20px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 0;
+
+    @media @desktop {
+      max-width: 350px;
+    }
 
     .icon {
       width: 40px;
       height: 40px;
-      background: #4884ee;
+      background: @blue;
       color: white;
       border-radius: 5px;
       padding: 5px;
@@ -534,6 +562,38 @@ section {
     p {
       margin-top: 5px;
       color: @grey;
+    }
+  }
+}
+
+#snippet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media @desktop {
+    flex-direction: row;
+    gap: 0 25px;
+    margin-bottom: 60px;
+  }
+
+  .info {
+    height: 100%;
+    max-width: 400px;
+  }
+
+  .img-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     }
   }
 }
@@ -584,8 +644,8 @@ section {
         font-weight: 700;
         padding: 0;
         transform: scale(1.3, 1.3);
-        background-color: #ff3cac;
-        background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+        background-color: #4884ee;
+        background: linear-gradient(225deg, #3b4371, #f3904f);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -616,12 +676,13 @@ section {
 #partners {
   padding: 15px;
   background-color: #4884ee;
-  background-image: linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
+  background: -webkit-linear-gradient(315deg,#3e8ede 0%,#4884ee 74%);
+  background: linear-gradient(315deg,#3e8ede 0%,#4884ee 74%);
   border-radius: 20px;
   width: 90%;
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 50px;
   color: white;
   position: relative;
   overflow: hidden;
@@ -669,8 +730,23 @@ section {
   }
 }
 
-#faq {
+#sponsors {
   margin-top: 40px;
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wrapper {
+    opacity: 1;
+  }
+}
+
+#faq {
+  margin-top: 15px;
   -webkit-text-size-adjust: 100%;
 
   @media @desktop {
@@ -753,21 +829,17 @@ section {
     align-items: center;
     text-align: center;
   }
-}
 
-#credits {
-  margin-top: 30px;
-  @media @desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  .note {
+    border-left: 6px solid rgb(247, 204, 75);
+    color: #8C8C8C;
+    padding: 0px 10px;
+    margin-top: 10px;
 
-  .wrapper {
-    margin-top: 0px;
-    opacity: 0.8;
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 }
 

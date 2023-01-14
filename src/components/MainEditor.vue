@@ -85,9 +85,10 @@ import Copy from './editor/Copy.vue';
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    height: 65px;
     color: @color;
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
 
     button {
@@ -123,14 +124,14 @@ import Copy from './editor/Copy.vue';
   align-items: center;
   overflow-x: auto;
   padding-right: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 
   button {
     flex: 0 0 auto;
     margin-left: 10px;
     padding: 5px 10px;
     background: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 5px;
 
     &:hover {
       background: darken(#f2f2f2, 10%);
@@ -165,7 +166,7 @@ import Copy from './editor/Copy.vue';
 
     #preview {
       @media @lg {
-        border-right: 2px solid #ccc;
+        border-right: 4px solid #e6e6e6;
       }
     }
   }

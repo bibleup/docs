@@ -54,70 +54,70 @@
         <div class="option-box">
           <label>Primary: </label>
           <div>
-            <input id="primary" type="text" maxlength="30" v-model="option.primary" />
+            <input id="primary" type="text" maxlength="30" v-model="option.primary" placeholder="color value" />
             <p>Set color for overall popup background</p>
           </div>
         </div>
         <div class="option-box">
           <label>Secondary: </label>
           <div>
-            <input id="secondary" type="text" maxlength="30" v-model="option.secondary" />
+            <input id="secondary" type="text" maxlength="30" v-model="option.secondary" placeholder="color value" />
             <p>Set background color for popup header (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Tertiary: </label>
           <div>
-            <input id="tertiary" type="text" maxlength="30" v-model="option.tertiary" />
+            <input id="tertiary" type="text" maxlength="30" v-model="option.tertiary" placeholder="color value" />
             <p>Set background color for popup version (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Header Color: </label>
           <div>
-            <input id="headerColor" type="text" maxlength="30" v-model="option.headerColor" />
+            <input id="headerColor" type="text" maxlength="30" v-model="option.headerColor" placeholder="color value" />
             <p>Font color for popup header (if it exists)</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Color: </label>
           <div>
-            <input id="fontColor" type="text" maxlength="30" v-model="option.fontColor" />
+            <input id="fontColor" type="text" maxlength="30" v-model="option.fontColor" placeholder="color value" />
             <p>The default font color for the popup</p>
           </div>
         </div>
         <div class="option-box">
           <label>Version Color: </label>
           <div>
-            <input id="versionColor" type="text" maxlength="30" v-model="option.versionColor" />
+            <input id="versionColor" type="text" maxlength="30" v-model="option.versionColor" placeholder="color value" />
             <p>Font color for popup version (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Close Color: </label>
           <div>
-            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor" />
+            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor" placeholder="color value"/>
             <p>Set color for close button (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Border Radius: </label>
           <div>
-            <input id="borderRadius" type="text" maxlength="30" v-model="option.borderRadius" />
+            <input id="borderRadius" type="text" maxlength="30" v-model="option.borderRadius" placeholder="10px" />
             <p>Set border radius for popup (in units).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Box Shadow: </label>
           <div>
-            <input id="boxShadow" type="text" maxlength="30" v-model="option.boxShadow" />
+            <input id="boxShadow" type="text" maxlength="30" v-model="option.boxShadow" placeholder="2px 2px 4px black"/>
             <p>Set a drop shadow for the popup (using CSS syntax).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Size: </label>
           <div>
-            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize" />
+            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize" placeholder="16px"/>
             <p>Set font size for all popup (in units)</p>
           </div>
         </div>
@@ -131,7 +131,7 @@
         <div class="option-box">
           <label>Ignore Specific HTML Elements: </label>
           <div>
-            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore" />
+            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore" placeholder="[]" />
             <p>
               BibleUp won't tag element listed here.<br />
               Seperate these elements using a comma and put inside a square bracket.
@@ -141,7 +141,7 @@
         <div class="option-box">
           <label>Allow Specific HTML Elements: </label>
           <div>
-            <input id="allow" type="text" maxlength="200" v-model="option.bu_allow" />
+            <input id="allow" type="text" maxlength="200" v-model="option.bu_allow" placeholder="[]" />
             <p>
               Override the default elements ignored by BibleUp by placing them here.<br />
               Seperate these elements using a comma and put inside a square bracket.

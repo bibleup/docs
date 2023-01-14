@@ -12,19 +12,19 @@ let state = reactive({
     popup: 'classic',
     version: 'KJV',
     darkTheme: false,
-    primary: false,
-    secondary: false,
-    tertiary: false,
-    headerColor: false,
-    fontColor: false,
-    versionColor: false,
-    closeColor: false,
-    borderRadius: false,
-    boxShadow: false,
-    fontSize: false,
-    bu_ignore: false,
-    bu_allow: false,
-    rawOptions: false,
+    primary: '',
+    secondary: '',
+    tertiary: '',
+    headerColor: '',
+    fontColor: '',
+    versionColor: '',
+    closeColor: '',
+    borderRadius: '',
+    boxShadow: '',
+    fontSize: '',
+    bu_ignore: '',
+    bu_allow: '',
+    rawOptions: '',
   },
   buOption: {},
 });
@@ -177,7 +177,7 @@ const format_buOption = () => {
   }
 
   //state.buOption = realOpt;
-  console.log('format Done');
+  console.log('format Done', realOpt);
   return realOpt;
 };
 

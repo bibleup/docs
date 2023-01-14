@@ -1,10 +1,19 @@
 <template>
+  <div id="banner" ref="banner">
+    <div class="info">
+      <p>BibleUp is now in <b>version 1.0</b> 💡</p>
+      <a class="go-btn"><i class="fi fi-rr-arrow-small-right"></i></a>
+    </div>
+    <button ref="close-btn" @click="removeBanner"><i class="fi fi-rr-cross-small"></i></button>
+  </div>
+
   <header :class="{ active: openMenu }">
     <div id="top">
       <div id="text">
         <img width="50" height="50" id="logo" alt="BibleUp Logo" src="../assets/logo.png" />
         <h1><router-link to="/" class="btn">BibleUp</router-link></h1>
       </div>
+
       <div id="header-nav">
         <button id="menu-btn" class="btn2" target="_blank" @click="menuAction">Menu</button>
         <div class="btn-group">
@@ -15,6 +24,7 @@
         </div>
       </div>
     </div>
+
     <div id="mobile-menu" v-show="openMenu">
       <ul>
         <li><a href="">Plugin and Extention</a></li>
@@ -33,14 +43,72 @@
 import { ref } from 'vue';
 
 let openMenu = ref(false);
+let banner = ref(null)
 
 const menuAction = () => {
   openMenu.value = !openMenu.value;
 };
+
+const removeBanner = () => {
+  banner.value.style.display = 'none'
+}
 </script>
 
 <style lang="less" scoped>
 @import '@/css/theme.less';
+
+#banner {
+  padding: 10px;
+  min-height: 50px;
+  font-size: 1.5rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  justify-items: center;
+  background-color: @blue;
+  background: #f3904f; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #3b4371,
+    #f3904f
+  );
+
+  color: #fff;
+
+  .info {
+    display: flex;
+    align-items: center;
+  }
+
+  .go-btn {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 0.95;
+    border-radius: 100px;
+
+    i {
+      margin-top: 2px;
+    }
+  }
+
+  button {
+    font-size: 2.4rem;
+    line-height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    border-radius: 5px;
+  }
+}
 
 header {
   font-family: 'Rubik', sans-serif;
@@ -162,7 +230,6 @@ header {
       border-radius: 5px;
       color: white;
       font-weight: 600;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
   }
 
