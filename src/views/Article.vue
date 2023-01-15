@@ -70,7 +70,7 @@ article {
 
     .description {
       margin-top: 10px;
-      color: #5C5C5C;
+      color: #404040;
     }
 
     .tag {

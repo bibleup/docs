@@ -124,7 +124,7 @@ import Copy from './editor/Copy.vue';
   align-items: center;
   overflow-x: auto;
   padding-right: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 
   button {
     flex: 0 0 auto;

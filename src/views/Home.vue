@@ -189,9 +189,7 @@
       Have an awesome review to share with us? <br />
       want to cheer us on?
     </p>
-    <p class="note info">
-      For issues, bugs or feature requests, <a href="">check here</a> instead
-    </p>
+    <p class="note info">For issues, bugs or feature requests, <a href="">check here</a> instead</p>
 
     <form name="feedback" method="post" id="contact-form" netlify>
       <input type="hidden" name="form-name" value="feedback" />
@@ -205,7 +203,6 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
-let partner = ref(null);
 let try1 = ref(null);
 let try2 = ref(null);
 let try3 = ref(null);
@@ -275,7 +272,7 @@ onBeforeUnmount(() => {
 
 a {
   color: inherit;
-  color: #4884ee;
+  color: #3174ec;
 }
 
 section {
@@ -300,7 +297,7 @@ section {
   justify-content: center;
   align-items: center;
   color: @color;
-  padding: 50px 20px;
+  padding: 30px 20px;
   background: white;
 
   @media @lg {
@@ -325,8 +322,6 @@ section {
     display: inline-block;
     width: auto;
     padding: 6px 15px;
-    //background-color: @blue;
-    //background-image: linear-gradient(315deg, @blue2 0%, #4884ee 74%);
     background: #f5f5f5;
     border: 3px solid transparent;
     background-image: linear-gradient(#f5f5f5, #f5f5f5), linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
@@ -339,7 +334,6 @@ section {
   h1 {
     font-size: 2.4rem;
     font-weight: 700;
-    margin-top: 20px;
 
     @media @lg {
       font-size: 3rem;
@@ -352,7 +346,6 @@ section {
 
   #header-image {
     width: 100%;
-    //background: #4884ee;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -511,14 +504,13 @@ section {
 
 #feature {
   width: 100%;
-  margin-top: 10px;
-  //background: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   .wrapper {
+    padding: 0 15px;
     @media @desktop {
       display: grid;
       grid-template-columns: auto auto;
@@ -555,7 +547,7 @@ section {
 
     h1 {
       font-size: 2rem;
-      color: #5c5c5c;
+      color: #404040;
       margin-top: 10px;
     }
 
@@ -567,6 +559,7 @@ section {
 }
 
 #snippet {
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -644,7 +637,7 @@ section {
         font-weight: 700;
         padding: 0;
         transform: scale(1.3, 1.3);
-        background-color: #4884ee;
+        background-color: #3174ec;
         background: linear-gradient(225deg, #3b4371, #f3904f);
         -webkit-background-clip: text;
         background-clip: text;
@@ -676,8 +669,8 @@ section {
 #partners {
   padding: 15px;
   background-color: #4884ee;
-  background: -webkit-linear-gradient(315deg,#3e8ede 0%,#4884ee 74%);
-  background: linear-gradient(315deg,#3e8ede 0%,#4884ee 74%);
+  background: -webkit-linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
+  background: linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
   border-radius: 20px;
   width: 90%;
   max-width: 700px;
@@ -731,7 +724,7 @@ section {
 }
 
 #sponsors {
-  margin-top: 40px;
+  margin-top: 50px;
   @media @desktop {
     display: flex;
     flex-direction: column;
@@ -746,7 +739,7 @@ section {
 }
 
 #faq {
-  margin-top: 15px;
+  margin-top: 20px;
   -webkit-text-size-adjust: 100%;
 
   @media @desktop {
@@ -783,7 +776,7 @@ section {
         margin-top: 10px;
         background: #f2f2f2;
         padding: 10px 35px;
-        border-radius: 10px;
+        border-radius: 5px;
         position: relative;
         user-select: none;
         cursor: pointer;
@@ -832,7 +825,7 @@ section {
 
   .note {
     border-left: 6px solid rgb(247, 204, 75);
-    color: #8C8C8C;
+    color: #808080;
     padding: 0px 10px;
     margin-top: 10px;
 
@@ -874,6 +867,7 @@ section {
     color: white;
     border: none;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    cursor: pointer;
 
     &:hover {
       background-color: darken(@blue, 5%);

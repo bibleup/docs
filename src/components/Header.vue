@@ -114,7 +114,7 @@ header {
   font-family: 'Rubik', sans-serif;
   display: flex;
   flex-direction: column;
-  padding: 25px 15px;
+  padding: 20px 15px;
   background: white;
 
   &.active {
