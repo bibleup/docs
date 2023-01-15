@@ -308,7 +308,7 @@ section {
 
   #main {
     width: 100%;
-    text-align: center;
+    //text-align: center;
     flex-grow: 1;
     max-width: 650px;
     justify-self: center;
@@ -334,11 +334,9 @@ section {
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    padding: 0 10px;
 
     @media @lg {
       font-size: 3rem;
-      padding: 0;
     }
   }
 
@@ -479,8 +477,8 @@ section {
 #try {
   width: 100%;
   background: #fff;
-  border-top: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
+  border-top: 2px solid #dedede;
+  border-bottom: 2px solid #dedede;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
