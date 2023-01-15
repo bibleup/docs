@@ -280,7 +280,7 @@ section {
   font-family: 'Rubik', sans-serif;
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: @color;
   }
 
@@ -332,7 +332,7 @@ section {
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: 700;
 
     @media @lg {
@@ -479,6 +479,7 @@ section {
   background: #f5f5f5;
   border-top: 2px solid #dedede;
   border-bottom: 2px solid #dedede;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -547,7 +548,7 @@ section {
 
     h1 {
       font-size: 2rem;
-      color: #404040;
+      color: #2a353c;
       margin-top: 10px;
     }
 
@@ -669,8 +670,8 @@ section {
 #partners {
   padding: 15px;
   background-color: #4884ee;
-  background: -webkit-linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
-  background: linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
+  //background: -webkit-linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
+  background: linear-gradient(to right bottom, #3b4371, #f3904f);
   border-radius: 20px;
   width: 90%;
   max-width: 700px;
