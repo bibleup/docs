@@ -69,7 +69,8 @@ const removeBanner = () => {
   background-color: @blue;
   background: #f3904f; /* fallback for old browsers */
   background: linear-gradient(
-    to right,
+    102deg,
+    #3b4371,
     #3b4371,
     #f3904f
   );

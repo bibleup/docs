@@ -334,9 +334,11 @@ section {
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
+    padding: 0 10px;
 
     @media @lg {
       font-size: 3rem;
+      padding: 0;
     }
   }
 
@@ -476,9 +478,9 @@ section {
 
 #try {
   width: 100%;
-  background: #f5f5f5;
-  border-top: 2px solid #dedede;
-  border-bottom: 2px solid #dedede;
+  background: #fff;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
