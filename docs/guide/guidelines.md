@@ -17,15 +17,13 @@ BibleUp reorders verse range that are not properly stated. For example, John 3:2
 
 ## Multiple verses
 BibleUp can also match multiple verses correctly.
-- `book` `chapter`:`verse`, `verse2` (e.g, John 3:16,19)
+- `book` `chapter`:`verse`, `verse2` (e.g, John 3:16, 19)
 - `book` `chapter`:`verse`-`verse-end`, `verse2`-`verse-end2` (e.g, Matthew 7:7-8, 24-26)
 
-Multiple verses are matched against the same `chapter` and must be seperated with a comma.
+Multiple verses are matched against the preceeding `chapter` and must be seperated with a comma.
 
-::: warning
-References with multiple chapters but same book, such as, John 3:16, 4:5 will not be matched **as expected** because references are only matched against the same `chapter`<br>
-You would have to state the references seperately to get it to match correctly - **John 3:16, John 4:5**
-:::
+## Multiple Chapters
+BibleUp can also recognise references with multiple chapters. For example, Romans 3:5, 2:1-3, 6-8 will be spotted to be made up of three parts: `Romans 3:5`, `Romans 2:1-3` and `Romans 2:6-8`. 
 
 
 ## Books

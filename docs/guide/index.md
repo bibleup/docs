@@ -2,8 +2,8 @@
 # Installation
 
 ::: tip NOTE
-The following guide is for development purposes. The installation guide for the WordPress plugin and browser extension guide can be found in the **Plugin and Extensions** section.
-::: 
+The installation guide for the WordPress plugin and browser extension can be found in the **Plugin and Extensions** section.
+:::
 
 BibleUp can be installed with NPM if you have node installed on your system and if you use a build tool. It can also be served from a CDN.
 
@@ -16,7 +16,7 @@ npm install @bibleup/bibleup
 // ES6 Modules
 import BibleUp from "@bibleup/bibleup"
 
-// CSS Theme 
+// CSS Theme
 import "@bibleup/bibleup/css"
 ```
 
@@ -33,7 +33,7 @@ To serve BibleUp through a CDN, place the following code before the closing `</b
 BibleUp comes with the default CSS theme (for the popovers) pre-bundled into the build, providing a single minified code.<br>However, you can decide to include BibleUp Core API and CSS separately.
 
 ### NPM:
- 
+
 After `npm install`:
 
 ```js

@@ -10,7 +10,7 @@ let bibleup = new BibleUp(element, options)
 - **options**  - This object should contain all BibleUp options and configurations. BibleUp options will be discussed in the next section.
 
 
-When you are done with configuring `BibleUp`, put it to work by calling the `create()` method
+Put BibleUp to work by calling the `create()` method
 
 ```js {2}
 let bibleup = new BibleUp(element, options);
@@ -25,8 +25,8 @@ For a minimal example of BibleUp options and usage:
 ```js
 let body = document.body
 let bibleup = new BibleUp(body, {
-version: "KJV", 
-popup: "classic", 
+version: "KJV",
+popup: "classic",
 darkTheme: false
 })
 
