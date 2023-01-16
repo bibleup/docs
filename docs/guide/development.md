@@ -21,5 +21,5 @@ The exported value: `fdb2ae39e9ef1fd8da12e40281267b2e` is the test API Key for u
 
 ## BibleUp Regex
 BibleUp uses two internal regexes to test and match Bible refernces. There is a **full regex** used to match any reference at a go. The **verse regex** then matches every separate range and parts.
-- [BibleUp @Full](regexr.com/6sk0t)
-- [BibleUp @Verse](regexr.com/6t63e)
+- [BibleUp @Full](https://regexr.com/6sk0t)
+- [BibleUp @Verse](https://regexr.com/6t63e)

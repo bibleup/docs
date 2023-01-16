@@ -10,11 +10,12 @@ export default {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    // https://bibleup.netlify.app 
+    // https://bibleup.netlify.app
     //['base', { href: "https://bibleup.netlify.app"}],
-    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/apple-touch-icon.png"}],
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicon-32x32.png"}],
-    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicon-16x16.png"}],
+    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png"}],
+    ['link', { rel: "icon", type: "image/x-icon", href: "/favicon.ico"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png"}],
     ["meta", { name: "theme-color", content: "#fff" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" },
@@ -56,11 +57,11 @@ export default {
       {
         text: "BibleUp Editor",
         link: "https://bibleup.netlify.app/demo#editor"
-      }, 
+      },
       {
-        text: "Github", 
+        text: "Github",
         link: "https://github.com/bibleup/bibleup"
-      }, 
+      },
       {
         text: "Community",
         link: "https://github.com/bibleup/bibleup/discussions"
@@ -79,18 +80,18 @@ export default {
         collapsible: false,
         items: [
           {text: 'Installation', link: '/guide/'},
-          {text: 'Usage', link: '/guide/usage'}, 
-          {text: 'Options', link: '/guide/options'}, 
+          {text: 'Usage', link: '/guide/usage'},
+          {text: 'Options', link: '/guide/options'},
           {text: 'Methods', link: '/guide/methods'},
-          {text: 'Local Development', link: '/guide/development'}, 
+          {text: 'Local Development', link: '/guide/development'},
           {text: 'Guidelines', link: '/guide/guidelines'}
         ]
       },
       {
-        text: 'Customisation 🎨', 
+        text: 'Customisation 🎨',
         collapsible: false,
         items: [
-          {text: 'Popup Styling', link: '/customisation/'}, 
+          {text: 'Popup Styling', link: '/customisation/'},
           {text: 'Presets', link: '/customisation/presets'}
         ]
       },
@@ -108,7 +109,7 @@ export default {
         ]
       },
       {
-        text: 'Extra Topics 🧤', 
+        text: 'Extra Topics 🧤',
         items: [
           {
             text: 'Contribute',
@@ -127,10 +128,10 @@ export default {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    "@vuepress/plugin-back-to-top", 
+    "@vuepress/plugin-back-to-top",
     "@vuepress/plugin-medium-zoom"
-  ], 
-  
+  ],
+
   markdown: {
     toc: { level: [1, 2] }
   }
