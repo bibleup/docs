@@ -478,7 +478,7 @@ section {
 
 #try {
   width: 100%;
-  background: #fff;
+  background: #f2f2f2;
   border-top: 2px solid #dedede;
   border-bottom: 2px solid #dedede;
   margin-top: 20px;
