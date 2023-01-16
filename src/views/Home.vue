@@ -334,7 +334,7 @@ section {
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    padding-right: 30px;
+    padding-right: 40px;
 
     @media @lg {
       font-size: 3rem;
@@ -381,7 +381,7 @@ section {
     gap: 12px;
     flex-direction: column;
     justify-content: center;
-    //align-items: center;
+    align-items: center;
     text-align: center;
 
     @media @lg {
@@ -447,7 +447,7 @@ section {
 
   .check-feat {
     display: flex;
-    //justify-content: center;
+    justify-content: center;
     align-items: center;
     gap: 0 15px;
     font-size: 1.3rem;
