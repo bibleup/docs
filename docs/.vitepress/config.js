@@ -37,6 +37,7 @@ export default {
     editLinkText: "Edit this page on Github",
     lastUpdated: false,
     smoothScroll: true,
+    logo: '/logo.png',
     editLink: {
       pattern: 'https://github.com/bibleup/docs/tree/docs/docs/:path',
       text: 'Edit this page on GitHub'
