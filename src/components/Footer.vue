@@ -27,7 +27,7 @@ footer {
   margin-top: 50px;
   border-top: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  border-image-source: linear-gradient(to right, #3b4371, #f3904f);
 
   ul {
     width: 100%;

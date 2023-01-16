@@ -103,6 +103,7 @@ const removeBanner = () => {
   }
 
   button {
+    display: none;
     font-size: 2.4rem;
     line-height: 0;
     background: rgba(255, 255, 255, 0.2);

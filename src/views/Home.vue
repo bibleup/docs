@@ -296,6 +296,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: @color;
   padding: 30px 20px;
   background: white;
@@ -334,7 +335,7 @@ section {
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    padding-right: 40px;
+    padding-right: 10px;
 
     @media @lg {
       font-size: 3rem;
@@ -672,7 +673,7 @@ section {
   padding: 15px;
   background-color: #4884ee;
   //background: -webkit-linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
-  background: linear-gradient(to right bottom, #3b4371, #f3904f);
+  background: linear-gradient(160deg, #3b4371, #f3904f);
   border-radius: 20px;
   width: 90%;
   max-width: 700px;
@@ -826,7 +827,7 @@ section {
   }
 
   .note {
-    border-left: 6px solid rgb(247, 204, 75);
+    border-left: 6px solid rgb(252, 203, 56);
     color: #808080;
     padding: 0px 10px;
     margin-top: 10px;
