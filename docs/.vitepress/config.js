@@ -99,6 +99,7 @@ export default {
         collapsible: false,
         items: [
           {text: 'Popup Styling', link: '/customisation/'},
+          {text: 'Link Styling', link: '/customisation/link'},
           {text: 'Presets', link: '/customisation/presets'}
         ]
       },

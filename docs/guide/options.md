@@ -8,6 +8,7 @@
   darkTheme: false,
   bu_ignore: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'IMG', 'A'],
   bu_allow: [],
+  buid: false,
   styles: {}
 }
 ```
@@ -81,6 +82,36 @@ Since BibleUp ignores Bible references on certain elements by default, this opti
 bu_allow: ['H4','H5']
 ```
 
+## `buid`
+**Default:** `false` <br>
+Use this option to specify a string that will used to identify a particular BibleUp instance.
+There are situations where a page may contain many BibleUp instance of different popups. In such cases, you can specify a `buid` to each instance to make it easier to style them separately.
+
+::: code-group
+```js [JS]
+let b = new BibleUp(element, {
+  buid: 'myCustom'
+})
+
+b.create()
+```
+```html [Popover]
+<!-- The popover ID (bu-popup-{buid}) -->
+<div id="bu-popup-myCustom" class="...">
+</div>
+```
+```html [Links]
+<!-- links classname (bu-link-{buid}) -->
+<a class="bu-link-myCustom">
+</a>
+```
+:::
+
+This option is especially helpful if you need to target popup for custom CSS styling. Check the customization guide - [using buid]() for further info.
+
+:::info NOTE
+When this option is not set or set to false, BibleUp internally generates a random 6-digit number to identify the instance.
+:::
 ## `styles`
 
 **Default:** `undefined` <br>
