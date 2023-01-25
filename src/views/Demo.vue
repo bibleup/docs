@@ -31,7 +31,7 @@
     <section id="article-wrapper">
       <div id="btn-group">
         <div class="wrapper">
-          <button id="apply-btn" @click="toggleState('editor')">Open Editor</button>
+          <button id="apply-btn" @click="openEditor()">Open Editor</button>
           <button @click="activate()">{{ isActive ? 'De-activate BibleUp' : 'Activate BibleUp' }}</button>
         </div>
       </div>
@@ -39,7 +39,8 @@
       <ArticlePost :key="articleKey" :active="isActive"></ArticlePost>
     </section>
 
-    <MainEditor v-show="isEditor"></MainEditor>
+    <router-view></router-view>
+    <!-- <MainEditor v-show="isEditor"></MainEditor> -->
   </div>
 </template>
 
@@ -47,7 +48,8 @@
 import ArticlePost from '@/components/ArticlePost.vue';
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import MainEditor from '@/components/MainEditor.vue';
-import { isEditor, toggleState } from '@/js/store';
+import router from '@/js/router.js'
+import { isEditor } from '@/js/store';
 let isActive = ref(false);
 let articleKey = ref(0);
 const demo1 = ref(null);
@@ -87,12 +89,17 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   //const bibleupInsatnces = [b1,b2,b3,b4]
-  console.log(bibleupInsatnces)
   bibleupInsatnces.forEach(element => {
     element.destroy()
   });
 });
 
+// stop scroll if editor is up before demo entered
+if (isEditor) {
+  document.body.style['overflow-y'] = 'hidden';
+}
+
+// watch isEditor and allow scroll
 watch(isEditor, (newVal) => {
   if (newVal === true) {
     document.body.style['overflow-y'] = 'hidden';
@@ -100,6 +107,10 @@ watch(isEditor, (newVal) => {
     document.body.style['overflow-y'] = 'visible';
   }
 });
+
+let openEditor = () => {
+  router.push('/demo/editor')
+}
 
 let activate = () => {
   isActive.value = !isActive.value;

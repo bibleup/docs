@@ -89,14 +89,20 @@
         <div class="option-box">
           <label>Version Color: </label>
           <div>
-            <input id="versionColor" type="text" maxlength="30" v-model="option.versionColor" placeholder="color value" />
+            <input
+              id="versionColor"
+              type="text"
+              maxlength="30"
+              v-model="option.versionColor"
+              placeholder="color value"
+            />
             <p>Font color for popup version (if it exists).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Close Color: </label>
           <div>
-            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor" placeholder="color value"/>
+            <input id="closeColor" type="text" maxlength="30" v-model="option.closeColor" placeholder="color value" />
             <p>Set color for close button (if it exists).</p>
           </div>
         </div>
@@ -110,14 +116,20 @@
         <div class="option-box">
           <label>Box Shadow: </label>
           <div>
-            <input id="boxShadow" type="text" maxlength="30" v-model="option.boxShadow" placeholder="2px 2px 4px black"/>
+            <input
+              id="boxShadow"
+              type="text"
+              maxlength="30"
+              v-model="option.boxShadow"
+              placeholder="2px 2px 4px black"
+            />
             <p>Set a drop shadow for the popup (using CSS syntax).</p>
           </div>
         </div>
         <div class="option-box">
           <label>Font Size: </label>
           <div>
-            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize" placeholder="16px"/>
+            <input id="fontSize" type="text" maxlength="200" v-model="option.fontSize" placeholder="16px" />
             <p>Set font size for all popup (in units)</p>
           </div>
         </div>
@@ -129,9 +141,21 @@
 
       <div class="option-wrapper">
         <div class="option-box">
+          <label>Ignore Case: </label>
+          <div>
+            <div class="wrap">
+              <label for="case-true">True</label>
+              <input id="case-true" name="ignoreCase" type="radio" value="true" v-model="option.ignoreCase" />
+              <label for="case-false">False</label>
+              <input id="case-false" name="ignoreCase" type="radio" value="false" v-model="option.ignoreCase" />
+            </div>
+            <p>Allow BibleUp match references in any letter case.</p>
+          </div>
+        </div>
+        <div class="option-box">
           <label>Ignore Specific HTML Elements: </label>
           <div>
-            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore" placeholder="[]" />
+            <input id="ignore" type="text" maxlength="200" v-model="option.bu_ignore" placeholder="['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'A']" />
             <p>
               BibleUp won't tag element listed here.<br />
               Seperate these elements using a comma and put inside a square bracket.
@@ -146,6 +170,13 @@
               Override the default elements ignored by BibleUp by placing them here.<br />
               Seperate these elements using a comma and put inside a square bracket.
             </p>
+          </div>
+        </div>
+        <div class="option-box">
+          <label>BibleUp ID (buid): </label>
+          <div>
+            <input id="allow" type="text" maxlength="200" v-model="option.buid" placeholder="buid string" />
+            <p>Attach a specific HTML ID attribute to popovers and links</p>
           </div>
         </div>
       </div>
@@ -191,8 +222,10 @@ let option = ref(getOptions);
 
 .option-divider {
   width: 100%;
-  height: 50px;
+  height: 45px;
   background: #f2f2f2;
+  border-top: 2px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
   padding: 10px 20px;
   margin-top: 20px;
   display: flex;

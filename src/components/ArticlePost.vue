@@ -53,6 +53,7 @@ let samePage = false;
 
 onMounted(() => {
   b = new BibleUp(article.value, getBuOption);
+
   watch(props, (newVal) => {
     if (newVal.active) {
       if (samePage) {
@@ -66,6 +67,7 @@ onMounted(() => {
       b.destroy(false);
     }
   });
+
   watch(
     getBuOption,
     debounce((newOpt) => {
@@ -79,7 +81,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   b.destroy();
-  console.log('destroy');
 });
 </script>
 

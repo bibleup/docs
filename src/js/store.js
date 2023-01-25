@@ -12,6 +12,7 @@ let state = reactive({
     popup: 'classic',
     version: 'KJV',
     darkTheme: false,
+    ignoreCase: false,
     primary: '',
     secondary: '',
     tertiary: '',
@@ -22,32 +23,13 @@ let state = reactive({
     borderRadius: '',
     boxShadow: '',
     fontSize: '',
+    buid: '',
     bu_ignore: '',
     bu_allow: '',
     rawOptions: '',
   },
   buOption: {},
 });
-
-/* let opt = {
-    popup: "classic",
-    version: "KJV",
-    darkTheme: false,
-    styles: {
-        primary: red,
-        secondary: false,
-        tertiary: false,
-        headerColor: false,
-        fontColor: false,
-        versionColor: false,
-        closeColor: false,
-        borderRadius: false,
-        boxShadow: false,
-        fontSize: false,
-    },
-    bu_ignore: false,
-    bu_allow: false,
-} */
 
 // GETTERS
 export let isEditor = computed(() => state.isEditor);
@@ -83,7 +65,6 @@ export let toggleState = (s) => {
     state.isImport = !state.isImport;
   }
 };
-
 
 /**
  * Checks if `state.option.rawOptions` is a valid object then `buOption` to the parsed rawOption value or `format_buOption` value
@@ -146,7 +127,21 @@ const format_buOption = () => {
     opt[prop] = validate(state.option[prop], false);
   }
 
-  let realOpt = { popup: opt.popup, version: opt.version, darkTheme: opt.darkTheme };
+  let realOpt = {
+    // these options will be present whether false or not
+    popup: opt.popup,
+    version: opt.version,
+    darkTheme: opt.darkTheme,
+  };
+
+  let extra = {
+    // these will be added to realOpt if not false
+    ignoreCase: opt.ignoreCase,
+    bu_allow: opt.bu_allow,
+    bu_ignore: opt.bu_ignore,
+    buid: opt.buid,
+  }
+
   let styles = {
     primary: opt.primary,
     secondary: opt.secondary,
@@ -160,7 +155,14 @@ const format_buOption = () => {
     fontSize: opt.fontSize,
   };
 
-  // check styles
+  // add `extra` props if not false
+  for (const prop in extra) {
+    if (extra[prop] && extra[prop] !== 'false') {
+      realOpt[prop] = extra[prop];
+    }
+  }
+
+  // add `styles` props if not false
   for (const prop in styles) {
     if (styles[prop] && styles[prop] !== 'false') {
       if (!realOpt.styles) realOpt.styles = {};
@@ -168,24 +170,15 @@ const format_buOption = () => {
     }
   }
 
-  // check others
-  if (opt.bu_allow && opt.bu_allow !== 'false') {
-    realOpt.bu_allow = opt.bu_allow;
-  }
-  if (opt.bu_ignore && opt.bu_ignore !== 'false') {
-    realOpt.bu_ignore = opt.bu_ignore;
-  }
-
-  //state.buOption = realOpt;
-  console.log('format Done', realOpt);
+  //console.log('format Done', realOpt);
   return realOpt;
 };
 
 export const addPreset = (val) => {
   if (val) {
-    state.preset = true
+    state.preset = true;
     if (state.isImport) {
-      state.isImport = false
+      state.isImport = false;
     }
     state.option.rawOptions = JSON.stringify(val);
   } else {
@@ -206,3 +199,6 @@ export const addImport = (val) => {
     state.option.rawOptions = false;
   }
 };
+
+// call once to set `buOption` initial value
+state.buOption = format_buOption()

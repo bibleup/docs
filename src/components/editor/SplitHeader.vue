@@ -20,17 +20,17 @@ const close = () => {
 
 #split-header {
   width: 100%;
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  background: #f2f2f2;
+  background: #e6e6e6;
   color: @color;
   position: sticky;
   top: 0;
-  border-top: 2px solid #e6e6e6;
-  border-bottom: 2px solid #e6e6e6;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
   z-index: 1;
 
   p {

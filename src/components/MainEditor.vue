@@ -3,7 +3,7 @@
     <div id="container">
       <header>
         <h1>BibleUp Editor</h1>
-        <button @click="toggleState('editor')">
+        <button @click="closeEditor()">
           <i id="close-btn" class="center fi fi-rr-cross"></i>
         </button>
       </header>
@@ -41,6 +41,11 @@ import Preview from './editor/Preview.vue';
 import Import from './editor/Import.vue';
 import Preset from './editor/Preset.vue';
 import Copy from './editor/Copy.vue';
+import router from '@/js/router';
+
+let closeEditor = () => {
+  router.push('/demo')
+}
 </script>
 
 <style lang="less" scoped>
