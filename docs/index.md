@@ -12,7 +12,7 @@ BibleUp removes the need of switching to a different tab or app to look up plain
 BibleUp supports customisation of links, popovers and versions - all done through the API options.
 
 ## How it works
-BibleUp efficiency runs through the DOM in an HTML page (or specific sections) and checks for all text nodes looking like a standard Bible reference. It uses a custom regex ([BibleUp Regex](/guide/development)) to test for resemblance and proceed to check if the reference chapters and verse range are indeed valid. Valid references are then, respectively, matched with the book of the Bible to which they relate and transformed to an hyperlink (`</a>`)
+BibleUp efficiency runs through the DOM in an HTML page (or specific sections) and checks for all text nodes looking like a standard Bible reference. It uses a custom regex ([BibleUp Regex](/guide/development#bibleup-regex)) to test for resemblance and proceed to check if the reference chapters and verse range are indeed valid. Valid references are then, respectively, matched with the book of the Bible to which they relate and transformed to an hyperlink (`</a>`)
 
 The popover is created and appended to the page from the options provided to BibleUp and styled in that same manner also. Hovering or clicking on BibleUp links will fetch the Bible text from the external API and make it accessible via a feature-rich and flexible popover.
 
@@ -24,7 +24,7 @@ The last 3 major versions of all browsers are fully supported with an extended s
 
 ## Try BibleUp Online
 1. Play with BibleUp configurations and methods on the [code playground](https://stackblitz.com/edit/bibleup).
-2. Use the [BibleUp Editor](https://bibleup.netlify.app/demo#editor) to generate popover styles and configure in real-time. You can also export styles to the WordPress plugin and browser extension.
+2. Use the [BibleUp Editor](https://bibleup.netlify.app/demo/editor) to generate popover styles and configure in real-time. You can also export styles to the WordPress plugin and browser extension.
 
 ## Community
 We love feedbacks 😀<br>

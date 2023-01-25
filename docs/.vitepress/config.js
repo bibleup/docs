@@ -45,13 +45,16 @@ export default {
     smoothScroll: true,
     logo: '/logo.png',
     editLink: {
-      pattern: 'https://github.com/bibleup/docs/tree/docs/docs/:path',
+      pattern: 'https://github.com/bibleup/docs/tree/docs/docs/src/:path',
       text: 'Edit this page on GitHub'
     },
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present BibleUp'
     },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/bibleup/bibleup' }
+    ],
     nav: [
       {
         text: "Home",
@@ -64,10 +67,6 @@ export default {
       {
         text: "BibleUp Editor",
         link: "https://bibleup.netlify.app/demo#editor"
-      },
-      {
-        text: "Github",
-        link: "https://github.com/bibleup/bibleup"
       },
       {
         text: "Community",

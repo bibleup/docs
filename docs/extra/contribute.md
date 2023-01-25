@@ -12,11 +12,11 @@ To do this, kindly consider using the closing part of a blog post to talk about 
 This doesn't have to take more than a few paragraphs. If you prefer to do this as a sort of announcement to your readers, you could dedicate a post for it.
 
 ### Acknowledgement
-Kindly send us a message with your website address and the blog post so we can properly acknowledge on our website.<br> Thank you for your contribution!
+Kindly [send us a message](https://bibleup.netlify.app/#contact) with your website address and the blog post so we can properly acknowledge on our website.<br> Thank you for your contribution!
 
 
 ## Reviewer
-You can help test BibleUp and report any bug or issue you encounter. Future requests, suggestions and comments are also welcome. All these can be reported through the community. Thank you! 
+You can help test BibleUp and report any bug or issue you encounter. Future requests, suggestions and comments are also welcome. All these can be reported through the community. Thank you!
 
 ## Organisation
 If you use BibleUp as an organisation and you're willing to support the development efforts. Kindly send a message for how you would love to do so.
