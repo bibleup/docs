@@ -3,14 +3,23 @@
 ```js
 // Option defaults
 {
-  version: 'KJV',
   popup: 'classic',
+  version: 'KJV',
   darkTheme: false,
+  ignoreCase: false,
   bu_ignore: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'IMG', 'A'],
   bu_allow: [],
   buid: false,
   styles: {}
 }
+```
+
+## `popup`
+**Default:** `classic` <br>
+Use this property to specify the popup type. There are currently 3 supported popup/popover types: classic, inline and wiki.
+
+```js
+popup: "classic" | "inline" | "wiki"
 ```
 
 ## `version`
@@ -29,7 +38,6 @@ version: "KJV" | "ASV" | "LSV" | "WEB"
 ```
 
 ## `darkTheme`
-
 **Default:** `false` <br>
 A boolean to toggle dark theme on popup.
 
@@ -41,17 +49,18 @@ darkTheme: true | false
 Dark theme on popovers can get overridden by some explicit `styles` property - like `primary`, `secondary` and `tertiary`. To prevent this, make sure these properties are set to `false` or not included.
 :::
 
-## `popup`
-
-**Default:** `classic` <br>
-Use this property to specify the popup type. There are currently 3 supported popup/popover types: classic, inline and wiki.
+## `ignoreCase`
+**Default:** `false` <br>
+When set to **true**, BibleUp will recognise and match all references regardless of the letter case used.
 
 ```js
-popup: "classic" | "inline" | "wiki"
+ignoreCase: true | false
 ```
+::: tip NOTE:
+By default, BibleUp only matches references with initial capital - it will match Psalm and not psalm or PsAlM.
+:::
 
 ## `bu_ignore`
-
 **Default:** `['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'A']` <br>
 BibleUp ignores references on certain elements by default. This includes all headers and anchor element. Use this to add other elements you want BibleUp to ignore. This property accepts an array.
 
@@ -73,7 +82,6 @@ Add `bu-ignore` class to any specific element you want to ignore in your HTML. B
 :::
 
 ## `bu_allow`
-
 **Default:** `{}` <br>
 Since BibleUp ignores Bible references on certain elements by default, this option allows BibleUp to permit listed elements. It overrides `bu-ignore`.
 
@@ -112,8 +120,8 @@ This option is especially helpful if you need to target popup for custom CSS sty
 :::info NOTE
 When this option is not set or set to false, BibleUp internally generates a random 6-digit number to identify the instance.
 :::
-## `styles`
 
+## `styles`
 **Default:** `undefined` <br>
 BibleUp allows you to customise popover colours, border-radius, box-shadow and font size, making it possible to completely change the popover looks. This is possible with any of the popup types.<br>
 Simply state the colour (HEX, RGBA or value) for the property.
