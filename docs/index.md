@@ -3,6 +3,8 @@ prev: false
 next: Guide
 ---
 
+# Introduction 💡
+
 [[toc]]
 
 ## What is BibleUp?
