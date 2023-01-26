@@ -1,5 +1,5 @@
 # Link Styling
-BibleUp adds a `bu-link-{buid}` class to all reference anchor links. These links can only be styled using custom CSS.
+BibleUp links can only be styled using custom CSS.
 
 ## Link Structure
 For a `John 3:16, 17-20` reference:
@@ -27,5 +27,5 @@ If `buid` is specified and not false, links can be target as below:
 ```
 
 ::: tip
-`cite` element is usually styled in italics by most browser. However, this has been changed to the default for BibleUp links.
+`cite` element is usually styled in italics by most browser. However, this has been changed internally for BibleUp links.
 :::

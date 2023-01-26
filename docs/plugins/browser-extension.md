@@ -1,18 +1,29 @@
 # BibleUp Browser Extension
-There is an official BibleUp browser extension for Chromium-based browsers that can be used on any website. The extension is available for installation on the Chrome store. <br><br> We only support Chromium-based browsers (Chrome, Edge, Opera, Brave, Valvadi, e.t.c). The extension will be made compatible with Mozilla Firefox in future releases.
+There is an official BibleUp browser extension for Chromium-based browsers that can be used on any website. The extension is currently in a public beta and will be available on the Chrome store soon. <br><br> We only support Chromium-based browsers (Chrome, Edge, Opera, Brave, Valvadi, e.t.c). The extension will be made compatible with Mozilla Firefox in future releases.
+
+![BibleUp WordPress Screenshot](/extension-shot.png)
 
 ## Installation
-Follow these steps to install BibleUp extension.
-1. Visit the extension Web page.
+::: warning NOTE
+As we are yet to release this package to the Chrome web store, you can only install manually for now.
+:::
+### Install manually
+1. [Download the package ZIP](https://github.com/bibleup/browser-extension/archive/refs/heads/main.zip) *(download starts immediately)*
+2. Locate the ZIP file on your computer and unzip it into a folder.
+3. Go to **chrome://extensions/** page and click the **Load unpacked** button
+4. Locate the folder and select to install.
+
+### Install from Chrome Web Store
+1. Visit the extension page.
 2. Click the **Add to Chrome** button.
 3. In the confirmation box, approve the requested permissions and click **Add Extension**
 4. When the download finishes, you should see the BibleUp icon at the upper right corner, near the address bar.
-5. To pin the extension, click on the puzzle icon next to your profile avatar (near the address bar). Then click on the pin button beside BibleUp icon
 
-You can now begin to configure BibleUp options.
+To pin the extension, click on the puzzle icon next to your profile avatar (near the address bar). Then click on the pin button beside BibleUp icon<br>
+You can now begin to configure BibleUp options 🎉
 
 ::: info NOTE
-The above steps are most accurate for Chrome and might not be exactly the same for other browsers. However, they won't be much different with other browsers.
+The above steps are most accurate for Chrome and might not be exactly the same for other browsers. However, the steps shouldn't be much different with others.
 :::
 
 ## Usage
@@ -34,7 +45,7 @@ We love feedbacks 😀<br>
 Don't hesitate to leave a review for us. It will allow more users find BibleUp and will also help us improve the project.
 
 ## Issues
-Use the extension issue forum to report issues or ask questions that particularly relate to the browser extension. If the issue relates to BibleUp code or generally partains to the use of BibleUp, reach out to the [community](https://github.com/bibleup/bibleup/discussions). 
+Use the extension issue forum to report issues or ask questions that particularly relate to the browser extension. If the issue relates to BibleUp code or generally partains to the use of BibleUp, reach out to the [community](https://github.com/bibleup/bibleup/discussions).
 
 ## Development
 The BibleUp browser extension is completely free and open source. Find the code in the [Github repository](https://github.com/bibleup/browser-extension). Contributions are always welcome.

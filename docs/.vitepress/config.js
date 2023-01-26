@@ -27,7 +27,6 @@ export default {
     ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
   ],
-
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
@@ -66,7 +65,7 @@ export default {
       },
       {
         text: "BibleUp Editor",
-        link: "https://bibleup.netlify.app/demo#editor"
+        link: "https://bibleup.netlify.app/demo/editor"
       },
       {
         text: "Community",
@@ -78,7 +77,7 @@ export default {
         text: 'Introduction 💡',
         collapsible: false,
         items: [
-          {text: 'What is BibleUp?', link: '/'}
+          {text: 'What is BibleUp?', link: '/'},
         ]
       },
       {
@@ -99,6 +98,7 @@ export default {
         items: [
           {text: 'Popup Styling', link: '/customisation/'},
           {text: 'Link Styling', link: '/customisation/link'},
+          {text: 'Using buid', link:'/customisation/buid'},
           {text: 'Presets', link: '/customisation/presets'}
         ]
       },
@@ -140,6 +140,6 @@ export default {
   ],
 
   markdown: {
-    toc: { level: [1, 2] }
+    toc: { level: [2] }
   }
 };

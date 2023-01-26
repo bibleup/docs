@@ -96,7 +96,7 @@ Use this option to specify a string that will used to identify a particular Bibl
 There are situations where a page may contain many BibleUp instance of different popups. In such cases, you can specify a `buid` to each instance to make it easier to style them separately.
 
 ::: code-group
-```js [JS]
+```js [JavaScript]
 let b = new BibleUp(element, {
   buid: 'myCustom'
 })
@@ -115,7 +115,7 @@ b.create()
 ```
 :::
 
-This option is especially helpful if you need to target popup for custom CSS styling. Check the customization guide - [using buid]() for further info.
+This option is especially helpful if you need to target popup for custom CSS styling. Check the customization guide - [using buid](/customisation/buid) for further info.
 
 :::info NOTE
 When this option is not set or set to false, BibleUp internally generates a random 6-digit number to identify the instance.

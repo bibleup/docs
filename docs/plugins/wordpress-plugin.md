@@ -1,5 +1,5 @@
 # BibleUp WordPress Plugin
-BibleUp is available as a plugin for WordPress-powered sites. It is hosted on the WordPress plugin directory and available for installation.<br>
+The official BibleUp plugin is hosted on the WordPress plugin directory and available for installation.<br>
 
 ![BibleUp WordPress Screenshot](/wordpress-screenshot.png)
 
@@ -15,10 +15,10 @@ The plugin relies on the development of [BibleUp Core](https://github.com/bibleu
 4) Activate the plugin and configure the options as you want!
 
 ### Install BibleUp manually
-1) Get the source code [here](https://downloads.wordpress.org/plugin/bibleup.zip)
+1) [Download the source code - ZIP](https://downloads.wordpress.org/plugin/bibleup.zip) *(download starts immediately)*
 2) From your site dashboard, go to **Plugins >> Add New**
 3) Click on the 'Upload Plugin' button at the top left corner to reveal the file picker.
-4) Select and upload the downloaded zip file.
+4) Select and upload the downloaded ZIP file.
 5) Install the Plugin and activate once done. Configure the options as you want!
 
 You can find the settings page at **settings >> BibleUp** after activating the plugin.

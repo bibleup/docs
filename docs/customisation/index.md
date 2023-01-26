@@ -1,5 +1,5 @@
 # Popup Styling
-The different popup types can be styled in many ways. You can use the [`style`](/guide/options.html#styles) option, redefine the root CSS variables or use classnames and ID to target elements directly.
+The different popup types can be styled in many ways. You can use the [`style`](/guide/options.html#styles) option, re-define the root CSS variables or use classnames and ID to target elements directly.
 
 ## Popup structure
 The popup is simply a structured HTML element styled internally by BibleUp. However these styles can be overiden with custom CSS through their selectors.
@@ -9,22 +9,23 @@ The popup is simply a structured HTML element styled internally by BibleUp. Howe
 ```html [Classic]
 <!-- 'classic' popup structure -->
 <div id="bu-popup-{buid}" class="bu-classic bu-popup-hide">
-  <div id="bu-popup-header">
-    <p id="bu-popup-ref"></p>
-    <p id="bu-popup-version"></p>
+  <div class="bu-popup-header">
+    <p class="bu-popup-ref"></p>
+    <p class="bu-popup-version"></p>
   </div>
 
-  <div id="bu-popup-content">
-    <ol id="bu-popup-text"></ol>
+  <div class="bu-popup-content">
+    <ol class="bu-popup-text"></ol>
   </div>
 
-  <div id="bu-popup-footer">
+  <div class="bu-popup-footer">
     <p>BibleUp 📖💡</p>
   </div>
 </div>
 ```
 
 ```html [Inline]
+<!-- 'inline' popup structure -->
 <div id="bu-popup-{buid}" class="bu-inline bu-popup-hide">
   <div class="bu-popup-content">
     <ol class="bu-popup-text"></ol>
@@ -37,20 +38,21 @@ The popup is simply a structured HTML element styled internally by BibleUp. Howe
 ```
 
 ```html [Wiki]
+<!-- 'wiki' popup structure -->
 <div id="bu-popup-{buid}" class="bu-wiki bu-popup-hide">
-  <div class='bu-popup-header'>
-    <p class='bu-popup-ref'></p>
-	  <span class='bu-popup-version'></span>
-	  <button class='bu-popup-close' tabindex='0'>&#x2715</button>
+  <div class="bu-popup-header">
+    <p class="bu-popup-ref"></p>
+    <span class="bu-popup-version"></span>
+    <button class="bu-popup-close" tabindex="0">&#x2715</button>
   </div>
 
-  <div class='bu-popup-content'>
-	 	<ol class='bu-popup-text'></ol>
-	</div>
+  <div class="bu-popup-content">
+    <ol class="bu-popup-text"></ol>
+  </div>
 
-	<div class='bu-popup-footer'>
-	 	<p>BibleUp 📖💡 </p>
-	</div>
+  <div class="bu-popup-footer">
+    <p>BibleUp 📖💡</p>
+  </div>
 </div>
 ```
 
@@ -64,43 +66,26 @@ The popup structure differs between the different popup types, and so some selec
 To change the styles and even completely change popup structure, simply use regular CSS.
 
 ```css
-#bu-popup {
-  box-shadow: none;
+[id^='bu-popup-'] {
+  /* all popup */
+}
+
+.bu-popup-version {
   border: 2px solid #ccc;
   border-radius: none;
 }
 
-#bu-popup-header {
+.bu-popup-header {
   background: blue;
   color: white;
 }
 ```
 
-::: tip
-You can style the popup however you want with this approach. Also consider CSS specificity and use `!important` if there is any clash between style declaration.
+::: tip NOTE
+- See how to [use `buid`](./buid.md) for better flexibility when styling with CSS.
+- Also consider CSS specificity and use `!important` if there is any clash between style declaration.
 :::
 
-### Using BibleUp ID `buid`
-[`buid`]() makes it possible to use any arbitary string to target popovers and links when styling with CSS. For example, when the value is set to **myCustom**, the popup container will have ID `bu-popup-myCustom` and all links will conatin the class `bu-link-myCustom`.
-
-BibleUp uses LESS CSS to style the preset popup, there may be specificity issues when overwriting default values due to nested selectors. However, `buid` can help solve this.
-
-```css
-#bu-popup-myCustom {
-    background: #3174EC;
-    color: #fff;
-}
-
-#bu-popup-myCustom .bu-popup-header {
-  /* custom styles */
-}
-```
-All anchor links relatiing to the buid instance can also be easily targeted
-```css
-.bu-link-myCustom {
-  /* custom styles */
-}
-```
 ## Root Variables
 Below are the root CSS variables used to style the popovers. Simply change the values you need to customize popovers. Using this method offers more flexibility than the `style` option.
 
@@ -170,4 +155,4 @@ To specify a different value when [`darkTheme`](/guide/options.html#darktheme) i
 
 ## Credit BibleUp
 
-If you enjoyed using BibleUp, we plead that you leave the popup footer (containing `BibleUp 📖💡`) untampared with or without obstruction. The text does not link to our website or any affiliate website, it only serves as a little promotion for this tool.
+If you enjoyed using BibleUp, we plead that you leave the popup footer (containing **BibleUp 📖💡**) untampared with or without obstruction. The text does not link to our website or any affiliate website, it only serves as a little promotion for this tool.
