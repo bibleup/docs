@@ -44,7 +44,7 @@ import Copy from './editor/Copy.vue';
 import router from '@/js/router';
 
 let closeEditor = () => {
-  router.push('/demo')
+  router.replace({ path: '/demo' })
 }
 </script>
 

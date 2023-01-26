@@ -66,9 +66,10 @@ onMounted(() => {
   bibleupInsatnces[1] = new BibleUp(p2, {
     popup: 'classic',
     styles: {
-      primary: 'linear-gradient(to bottom right, #E5E5BE, #003973)',
+      primary: '#fde481',
       secondary: '#003973',
-      headerColor: 'white'
+      headerColor: 'white',
+      boxShadow: '10px -8px 0px #fcd53a'
     },
 
   });
@@ -95,7 +96,7 @@ onBeforeUnmount(() => {
 });
 
 // stop scroll if editor is up before demo entered
-if (isEditor) {
+if (isEditor.value === true) {
   document.body.style['overflow-y'] = 'hidden';
 }
 
@@ -109,7 +110,7 @@ watch(isEditor, (newVal) => {
 });
 
 let openEditor = () => {
-  router.push('/demo/editor')
+  router.replace('/demo/editor')
 }
 
 let activate = () => {

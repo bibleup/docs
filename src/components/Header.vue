@@ -27,10 +27,10 @@
 
     <div id="mobile-menu" v-show="openMenu">
       <ul>
-        <li><a href="">Plugin and Extention</a></li>
+        <li><a href="https://bibleup.netlify.app/docs#plugin-and-browser-extension">Plugin and Extention</a></li>
         <li><a href="https://docs-v1--bibleup.netlify.app/">Documentation</a></li>
         <li><a href="https://github.com/bibleup">Join The Community</a></li>
-        <li><a href="/demo">BibleUp Editor</a></li>
+        <li><router-link to="/demo/editor">BibleUp Editor</router-link></li>
         <li>
           <a class="github" target="_blank" href="https://github.com/Bibleup/bibleup.js">Github</a>
         </li>
