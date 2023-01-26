@@ -15,7 +15,7 @@
       </div>
 
       <div id="header-nav">
-        <button id="menu-btn" class="btn2" target="_blank" @click="menuAction">Menu</button>
+        <button id="menu-btn" class="btn2" target="_blank" @click="toggleMenu">Menu</button>
         <div class="btn-group">
           <a href="https://bibleup.netlify.app/docs#plugin-and-browser-extension">Plugin and Extention</a>
           <a href="https://github.com/bibleup">Join The Community</a>
@@ -41,13 +41,10 @@
 
 <script setup>
 import { ref } from 'vue';
+import { toggleMenu } from '@/js/utility.js'
 
 let openMenu = ref(false);
 let banner = ref(null)
-
-const menuAction = () => {
-  openMenu.value = !openMenu.value;
-};
 
 const removeBanner = () => {
   banner.value.style.display = 'none'

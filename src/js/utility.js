@@ -11,6 +11,10 @@ export function debounce(func, wait, immediate) {
     };
 }
 
+export const toggleMenu = () => {
+  openMenu.value = !openMenu.value;
+};
+
 export let preset = {
     'preset 1': {
       popup: 'inline',

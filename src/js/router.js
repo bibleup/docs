@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import { toggleState } from "./store";
+import { toggleMenu } from "./utility";
 
 const routes = [
   {
@@ -48,6 +49,7 @@ router.beforeResolve((to, from, next) => {
 router.afterEach((to, from) => {
   // Complete the animation of the route progress bar.
   NProgress.done();
+  toggleMenu();
   if (to.name === 'editor' || from.name === 'editor') {
     toggleState('editor')
   }

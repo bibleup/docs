@@ -110,7 +110,7 @@ watch(isEditor, (newVal) => {
 });
 
 let openEditor = () => {
-  router.replace('/demo/editor')
+  router.push('/demo/editor')
 }
 
 let activate = () => {
