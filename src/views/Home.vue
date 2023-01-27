@@ -8,7 +8,7 @@
       </p>
 
       <div class="btn-grp">
-        <a href="https://docs-v1--bibleup.netlify.app/">Get Started</a>
+        <a href="/docs">Get Started</a>
         <router-link to="/demo" class="grad">See Demo <i class="fi fi-rr-magic-wand"></i></router-link>
       </div>
 
