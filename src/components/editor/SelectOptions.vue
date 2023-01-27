@@ -3,9 +3,9 @@
     <SplitHeader class="split-header"></SplitHeader>
     <div class="note">
       <p>
-        Set any option to false or leave empty to get the default value. For full documentation of these options, check
+        Set any option to false or leave empty to get the default value. Check
         the
-        <span><a href="https://bibleup.netlify.app/docs" target="_blank">docs</a></span>
+        <span><a href="https://bibleup.netlify.app/docs" target="_blank">docs</a></span> for full documentation.
       </p>
     </div>
 
