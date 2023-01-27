@@ -1,3 +1,7 @@
+// global mobile-menu state
+import { ref } from 'vue'
+export let openMenu = ref(false);
+
 export function debounce(func, wait, immediate) {
     let timeout;
     return function() {
@@ -14,6 +18,12 @@ export function debounce(func, wait, immediate) {
 export const toggleMenu = () => {
   openMenu.value = !openMenu.value;
 };
+
+export const closeMenu = () => {
+  if (openMenu.value) {
+    openMenu.value = false;
+  }
+}
 
 export let preset = {
     'preset 1': {

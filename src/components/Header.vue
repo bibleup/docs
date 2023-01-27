@@ -41,9 +41,8 @@
 
 <script setup>
 import { ref } from 'vue';
-import { toggleMenu } from '@/js/utility.js'
+import { toggleMenu, openMenu } from '@/js/utility.js'
 
-let openMenu = ref(false);
 let banner = ref(null)
 
 const removeBanner = () => {
