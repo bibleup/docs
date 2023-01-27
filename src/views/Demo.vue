@@ -19,6 +19,11 @@
         <p>Rom 1:17 LSV, 2:5-8 KJV</p>
         <p>2 Ki 5 (Wiki)</p>
       </div>
+
+      <label class="switch">
+        <input v-model="slider" type="checkbox" />
+        <span class="slider"></span>
+      </label>
     </section>
 
     <div class="alert-box2">
@@ -40,21 +45,20 @@
     </section>
 
     <router-view></router-view>
-    <!-- <MainEditor v-show="isEditor"></MainEditor> -->
   </div>
 </template>
 
 <script setup>
 import ArticlePost from '@/components/ArticlePost.vue';
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
-import MainEditor from '@/components/MainEditor.vue';
-import router from '@/js/router.js'
+import router from '@/js/router.js';
 import { isEditor } from '@/js/store';
 let isActive = ref(false);
 let articleKey = ref(0);
 const demo1 = ref(null);
 const demo2 = ref(null);
-const bibleupInsatnces = []
+const bibleupInsatnces = [];
+let slider = ref(true);
 
 onMounted(() => {
   bibleupInsatnces[0] = new BibleUp(demo1.value, {
@@ -69,9 +73,8 @@ onMounted(() => {
       primary: '#fde481',
       secondary: '#003973',
       headerColor: 'white',
-      boxShadow: '10px -8px 0px #fcd53a'
+      boxShadow: '10px -8px 0px #fcd53a',
     },
-
   });
   bibleupInsatnces[1].create();
 
@@ -90,28 +93,39 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   //const bibleupInsatnces = [b1,b2,b3,b4]
-  bibleupInsatnces.forEach(element => {
-    element.destroy()
+  bibleupInsatnces.forEach((element) => {
+    element.destroy();
   });
 });
 
-// stop scroll if editor is up before demo entered
-if (isEditor.value === true) {
-  document.body.style['overflow-y'] = 'hidden';
-}
-
 // watch isEditor and allow scroll
-watch(isEditor, (newVal) => {
-  if (newVal === true) {
-    document.body.style['overflow-y'] = 'hidden';
+watch(
+  isEditor,
+  (newVal) => {
+    if (newVal === true) {
+      document.body.style['overflow-y'] = 'hidden';
+    } else {
+      document.body.style['overflow-y'] = 'visible';
+    }
+  },
+  { immediate: true }
+);
+
+watch(slider, (newVal) => {
+  if (newVal === false) {
+    bibleupInsatnces.forEach((element) => {
+      element.destroy(false);
+    });
   } else {
-    document.body.style['overflow-y'] = 'visible';
+    bibleupInsatnces.forEach((element) => {
+      element.refresh();
+    });
   }
 });
 
 let openEditor = () => {
-  router.push('/demo/editor')
-}
+  router.push('/demo/editor');
+};
 
 let activate = () => {
   isActive.value = !isActive.value;
@@ -154,6 +168,7 @@ article {
 }
 
 #interactive {
+  position: relative;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -164,7 +179,7 @@ article {
   border-top: 2px solid #f2f2f2;
   border-bottom: 2px solid #f2f2f2;
 
-  @media @lg {
+  @media screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
@@ -173,11 +188,75 @@ article {
     font-size: 1.8rem;
     color: @color;
   }
+
   p {
-    color: #595959;
+    color: #404040;
 
     &:first-of-type {
       margin-top: 5px;
+    }
+  }
+}
+
+.switch {
+  position: absolute;
+  top: 8%;
+  right: 3%;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+
+  /* Hide default HTML checkbox */
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked + .slider {
+      background-color: #3174ec;
+    }
+
+    &:focus + .slider {
+      outline: 0;
+    }
+
+    &:checked + .slider:before {
+      outline: 0;
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    box-shadow: none;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+    /* Rounded sliders */
+    &.round {
+      border-radius: 34px;
+    }
+    &.round:before {
+      border-radius: 50%;
     }
   }
 }

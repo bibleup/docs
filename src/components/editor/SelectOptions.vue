@@ -223,9 +223,9 @@ let option = ref(getOptions);
 .option-divider {
   width: 100%;
   height: 45px;
-  background: #f2f2f2;
-  border-top: 2px solid #e6e6e6;
-  border-bottom: 2px solid #e6e6e6;
+  background: #f5f5f5;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
   padding: 10px 20px;
   margin-top: 20px;
   display: flex;

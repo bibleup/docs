@@ -113,7 +113,7 @@ article {
 
   p {
     margin-top: 5px;
-    color: #595959;
+    color: #404040;
   }
 
   .tag {
