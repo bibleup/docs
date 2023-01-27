@@ -25,7 +25,7 @@ const close = () => {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  background: #e6e6e6;
+  background: #f7f7f7;
   color: @color;
   position: sticky;
   top: 0;

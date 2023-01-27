@@ -31,7 +31,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
     } else {
@@ -44,15 +44,17 @@ let toggleScroll = () => {
 
 }
 
-router.beforeResolve((to, next) => {
+router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
   if (to.name) {
+    // Start the route progress bar.
     NProgress.start();
   }
   next();
 });
 
 router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
   NProgress.done();
   closeMenu();
   if (to.name === 'editor' || from.name === 'editor') {
