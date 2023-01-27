@@ -1,0 +1,22 @@
+{
+  "name": "BibleUp Docs",
+  "version": "0.1.0",
+  "description": "BibleUp documentation",
+  "main": "index.js",
+  "authors": {
+    "name": "BibleUp",
+    "email": "bukunmikuti@gmail.com"
+  },
+  "repository": "https://github.com/Bibleup/docs/BibleUp Docs",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "preview": "npm run build && npm run serve"
+  },
+  "license": "MIT",
+  "devDependencies": {
+   "vitepress": "^1.0.0-alpha.4",
+   "vue": "^3.2.37"
+  }
+}

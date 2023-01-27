@@ -1,7 +1,6 @@
 [build]
-  base = "docs/"
-  publish = "src/.vuepress/dist"
-  
+  publish = "docs/.vitepress/dist"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
