@@ -25,12 +25,12 @@ const close = () => {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  background: #f7f7f7;
+  background: #f5f5f5;
   color: @color;
   position: sticky;
   top: 0;
-  border-top: 2px solid #d9d9d9;
-  border-bottom: 2px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
   z-index: 1;
 
   p {
