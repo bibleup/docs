@@ -24,9 +24,10 @@ footer {
   background: #f2f2f2;
   padding-bottom: 20px;
   font-size: 1.5rem;
+  margin-top: 50px;
   border-top: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  border-image-source: linear-gradient(to right, #3b4371, #f3904f);
 
   ul {
     width: 100%;
@@ -36,9 +37,11 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0;
+    margin: 0;
+    margin: 10px;
 
     li {
-      padding: 10px 15px;
+      padding: 5px 15px;
 
       a {
         text-decoration: none;

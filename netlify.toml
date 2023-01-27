@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/docs/*"
-  to = "https://docs--bibleup.netlify.app/:splat"
+  to = "https://bibleup.netlify.app/:splat"
   status = 200
   force = true
 
