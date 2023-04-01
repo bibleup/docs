@@ -43,7 +43,7 @@ export default {
     smoothScroll: true,
     logo: '/logo.png',
     editLink: {
-      pattern: 'https://github.com/bibleup/docs/tree/docs/docs/src/:path',
+      pattern: 'https://github.com/bibleup/docs/blob/docs/docs/:path',
       text: 'Edit this page on GitHub'
     },
     footer: {
@@ -127,7 +127,12 @@ export default {
           }
         ]
       }
-    ]
+    ],
+    algolia: {
+      appId: 'N7W8DF5577',
+      apiKey: 'f344ea6250ee95257d24a0536892409c',
+      indexName: 'bibleup'
+    }
   },
 
   /**
