@@ -18,7 +18,7 @@
         <button id="menu-btn" class="btn2" target="_blank" @click="toggleMenu">Menu</button>
         <div class="btn-group">
           <a href="https://bibleup.netlify.app/docs#plugin-and-browser-extension">Plugin and Extention</a>
-          <a href="https://github.com/bibleup">Join The Community</a>
+          <a href="https://github.com/bibleup/bibleup/discussions">Join The Community</a>
           <router-link to="/demo/editor">BibleUp Editor</router-link>
           <a href="https://github.com/Bibleup/bibleup">Github</a>
         </div>

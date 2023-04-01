@@ -189,7 +189,7 @@
       Have an awesome review to share with us? <br />
       want to cheer us on?
     </p>
-    <p class="note info">For issues, bugs or feature requests, <a href="">check here</a> instead</p>
+    <p class="note info">For issues, bugs or feature requests, <a href="https://bibleup.canny.io/">check here</a> instead</p>
 
     <form name="feedback" method="post" id="contact-form" netlify>
       <input type="hidden" name="form-name" value="feedback" />
