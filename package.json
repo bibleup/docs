@@ -1,0 +1,19 @@
+{
+    "name": "bibleup-website",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "www": "pnpm --filter www run dev",
+        "docs": "pnpm --filter docs run dev",
+        "build:www": "pnpm --filter www run build",
+        "preview:www": "pnpm --filter www run preview",
+        "build:docs": "pnpm --filter docs run build",
+        "preview:docs": "pnpm --filter docs run preview",
+        "serve:docs": "pnpm --filter docs run serve"
+    },
+    "dependencies": {
+        "@bibleup/bibleup": "^1.0.0-beta",
+        "vue": "^3.2.25",
+        "vue-router": "^4.0.14"
+    }
+}
