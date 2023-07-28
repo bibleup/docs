@@ -1,20 +1,15 @@
 {
-    "name": "bibleup-website",
     "private": true,
     "version": "0.0.0",
+    "type": "module",
     "scripts": {
-        "www": "pnpm --filter 'www' run dev",
-        "docs": "pnpm --filter 'docs' run dev",
-        "dev": "pnpm run www",
-        "build:www": "pnpm --filter 'www' run build",
-        "preview:www": "pnpm --filter 'www' run preview",
-        "build:docs": "pnpm --filter 'docs' run build",
-        "preview:docs": "pnpm --filter 'docs' run preview",
-        "serve:docs": "pnpm --filter 'docs' run serve"
-    },
-    "dependencies": {
-        "@bibleup/bibleup": "^1.0.0-beta",
-        "vue": "^3.2.25",
-        "vue-router": "^4.0.14"
+        "www": "pnpm -F www run dev",
+        "docs": "pnpm -F docs run dev",
+        "dev": "call pnpm run www && cd ./docs && pnpm run dev",
+        "build:www": "pnpm -F www run build",
+        "preview:www": "pnpm -F www run preview",
+        "build:docs": "pnpm -F docs run build",
+        "preview:docs": "pnpm -F docs run preview",
+        "serve:docs": "pnpm -F docs run serve"
     }
 }
