@@ -6,6 +6,7 @@
         "www": "pnpm -F www run dev",
         "docs": "pnpm -F docs run dev",
         "dev": "call pnpm run www && cd ./docs && pnpm run dev",
+        "build": "pnpm run build:www && pnpm run build:docs",
         "build:www": "pnpm -F www run build",
         "preview:www": "pnpm -F www run preview",
         "build:docs": "pnpm -F docs run build",
