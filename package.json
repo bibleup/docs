@@ -3,12 +3,12 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "www": "pnpm -F www run dev",
+        "homepage": "pnpm -F homepage run dev",
         "docs": "pnpm -F docs run dev",
-        "dev": "call pnpm run www && cd ./docs && pnpm run dev",
-        "build": "pnpm run build:www && pnpm run build:docs",
-        "build:www": "pnpm -F www run build",
-        "preview:www": "pnpm -F www run preview",
+        "dev": "call pnpm run homepage && cd ./docs && pnpm run dev",
+        "build": "pnpm run build:homepage && pnpm run build:docs",
+        "build:homepage": "pnpm -F homepage run build",
+        "preview:homepage": "pnpm -F homepage run preview",
         "build:docs": "pnpm -F docs run build",
         "preview:docs": "pnpm -F docs run preview",
         "serve:docs": "pnpm -F docs run serve"
