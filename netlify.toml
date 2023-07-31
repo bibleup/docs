@@ -1,9 +1,3 @@
 [build]
   command = "pnpm run build"
   publish = "dist"
-
-[[redirects]]
-  from = "/docs/*"
-  to = "/dist/docs/:splat"
-  status = 200
-  force = true
