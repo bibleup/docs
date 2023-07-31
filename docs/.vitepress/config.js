@@ -3,6 +3,7 @@ export default {
   title: "BibleUp Docs",
   description: 'BibleUp Documentation | A tool for converting bible references on a webpage to a link with accessible popup',
   base: '/docs/',
+  outDir: '../dist/docs',
 
   /**
    * Extra tags to be injected to the page HTML `<head>`

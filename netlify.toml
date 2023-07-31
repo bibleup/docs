@@ -1,6 +1,10 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
 [[redirects]]
   from = "/docs/*"
-  to = "https://docs--bibleup.netlify.app/:splat"
+  to = "/dist/docs/:splat"
   status = 200
   force = true
 
