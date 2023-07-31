@@ -1,23 +1,16 @@
 {
-  "name": "bibleup-docs",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@bibleup/bibleup": "^1.0.0-beta",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.14"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "autoprefixer": "^10.4.7",
-    "less": "^4.1.2",
-    "less-loader": "^10.2.0",
-    "postcss": "^8.4.18",
-    "vite": "^2.9.13"
-  }
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "homepage": "pnpm -F homepage run dev",
+        "docs": "pnpm -F docs run dev",
+        "dev": "call pnpm run homepage && cd ./docs && pnpm run dev",
+        "build": "pnpm run build:homepage && pnpm run build:docs",
+        "build:homepage": "pnpm -F homepage run build",
+        "preview:homepage": "pnpm -F homepage run preview",
+        "build:docs": "pnpm -F docs run build",
+        "preview:docs": "pnpm -F docs run preview",
+        "serve:docs": "pnpm -F docs run serve"
+    }
 }
