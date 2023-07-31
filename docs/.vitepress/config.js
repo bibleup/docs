@@ -11,7 +11,6 @@ export default {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['base', { href: "https://bibleup.netlify.app"}],
     // fonts
     ['link', {rel: "preconnect", href: "https://fonts.googleapis.com"}],
     ['link', {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true}],

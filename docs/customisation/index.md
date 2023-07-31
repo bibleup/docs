@@ -82,7 +82,7 @@ To change the styles and even completely change popup structure, simply use regu
 ```
 
 ::: tip NOTE
-- See how to [use `buid`](./buid.md) for better flexibility when styling with CSS.
+- See how to [use `buid`](./buid) for better flexibility when styling with CSS.
 - Also consider CSS specificity and use `!important` if there is any clash between style declaration.
 :::
 
