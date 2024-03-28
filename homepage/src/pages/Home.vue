@@ -287,7 +287,7 @@ section {
   font-family: 'Rubik', sans-serif;
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: @color;
   }
 
@@ -341,7 +341,7 @@ section {
   }
 
   h1 {
-    font-size: 2.7rem;
+    font-size: 2.6rem;
     font-weight: 700;
 
     @media @lg {
@@ -681,7 +681,7 @@ section {
   padding: 30px 20px;
   //background-color: #3174EC;
   //background: linear-gradient(160deg, #3174EC, #2751a0);
-  border: 2px solid #ccc;
+  border: 2px solid #e2e2e2;
   border-radius: 20px;
   width: 90%;
   max-width: 700px;
@@ -705,11 +705,6 @@ section {
     right: -20px;
     width: 150px;
     height: 150px;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-    //color: white;
   }
 
   p {
@@ -753,7 +748,7 @@ section {
   .wrapper {
     display: flex;
     margin-top: 10px;
-    gap: 0 30px;
+    gap: 0 50px;
   }
 }
 
