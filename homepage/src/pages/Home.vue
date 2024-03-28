@@ -343,7 +343,6 @@ section {
   h1 {
     font-size: 2.7rem;
     font-weight: 700;
-    padding-right: 10px;
 
     @media @lg {
       font-size: 3rem;

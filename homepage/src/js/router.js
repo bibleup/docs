@@ -1,6 +1,6 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/Home.vue";
+import Home from "@/pages/Home.vue";
 import { toggleState } from "./store";
 import { closeMenu } from "./utility";
 
@@ -13,7 +13,7 @@ const routes = [
   {
     path: "/demo",
     name: "Demo",
-    component: () => import("@/views/Demo.vue"),
+    component: () => import("@/pages/Demo.vue"),
     children: [
       {
         name: 'editor',
@@ -24,7 +24,7 @@ const routes = [
   },
   {
     path: "/:catchAll(.*)",
-    component: () => import("@/views/NotFound.vue"),
+    component: () => import("@/pages/NotFound.vue"),
   },
 ];
 
