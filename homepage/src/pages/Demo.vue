@@ -8,8 +8,8 @@
     <section id="interactive">
       <div ref="demo1">
         <h3>Smart reference tagging</h3>
-        <p>Jn 1:1-2, 5-7, 3:16 ASV, 19</p>
-        <p>Rom 1:17b LSV, 2:5-6 KJV</p>
+        <p>Jn 1:1-2, 5-7, 3:16 NLT, 19</p>
+        <p>Rom 1:17b AMP, 2:5-6 KJV</p>
         <p>2 Ki 5</p>
       </div>
 

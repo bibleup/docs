@@ -36,4 +36,8 @@ let toClipboard = () => {
 .option-box {
   margin-top: 10px;
 }
+
+textarea {
+  background: #f7f7f7;
+}
 </style>

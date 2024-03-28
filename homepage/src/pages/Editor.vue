@@ -36,11 +36,11 @@
 
 <script setup>
 import SelectOptions from '@/components/editor/SelectOptions.vue';
+import Preview from '@/components/editor/Preview.vue';
+import Import from '@/components/editor/Import.vue';
+import Preset from '@/components/editor/Preset.vue';
+import Copy from '@/components/editor/Copy.vue';
 import { updateScreen, toggleState, isSplit, getScreen } from '@/js/store';
-import Preview from './editor/Preview.vue';
-import Import from './editor/Import.vue';
-import Preset from './editor/Preset.vue';
-import Copy from './editor/Copy.vue';
 import router from '@/js/router';
 
 let closeEditor = () => {
