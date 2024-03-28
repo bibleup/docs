@@ -118,6 +118,10 @@ export default {
         text: 'Extra Topics 🧤',
         items: [
           {
+            text: 'Copyright',
+            link: '/extra/copyright'
+          },
+          {
             text: 'Contribute',
             link: '/extra/contribute'
           },

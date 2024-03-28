@@ -1,7 +1,8 @@
 <template>
+  <!-- Header Short Announcement Banner -->
   <div id="banner" ref="banner">
     <div class="info">
-      <p>BibleUp WordPress Plugin is now live 💡</p>
+      <p>BibleUp <b>v1.1.0</b> just got released</p>
       <a class="go-btn" href="https://wordpress.org/plugins/bibleup/"><i class="fi fi-rr-arrow-small-right"></i></a>
     </div>
     <button ref="close-btn" @click="removeBanner"><i class="fi fi-rr-cross-small"></i></button>
@@ -59,6 +60,7 @@ const removeBanner = () => {
   font-size: 1.5rem;
   margin: 0;
   display: grid;
+  display: none;
   grid-template-columns: 1fr auto;
   align-content: center;
   justify-items: center;
