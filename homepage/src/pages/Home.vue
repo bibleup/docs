@@ -195,7 +195,7 @@
       want to cheer us on?
     </p>
     <p class="note info">
-      For issues, bugs or feature requests, <a href="https://bibleup.canny.io/">check here</a> instead
+      For issues, bugs or feature requests, chat on our <a href="https://groups.google.com/g/bibleup">Google group</a> instead
     </p>
 
     <form name="feedback" method="post" id="contact-form" netlify>

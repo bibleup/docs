@@ -30,8 +30,8 @@ The last 3 major versions of all browsers are fully supported with an extended s
 
 ## Community
 We love feedbacks 😀<br>
-If you have any questions, a feature request, an issue, kindly submit those through the [support page](https://bibleup.canny.io/). To follow updates, and join the development, reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions)
-- [support page](https://bibleup.canny.io/)
+If you have any questions, a feature request, an issue, kindly submit those through the [support group](https://groups.google.com/g/bibleup). To follow updates, and join the development, reach out to the community on [Github discussions](https://github.com/bibleup/bibleup/discussions)
+- [Google support group](https://groups.google.com/g/bibleup)
 - [Github discussions](https://github.com/bibleup/bibleup/discussions)
 
 Use the appropriate issue forum when using the browser extension or WordPress plugin.
