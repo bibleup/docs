@@ -41,11 +41,24 @@ import Import from '@/components/editor/Import.vue';
 import Preset from '@/components/editor/Preset.vue';
 import Copy from '@/components/editor/Copy.vue';
 import { updateScreen, toggleState, isSplit, getScreen } from '@/js/store';
+import { useHead } from 'unhead'
 import router from '@/js/router';
 
 let closeEditor = () => {
-  router.replace({ path: '/demo' })
-}
+  router.replace({ path: '/demo' });
+};
+
+useHead({
+  // Can be static or computed
+  title: 'BibleUp Editor: Customise and preview options in real-time',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Customise and Configure BibleUp Options in real-time with the Editor. Export custom styles to the WordPress Plugin or other extensions',
+    },
+  ],
+});
 </script>
 
 <style lang="less" scoped>

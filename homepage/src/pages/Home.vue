@@ -210,12 +210,25 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { useHead } from 'unhead'
 let try1 = ref(null);
 let try2 = ref(null);
 let try3 = ref(null);
 let bibleup_try1;
 let bibleup_try2;
 let bibleup_try3;
+
+useHead({
+  // Can be static or computed
+  title: 'Transform Bible References into Interactive Hyperlinks',
+  meta: [
+    {
+      name: 'description',
+      content: 'BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with accessible Popovers. With a free WordPress plugin.',
+    },
+
+  ],
+});
 
 onMounted(() => {
   bibleup_try1 = new BibleUp(try1.value);

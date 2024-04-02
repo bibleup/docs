@@ -14,6 +14,22 @@
   </section>
 </template>
 
+<script setup>
+import { useHead } from 'unhead';
+
+useHead({
+  // Can be static or computed
+  title: 'Oops! Page Not Found | BibleUp',
+  meta: [
+    {
+      name: "description",
+      content: "Sorry, the page you're looking for doesn't exist.",
+    },
+
+  ],
+});
+</script>
+
 <style lang="less" scoped>
 @import "@/css/theme.less";
 

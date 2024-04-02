@@ -1,7 +1,8 @@
 
 export default {
-  title: "BibleUp Docs",
-  description: 'BibleUp Documentation | A tool for converting bible references on a webpage to a link with accessible popup',
+  title: "BibleUp Documentation: User & Developer Guide",
+  description: 'The BibleUp documentation provides all the resources you need for a installing, customizing, and using the BibleUp library and extensions',
+  titleTemplate: 'BibleUp Documentation',
   base: '/docs/',
   outDir: '../dist/docs',
 
@@ -149,5 +150,25 @@ export default {
 
   markdown: {
     toc: { level: [2] }
+  },
+
+  sitemap: {
+    hostname: 'https://bibleup.netlify.app/docs/',
+    transformItems: (items) => {
+      // add new items or modify/filter existing items
+      items.push({
+        url: 'https://bibleup.netlify.app/',
+        priority: 1.0
+      })
+      items.push({
+        url: 'https://bibleup.netlify.app/demo',
+        priority: 1.0
+      })
+      items.push({
+        url: 'https://bibleup.netlify.app/demo/editor',
+        priority: 1.0
+      })
+      return items
+    }
   }
 };
