@@ -3,7 +3,7 @@
     <div id="main">
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
       <p class="catch">
-        BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with
+        BibleUp is a configurable web tool that transforms plain Bible references on a webpage into interactive hyperlinks with
         accessible Popovers.
       </p>
 
@@ -87,9 +87,9 @@
       Enjoy the merit of open source and rapid development. Contributions are allowed from everyone and anyone.
     </p>
 
-    <div id="soon">
+    <div id="utility">
       <div class="box">
-        <h3>4</h3>
+        <h3>10</h3>
         <p>Bible versions</p>
         <p class="tag">More to come</p>
       </div>
@@ -136,7 +136,12 @@
     <h1>Credits & Sponsors</h1>
     <p class="info">BibleUp is free, supported and backed by these amazing organisations</p>
     <div class="wrapper">
-      <a href=""><img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70" /></a>
+      <a href="http://scripture.api.bible/"
+        ><img src="../assets/api-bible-logo.svg" alt="api.bible" width="150" height="70"
+      /></a>
+      <a href="http://bolls.life/"
+        ><img style="border-radius: 100%" src="../assets/bolls.png" alt="bolls.life logo" width="60" height="60"
+      /></a>
     </div>
   </section>
 
@@ -189,7 +194,9 @@
       Have an awesome review to share with us? <br />
       want to cheer us on?
     </p>
-    <p class="note info">For issues, bugs or feature requests, <a href="https://bibleup.canny.io/">check here</a> instead</p>
+    <p class="note info">
+      For issues, bugs or feature requests, chat on our <a href="https://groups.google.com/g/bibleup">Google group</a> instead
+    </p>
 
     <form name="feedback" method="post" id="contact-form" netlify>
       <input type="hidden" name="form-name" value="feedback" />
@@ -203,12 +210,25 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { useHead } from 'unhead'
 let try1 = ref(null);
 let try2 = ref(null);
 let try3 = ref(null);
 let bibleup_try1;
 let bibleup_try2;
 let bibleup_try3;
+
+useHead({
+  // Can be static or computed
+  title: 'Transform Bible References into Interactive Hyperlinks',
+  meta: [
+    {
+      name: 'description',
+      content: 'BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with accessible Popovers. With a free WordPress plugin.',
+    },
+
+  ],
+});
 
 onMounted(() => {
   bibleup_try1 = new BibleUp(try1.value);
@@ -280,7 +300,7 @@ section {
   font-family: 'Rubik', sans-serif;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     color: @color;
   }
 
@@ -300,6 +320,7 @@ section {
   color: @color;
   padding: 30px 20px;
   background: white;
+  min-height: 450px;
 
   @media @lg {
     display: grid;
@@ -333,9 +354,8 @@ section {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 700;
-    padding-right: 10px;
 
     @media @lg {
       font-size: 3rem;
@@ -606,7 +626,7 @@ section {
     text-align: center;
   }
 
-  #soon {
+  #utility {
     width: 100%;
     margin-top: 20px;
     display: grid;
@@ -616,8 +636,9 @@ section {
 
     @media @desktop {
       display: grid;
-      grid-template-columns: repeat(2, 300px);
+      grid-template-columns: repeat(2, 150px);
       justify-content: center;
+      gap: 20px 50px;
     }
 
     .box {
@@ -670,16 +691,16 @@ section {
 }
 
 #partners {
-  padding: 15px;
-  background-color: #4884ee;
-  //background: -webkit-linear-gradient(315deg, #3e8ede 0%, #4884ee 74%);
-  background: linear-gradient(160deg, #3b4371, #f3904f);
+  padding: 30px 20px;
+  //background-color: #3174EC;
+  //background: linear-gradient(160deg, #3174EC, #2751a0);
+  border: 2px solid #e2e2e2;
   border-radius: 20px;
   width: 90%;
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 50px;
-  color: white;
+  margin-top: 70px;
+  //color: white;
   position: relative;
   overflow: hidden;
 
@@ -691,16 +712,12 @@ section {
   }
 
   svg {
+    display: none;
     position: absolute;
     bottom: -90px;
     right: -20px;
     width: 150px;
     height: 150px;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-    color: white;
   }
 
   p {
@@ -713,6 +730,7 @@ section {
     height: 45px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 1);
+    background: #3174ec;
 
     a {
       width: 100%;
@@ -723,11 +741,15 @@ section {
       line-height: 2px;
       font-size: 2rem;
     }
+
+    i {
+      color: white;
+    }
   }
 }
 
 #sponsors {
-  margin-top: 50px;
+  margin-top: 70px;
   @media @desktop {
     display: flex;
     flex-direction: column;
@@ -737,12 +759,14 @@ section {
   }
 
   .wrapper {
-    opacity: 1;
+    display: flex;
+    margin-top: 10px;
+    gap: 0 50px;
   }
 }
 
 #faq {
-  margin-top: 20px;
+  margin-top: 50px;
   -webkit-text-size-adjust: 100%;
 
   @media @desktop {

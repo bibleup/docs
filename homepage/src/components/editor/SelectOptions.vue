@@ -29,6 +29,12 @@
             <option value="ASV">American Standard Version (ASV)</option>
             <option value="LSV">Literal Standard Version (LSV)</option>
             <option value="WEB">World English Bible (WEB)</option>
+            <option value="ESV">English Standard Version (ESV)</option>
+            <option value="NIV">New International Version (NIV)</option>
+            <option value="MSG">The Message Translation (MSG)</option>
+            <option value="NLT">New Living Translation (NLT)</option>
+            <option value="AMP">The Amplified Bible (AMP)</option>
+            <option value="NASB">New American Standard Bible (NASB)</option>
           </select>
           <p>The default Bible translation for references.</p>
         </div>

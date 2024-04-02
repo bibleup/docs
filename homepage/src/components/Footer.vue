@@ -7,7 +7,7 @@
       <li><a href="https://github.com/Bibleup" target="_blank">Projects</a></li>
       <li><router-link to="/">Jesus Forever</router-link> ❤️</li>
     </ul>
-    <p id="copyright">Copyright ©️ 2022 BibleUp</p>
+    <p id="copyright">Copyright ©️ 2022-Present BibleUp</p>
   </footer>
 </template>
 

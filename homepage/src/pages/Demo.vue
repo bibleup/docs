@@ -8,8 +8,8 @@
     <section id="interactive">
       <div ref="demo1">
         <h3>Smart reference tagging</h3>
-        <p>Jn 1:1-2, 5-7, 3:16 ASV, 19</p>
-        <p>Rom 1:17b LSV, 2:5-6 KJV</p>
+        <p>Jn 1:1-2, 5-7, 3:16 NLT, 19</p>
+        <p>Rom 1:17b AMP, 2:5-6 KJV</p>
         <p>2 Ki 5</p>
       </div>
 
@@ -51,6 +51,7 @@
 <script setup>
 import ArticlePost from '@/components/ArticlePost.vue';
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
+import { useHead } from 'unhead';
 import router from '@/js/router.js';
 import { isEditor } from '@/js/store';
 let isActive = ref(false);
@@ -59,6 +60,18 @@ const demo1 = ref(null);
 const demo2 = ref(null);
 const bibleupInsatnces = [];
 let slider = ref(true);
+
+useHead({
+  // Can be static or computed
+  title: 'BibleUp Live Demo',
+  meta: [
+    {
+      name: 'description',
+      content: 'See how BibleUp references work and how they become interactive hyperlinks on your site. Supports Powerful and quick Bible reference tagging',
+    },
+
+  ],
+});
 
 onMounted(() => {
   bibleupInsatnces[0] = new BibleUp(demo1.value, {
