@@ -3,7 +3,7 @@
     <div id="main">
       <h1>Convert Bible References On A Web Page To Accessible Popovers</h1>
       <p class="catch">
-        BibleUp is a configurable web tool that transforms plain Bible references on a webpage into hyperlinks with
+        BibleUp is a configurable web tool that transforms plain Bible references on a webpage into interactive hyperlinks with
         accessible Popovers.
       </p>
 
